@@ -47,19 +47,11 @@ export const DossierCustomPage: React.FC<DossierCustomPageProps> = ({
 
       {/* Corps éditable de la page */}
       <div className="my-auto py-6 space-y-4 flex-1">
-        <h2
-          contentEditable
-          suppressContentEditableWarning
-          className="text-xl font-bold text-[#103f91] border-b border-[#2575fc]/30 pb-1 outline-none focus:bg-blue-50/50 focus:ring-1 focus:ring-blue-400 p-1 rounded"
-        >
+        <h2 className="text-xl font-bold text-[#103f91] border-b border-[#2575fc]/30 pb-1 p-1 rounded">
           {title}
         </h2>
 
-        <div
-          contentEditable
-          suppressContentEditableWarning
-          className="text-xs text-gray-700 leading-relaxed outline-none min-h-[350px] focus:bg-blue-50/30 focus:ring-1 focus:ring-blue-400 p-2 rounded whitespace-pre-wrap"
-        >
+        <div className="text-xs text-gray-700 leading-relaxed min-h-[350px] p-2 rounded whitespace-pre-wrap">
           {content}
         </div>
       </div>

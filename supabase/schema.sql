@@ -46,3 +46,13 @@ CREATE POLICY "Insertion de commentaires autorisée"
   ON dossier_comments FOR INSERT 
   TO anon, authenticated 
   WITH CHECK (true);
+
+CREATE POLICY "Suppression de commentaires autorisée" 
+  ON dossier_comments FOR DELETE 
+  TO anon, authenticated 
+  USING (true);
+
+-- 6. Activation du Temps Réel Supabase (Realtime broadcast)
+-- Permet la synchronisation instantanée entre tous les étudiants connectés
+ALTER PUBLICATION supabase_realtime ADD TABLE dossier_comments;
+

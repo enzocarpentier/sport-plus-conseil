@@ -29,11 +29,11 @@ export const DossierPage13Stakeholders: React.FC<DossierPageProps> = ({
         </h2>
 
         <p>
-          Développée par R. Edward Freeman dans son ouvrage séminal de 1984, la théorie des parties prenantes (<em>Stakeholder Theory</em>) postule que la performance et la légitimité d&apos;une entreprise dépendent de sa capacité à équilibrer les intérêts de l&apos;ensemble des acteurs « pouvant affecter ou être affectés par la réalisation des objectifs de l&apos;organisation ». Dans le cadre d&apos;une OS de niveau 2 opérant dans l&apos;événementiel comme Sport Plus Conseil, cette cartographie constitue un outil indispensable de pilotage relationnel et de sécurisation contractuelle.
+          Développée par R. Edward Freeman (1984), la théorie des parties prenantes (<em>Stakeholder Theory</em>) postule que la performance et la légitimité d&apos;une entreprise dépendent de sa capacité à équilibrer les intérêts de l&apos;ensemble des acteurs pouvant affecter ou être affectés par son activité. Pour une OS de niveau 2 comme Sport Plus Conseil, cette cartographie constitue un outil indispensable de pilotage relationnel et de sécurisation contractuelle.
         </p>
 
         <p>
-          Au premier rang figurent les parties prenantes primaires, analysées dans le cours d&apos;Aurélien François comme de véritables <em>apporteuses de ressources</em> indispensables : les ligues délégataires (NBA, LNB, WTA) concèdent des droits d&apos;exploitation d&apos;élite ; les collectivités publiques (Métropole de Rouen, Région, Ville de Paris) apportent subventions territoriales, caution institutionnelle et mise à disposition d&apos;arénas (Kindarena, Accor Arena) ; les partenaires privés (Capfinances, sponsors B2B) fournissent le flux de trésorerie marchande ; et les spectateurs et coureurs finaux apportent les recettes directes de billetterie.
+          Au premier rang figurent les parties prenantes primaires, analysées par Aurélien François comme de véritables <em>apporteuses de ressources</em> : les ligues délégataires (NBA, LNB, WTA) concèdent des droits d&apos;exploitation d&apos;élite ; les collectivités publiques (Métropole de Rouen, Région, Ville de Paris) apportent subventions, caution institutionnelle et arénas (Kindarena, Accor Arena) ; les partenaires privés (Capfinances, sponsors B2B) fournissent le flux de trésorerie ; et les spectateurs apportent les recettes de billetterie.
         </p>
 
         <h2 className="academic-h1">
@@ -41,11 +41,11 @@ export const DossierPage13Stakeholders: React.FC<DossierPageProps> = ({
         </h2>
 
         <p>
-          Les parties prenantes secondaires rassemblent les acteurs qui, sans lien contractuel marchand direct, exercent une influence déterminante sur le climat d&apos;exploitation de l&apos;événement. La composante la plus critique est constituée par la communauté des bénévoles : sans l&apos;engagement désintéressé de plus de 800 volontaires sur le Seine-Marathon et de 200 à l&apos;Open de Rouen pour l&apos;accueil, l&apos;orientation, les ramasseurs de balles et le contrôle, l&apos;équation économique de l&apos;agence deviendrait intenable. S&apos;y ajoutent les services de l&apos;État (préfectures, forces de police, SAMU), dont les autorisations conditionnent l&apos;ouverture des épreuves, ainsi que les médias régionaux et les riverains impactés par les fermetures de voirie.
+          Les parties prenantes secondaires rassemblent les acteurs qui, sans lien contractuel direct, influencent l&apos;exploitation. La composante la plus critique est la communauté des bénévoles : sans l&apos;engagement de 800 volontaires sur le Seine-Marathon et 200 à l&apos;Open de Rouen (accueil, orientation, ramasseurs de balles), l&apos;équation économique de l&apos;agence serait intenable. S&apos;y ajoutent les services de l&apos;État (préfectures, police, SAMU), dont les autorisations conditionnent les épreuves, ainsi que les médias régionaux et les riverains.
         </p>
 
         <p>
-          L&apos;exercice du management consiste dès lors à concilier des attentes souvent antagonistes : les collectivités publiques exigent des tarifs populaires accessibles à toutes les bourses et des retombées sociales inclusives, tandis que la rentabilité de l&apos;agence et les attentes des sponsors imposent une montée en gamme des prestations d&apos;hospitalités et des prix de billetterie ciblés. Sport Plus Conseil y parvient par une segmentation tarifaire soignée, maintenant des accès gratuits ou très accessibles pour les familles et les scolaires tout en développant des salons d&apos;affaires privatifs à haute rentabilité unitaire.
+          Le management consiste à concilier des attentes parfois divergentes : les collectivités exigent des tarifs populaires et des retombées inclusives, tandis que la rentabilité marchande et les sponsors réclament une montée en gamme des hospitalités VIP. Sport Plus Conseil y parvient par une segmentation tarifaire soignée, préservant des accès très accessibles pour les familles et les scolaires tout en développant des salons d&apos;affaires privatifs à haute rentabilité unitaire.
         </p>
       </div>
 

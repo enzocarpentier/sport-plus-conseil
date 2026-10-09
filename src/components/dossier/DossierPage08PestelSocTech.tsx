@@ -29,11 +29,11 @@ export const DossierPage08PestelSocTech: React.FC<DossierPageProps> = ({
         </h2>
 
         <p>
-          Sur le plan socioculturel, les attentes des consommateurs de sport ont connu une mutation profonde au cours de la dernière décennie. Le public ne se satisfait plus d&apos;une simple confrontation sportive linéaire : il exige une expérience globale et immersive, qualifiée dans l&apos;industrie de « sportainment ». Ce croisement entre performance sportive pure et show de divertissement à l&apos;américaine constitue l&apos;ADN des productions de Sport Plus Conseil, comme l&apos;illustrent les spectacles son et lumière, les animations pyrotechniques et les concerts intégrés au All Star Game de la LNB ou aux NBA Paris Games.
+          Sur le plan socioculturel, les attentes des consommateurs ont profondément évolué. Le public ne se satisfait plus d&apos;une simple confrontation sportive : il exige une expérience immersive qualifiée de « sportainment ». Ce croisement entre performance sportive et spectacle de divertissement constitue l&apos;ADN des productions de Sport Plus Conseil, comme l&apos;illustrent les shows son et lumière, animations pyrotechniques et concerts intégrés au All Star Game de la LNB et aux NBA Paris Games.
         </p>
 
         <p>
-          Simultanément, la société manifeste un engouement croissant pour les pratiques physiques de santé et de bien-être, expliquant le succès phénoménal des courses sur route telles que le Seine-Marathon 76. Le running répond à un besoin de dépassement personnel, de convivialité et de reconnexion collective au cœur de l&apos;espace urbain. Enfin, la sensibilité sociétale en faveur de l&apos;égalité hommes-femmes et la mise en lumière des athlètes féminines constituent une tendance de fond majeure. En hissant l&apos;Open de Rouen au rang de WTA 250, l&apos;agence répond directement à cette aspiration collective en offrant une vitrine d&apos;excellence au sport féminin professionnel.
+          Simultanément, l&apos;engouement pour les pratiques de santé et de bien-être porte le succès populaire du Seine-Marathon 76. Le running répond à un besoin de dépassement personnel et de reconnexion au cœur de l&apos;espace urbain. Enfin, la valorisation des athlètes féminines constitue une tendance sociétale majeure. En hissant l&apos;Open de Rouen au rang de tournoi WTA 250, l&apos;agence offre une vitrine d&apos;excellence au sport féminin professionnel.
         </p>
 
         <h2 className="academic-h1">
@@ -41,11 +41,11 @@ export const DossierPage08PestelSocTech: React.FC<DossierPageProps> = ({
         </h2>
 
         <p>
-          L&apos;environnement technologique redéfinit radicalement les standards de délivrance des événements sportifs. La généralisation de la diffusion en continu (streaming OTT), des plateformes numériques et des réseaux sociaux impose aux organisateurs une réactivité instantanée pour la génération de contenus courts et percutants. Grâce à l&apos;intégration de TV Sport Events, Sport Plus Conseil dispose d&apos;un avantage technologique décisif en produisant en propre des flux vidéo conformes aux exigences des chaînes nationales (beIN Sports, L&apos;Équipe) et des flux internationaux des circuits WTA et NBA.
+          L&apos;environnement technologique redéfinit la délivrance des événements sportifs. La diffusion en streaming OTT et sur les réseaux sociaux impose une réactivité instantanée pour produire des formats courts viraux. Grâce à l&apos;intégration de TV Sport Events, Sport Plus Conseil dispose d&apos;un avantage décisif en produisant en propre des flux vidéo conformes aux standards des diffuseurs nationaux (beIN Sports, L&apos;Équipe) et internationaux (WTA, NBA).
         </p>
 
         <p>
-          Au sein des enceintes sportives, la digitalisation transforme également le parcours du spectateur. La billetterie est désormais intégralement dématérialisée, s&apos;appuyant sur des protocoles de contrôle d&apos;accès sécurisés et mobiles qui fluidifient l&apos;entrée de milliers de personnes en quelques minutes. Sur les courts et les parquets, l&apos;intégration d&apos;outils technologiques de haute précision — tels que les caméras haute fréquence du système d&apos;arbitrage Hawk-Eye à l&apos;Open de Rouen, les écrans géants LED synchronisés et les systèmes de sonorisation directionnelle — contribue à dramatiser le spectacle tout en assurant une équité sportive irréprochable.
+          Au sein des arénas, la digitalisation transforme le parcours du spectateur. La billetterie est intégralement dématérialisée, s&apos;appuyant sur un contrôle d&apos;accès mobile et fluide. Sur les courts, des outils de haute précision — caméras Hawk-Eye à l&apos;Open de Rouen, écrans géants LED synchronisés et sonorisation directionnelle — dramatisent le spectacle tout en assurant une équité sportive irréprochable.
         </p>
       </div>
 

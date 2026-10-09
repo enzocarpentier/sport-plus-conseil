@@ -240,6 +240,19 @@
   white-space: nowrap !important;
 }
 
+/* ITEM BOX DU CONTENU ACADÉMIQUE : CADRAGE STRICT SANS AUCUN DÉPASSEMENT NI COLLISION
+   • Largeur exacte de l'item box : 160 mm (210 mm de page - 25 mm marge gauche - 25 mm marge droite)
+   • Hauteur utile maximale : 225 mm (garantit un arrêt net du texte bien au-dessus du footer scellé à 25 mm)
+   • Confinement rigoureux : zéro débordement sur les marges, zéro chevauchement avec le pied de page */
+.academic-body,
+.sommaire-container {
+  width: 160mm !important;
+  max-width: 160mm !important;
+  max-height: 225mm !important;
+  box-sizing: border-box !important;
+  overflow: hidden !important;
+}
+
 /* VERROUILLAGE TNR 12 PT & INTERLIGNE 1,5 SUR TOUT LE CONTENU ACADÉMIQUE */
 .academic-body,
 .academic-body p,

@@ -100,7 +100,7 @@ export const CommentsPanel: React.FC<CommentsPanelProps> = ({
       setStatusMessage({ type: 'error', text: `Erreur : ${result.error}` })
     } else {
       setCommentText('')
-      setStatusMessage({ type: 'success', text: 'Commentaire publié et synchronisé avec Supabase !' })
+      setStatusMessage({ type: 'success', text: 'Commentaire publié avec succès !' })
       onRefreshComments()
       setTimeout(() => setStatusMessage(null), 4000)
     }
@@ -125,7 +125,7 @@ export const CommentsPanel: React.FC<CommentsPanelProps> = ({
             <div>
               <h2 className="text-sm font-semibold tracking-wide">Commentaires &amp; Remarques</h2>
               <p className="text-[11px] text-gray-300">
-                Synchronisé en direct avec Supabase ({comments.length} avis)
+                Espace d&apos;échange du groupe ({comments.length} avis)
               </p>
             </div>
           </div>
@@ -297,7 +297,7 @@ export const CommentsPanel: React.FC<CommentsPanelProps> = ({
               className="w-full flex items-center justify-center gap-1.5 bg-[#1c2d42] hover:bg-[#0f1b29] text-white py-2 px-3 rounded-md text-xs font-medium shadow-xs transition-colors cursor-pointer disabled:opacity-50"
             >
               <Send size={13} />
-              <span>{isSubmitting ? 'Envoi à Supabase...' : 'Publier le commentaire'}</span>
+              <span>{isSubmitting ? 'Publication en cours...' : 'Publier le commentaire'}</span>
             </button>
           </form>
 
@@ -387,7 +387,7 @@ export const CommentsPanel: React.FC<CommentsPanelProps> = ({
         {/* PIED DU PANNEAU */}
         <div className="p-3 bg-gray-50 border-t border-gray-200 text-center text-[11px] text-gray-500 flex items-center justify-center gap-2">
           <span className="w-2 h-2 rounded-full bg-emerald-500"></span>
-          <span>Base de données Supabase active • UFR STAPS Rouen</span>
+          <span>Espace collaboratif du groupe • UFR STAPS Rouen</span>
         </div>
       </div>
     </div>

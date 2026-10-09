@@ -9,7 +9,7 @@ import {
   fetchDossierComments,
   subscribeToDossierComments
 } from './lib/supabase'
-import { Printer, MessageSquare, Database } from 'lucide-react'
+import { Printer, MessageSquare } from 'lucide-react'
 
 export function App() {
   const totalPages = 4
@@ -74,9 +74,6 @@ export function App() {
             )}
           </div>
           <span>Commentaires</span>
-          <span className="hidden sm:inline-flex items-center gap-1 text-[10px] text-emerald-600 bg-emerald-50 px-1.5 py-0.5 rounded border border-emerald-200">
-            <Database size={9} /> Supabase
-          </span>
         </button>
 
         {/* BOUTON D'IMPRESSION / EXPORT PDF ACADÉMIQUE */}

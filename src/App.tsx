@@ -36,27 +36,27 @@ interface DossierPageConfig {
 }
 
 const DOSSIER_PAGES: DossierPageConfig[] = [
-  { num: 1, title: 'Page de Garde Académique', render: (p, t) => <DossierCoverPage pageNumber={p} totalPages={t} /> },
-  { num: 2, title: 'Sommaire Général (Cliquable)', render: (p, t, onNav) => <DossierPage02Sommaire pageNumber={p} totalPages={t} onNavigatePage={onNav} /> },
-  { num: 3, title: 'Introduction Générale & Problématique', render: (p, t) => <DossierPage03Intro pageNumber={p} totalPages={t} /> },
-  { num: 4, title: "Genèse, PME & Culture d'Entreprise", render: (p, t) => <DossierPage04Genesis pageNumber={p} totalPages={t} /> },
-  { num: 5, title: 'Rapprochements & Alliances Stratégiques', render: (p, t) => <DossierPage05Mergers pageNumber={p} totalPages={t} /> },
-  { num: 6, title: "Portefeuille Multisport d'Événements", render: (p, t) => <DossierPage06Portfolio pageNumber={p} totalPages={t} /> },
-  { num: 7, title: 'PESTEL : Dimensions Politique & Économique', render: (p, t) => <DossierPage07PestelPolEco pageNumber={p} totalPages={t} /> },
-  { num: 8, title: 'PESTEL : Dimensions Sociale & Technologique', render: (p, t) => <DossierPage08PestelSocTech pageNumber={p} totalPages={t} /> },
-  { num: 9, title: 'PESTEL : Dimensions Écologique & Légale', render: (p, t) => <DossierPage09PestelEnvLeg pageNumber={p} totalPages={t} /> },
-  { num: 10, title: 'Modèle des 5 Forces (+1) de Porter', render: (p, t) => <DossierPage10PorterForces pageNumber={p} totalPages={t} /> },
-  { num: 11, title: 'Diagnostic SWOT Global', render: (p, t) => <DossierPage11Swot pageNumber={p} totalPages={t} /> },
-  { num: 12, title: "Modèle d'Affaires dans les OS 2 (RCOV)", render: (p, t) => <DossierPage12BusinessModel pageNumber={p} totalPages={t} /> },
-  { num: 13, title: 'Cartographie des Parties Prenantes', render: (p, t) => <DossierPage13Stakeholders pageNumber={p} totalPages={t} /> },
-  { num: 14, title: 'Théorie des Ressources (RBV)', render: (p, t) => <DossierPage14ResourcesRbv pageNumber={p} totalPages={t} /> },
-  { num: 15, title: 'Modèle VRIO de Barney', render: (p, t) => <DossierPage15VrioModel pageNumber={p} totalPages={t} /> },
-  { num: 16, title: "Stratégie Sportive de l'Agence", render: (p, t) => <DossierPage16SportStrategy pageNumber={p} totalPages={t} /> },
-  { num: 17, title: 'Stratégie Commerciale & Hospitalités B2B', render: (p, t) => <DossierPage17CommercialStrategy pageNumber={p} totalPages={t} /> },
-  { num: 18, title: 'Stratégie Territoriale & Pouvoirs Publics', render: (p, t) => <DossierPage18TerritorialStrategy pageNumber={p} totalPages={t} /> },
-  { num: 19, title: 'Stratégie Sociétale, Parité & RSE', render: (p, t) => <DossierPage19RseStrategy pageNumber={p} totalPages={t} /> },
-  { num: 20, title: 'Prospective & Fable de Mintzberg', render: (p, t) => <DossierPage20ProspectiveMintzberg pageNumber={p} totalPages={t} /> },
-  { num: 21, title: 'Sources & Bibliographie Académique', render: (p, t) => <DossierPage21Bibliography pageNumber={p} totalPages={t} /> },
+  { num: 1, title: 'Page de Garde Académique', render: (p, t) => <DossierCoverPage id={`dossier-page-${p}`} pageNumber={p} totalPages={t} /> },
+  { num: 2, title: 'Sommaire Général (Cliquable)', render: (p, t, onNav) => <DossierPage02Sommaire id={`dossier-page-${p}`} pageNumber={p} totalPages={t} onNavigatePage={onNav} /> },
+  { num: 3, title: 'Introduction Générale & Problématique', render: (p, t) => <DossierPage03Intro id={`dossier-page-${p}`} pageNumber={p} totalPages={t} /> },
+  { num: 4, title: "Genèse, PME & Culture d'Entreprise", render: (p, t) => <DossierPage04Genesis id={`dossier-page-${p}`} pageNumber={p} totalPages={t} /> },
+  { num: 5, title: 'Rapprochements & Alliances Stratégiques', render: (p, t) => <DossierPage05Mergers id={`dossier-page-${p}`} pageNumber={p} totalPages={t} /> },
+  { num: 6, title: "Portefeuille Multisport d'Événements", render: (p, t) => <DossierPage06Portfolio id={`dossier-page-${p}`} pageNumber={p} totalPages={t} /> },
+  { num: 7, title: 'PESTEL : Dimensions Politique & Économique', render: (p, t) => <DossierPage07PestelPolEco id={`dossier-page-${p}`} pageNumber={p} totalPages={t} /> },
+  { num: 8, title: 'PESTEL : Dimensions Sociale & Technologique', render: (p, t) => <DossierPage08PestelSocTech id={`dossier-page-${p}`} pageNumber={p} totalPages={t} /> },
+  { num: 9, title: 'PESTEL : Dimensions Écologique & Légale', render: (p, t) => <DossierPage09PestelEnvLeg id={`dossier-page-${p}`} pageNumber={p} totalPages={t} /> },
+  { num: 10, title: 'Modèle des 5 Forces (+1) de Porter', render: (p, t) => <DossierPage10PorterForces id={`dossier-page-${p}`} pageNumber={p} totalPages={t} /> },
+  { num: 11, title: 'Diagnostic SWOT Global', render: (p, t) => <DossierPage11Swot id={`dossier-page-${p}`} pageNumber={p} totalPages={t} /> },
+  { num: 12, title: "Modèle d'Affaires dans les OS 2 (RCOV)", render: (p, t) => <DossierPage12BusinessModel id={`dossier-page-${p}`} pageNumber={p} totalPages={t} /> },
+  { num: 13, title: 'Cartographie des Parties Prenantes', render: (p, t) => <DossierPage13Stakeholders id={`dossier-page-${p}`} pageNumber={p} totalPages={t} /> },
+  { num: 14, title: 'Théorie des Ressources (RBV)', render: (p, t) => <DossierPage14ResourcesRbv id={`dossier-page-${p}`} pageNumber={p} totalPages={t} /> },
+  { num: 15, title: 'Modèle VRIO de Barney', render: (p, t) => <DossierPage15VrioModel id={`dossier-page-${p}`} pageNumber={p} totalPages={t} /> },
+  { num: 16, title: "Stratégie Sportive de l'Agence", render: (p, t) => <DossierPage16SportStrategy id={`dossier-page-${p}`} pageNumber={p} totalPages={t} /> },
+  { num: 17, title: 'Stratégie Commerciale & Hospitalités B2B', render: (p, t) => <DossierPage17CommercialStrategy id={`dossier-page-${p}`} pageNumber={p} totalPages={t} /> },
+  { num: 18, title: 'Stratégie Territoriale & Pouvoirs Publics', render: (p, t) => <DossierPage18TerritorialStrategy id={`dossier-page-${p}`} pageNumber={p} totalPages={t} /> },
+  { num: 19, title: 'Stratégie Sociétale, Parité & RSE', render: (p, t) => <DossierPage19RseStrategy id={`dossier-page-${p}`} pageNumber={p} totalPages={t} /> },
+  { num: 20, title: 'Prospective & Fable de Mintzberg', render: (p, t) => <DossierPage20ProspectiveMintzberg id={`dossier-page-${p}`} pageNumber={p} totalPages={t} /> },
+  { num: 21, title: 'Sources & Bibliographie Académique', render: (p, t) => <DossierPage21Bibliography id={`dossier-page-${p}`} pageNumber={p} totalPages={t} /> },
 ]
 
 export function App() {
@@ -102,7 +102,7 @@ export function App() {
   }
 
   return (
-    <div className="min-h-screen bg-[#e5e7eb] py-12 px-4 flex flex-col items-center justify-start select-text relative">
+    <div className="min-h-screen bg-[#e5e7eb] py-12 px-4 flex flex-col items-center justify-start select-text relative print:min-h-0 print:bg-white print:p-0 print:m-0 print:block">
       
       {/* BARRE D'ACTIONS FLOTTANTE EN HAUT À DROITE */}
       <div className="no-print fixed top-4 right-4 z-40 flex items-center gap-2.5">
@@ -154,9 +154,9 @@ export function App() {
       </div>
 
       {/* LES 21 PAGES A4 DU DOSSIER ACADÉMIQUE */}
-      <div className="flex flex-col items-center gap-12 w-full max-w-full">
+      <div className="flex flex-col items-center gap-12 w-full max-w-full print:block print:w-auto print:gap-0 print:p-0 print:m-0">
         {DOSSIER_PAGES.map((page) => (
-          <div key={page.num} className="relative flex flex-col items-center w-full">
+          <div key={page.num} className="relative flex flex-col items-center w-full print:block print:w-auto print:m-0 print:p-0">
             <div className="no-print w-[210mm] max-w-full flex justify-between items-center mb-1.5 px-1 text-xs text-gray-600">
               <span className="font-semibold text-gray-700">
                 Page {page.num} — {page.title}
@@ -174,7 +174,7 @@ export function App() {
                 )}
               </button>
             </div>
-            <div id={`dossier-page-${page.num}`} className="a4-page-wrapper">
+            <div id={`page-wrapper-${page.num}`} className="a4-page-wrapper">
               {page.render(page.num, totalPages, handleScrollToPage)}
             </div>
           </div>

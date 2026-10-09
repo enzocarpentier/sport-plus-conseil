@@ -11,10 +11,11 @@
   }
 }
 
-/* ITEM BOX FEUILLE A4 STRICTEMENT VERROUILLÉE (Norme ISO 216 & Universitaire) :
+/* ITEM BOX FEUILLE A4 STRICTEMENT VERROUILLÉE (Norme ISO 216 & AFNOR) :
    - Dimensions exactes : 210 mm x 297 mm
-   - Marges normalisées : Gauche / Droite 25 mm (2,5 cm), Haut / Bas 20 mm (2,0 cm)
-   - Verrouillage textuel absolu : overflow: hidden, dimensions bloquées min/max
+   - Marges classiques universitaires : 2,5 cm (25 mm) sur les 4 côtés (Haut, Bas, Gauche, Droite)
+   - Typographie officielle : Times New Roman (TNR), Corps 12 pt, Interligne 1,5, Alinéa 1 cm, Justifié
+   - Verrouillage textuel absolu : overflow: hidden, dimensions physiques bloquées
 */
 @media screen {
   .a4-page-container {
@@ -32,10 +33,7 @@
     flex-direction: column !important;
     justify-content: space-between !important;
     overflow: hidden !important;
-    padding-top: 20mm !important;
-    padding-bottom: 20mm !important;
-    padding-left: 25mm !important;
-    padding-right: 25mm !important;
+    padding: 25mm !important; /* Marges classiques exactes : 2,5 cm sur les 4 côtés */
     font-family: 'Times New Roman', Times, 'Cambria', serif !important;
     color: #000000 !important;
     margin-left: auto !important;
@@ -47,7 +45,7 @@
 @media print {
   @page {
     size: 210mm 297mm;
-    margin: 20mm 25mm 20mm 25mm; /* Haut 20mm, Droite 25mm, Bas 20mm, Gauche 25mm */
+    margin: 25mm; /* Marges classiques officielles 2,5 cm */
   }
 
   body {
@@ -85,21 +83,25 @@
   }
 }
 
-/* Typographie académique normalisée */
+/* Typographie académique strictement verrouillée */
 .academic-body {
-  font-family: 'Times New Roman', Times, 'Cambria', serif;
-  font-size: 12pt;
-  line-height: 1.5;
-  text-align: justify;
-  text-justify: inter-word;
-  hyphens: auto;
-  color: #000000;
+  font-family: 'Times New Roman', Times, 'Cambria', serif !important;
+  font-size: 12pt !important;
+  line-height: 1.5 !important;
+  text-align: justify !important;
+  text-justify: inter-word !important;
+  hyphens: auto !important;
+  color: #000000 !important;
 }
 
 .academic-body p {
-  text-indent: 1cm; /* Alinéa académique français 1 cm */
-  margin-top: 0;
-  margin-bottom: 6pt;
+  font-family: 'Times New Roman', Times, 'Cambria', serif !important;
+  font-size: 12pt !important;
+  line-height: 1.5 !important;
+  text-indent: 1cm !important; /* Alinéa académique français 1 cm */
+  margin-top: 0 !important;
+  margin-bottom: 5pt !important;
+  text-align: justify !important;
 }
 
 .academic-h1 {

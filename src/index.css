@@ -88,13 +88,13 @@
 /* VERROUILLAGE TNR 12 PT & INTERLIGNE 1,5 SUR TOUT LE CONTENU ACADÉMIQUE */
 .academic-body,
 .academic-body p,
-.academic-body span:not(.font-mono),
+.academic-body span,
 .academic-body a,
 .academic-body li,
 .academic-body div:not(.page-header):not(.page-footer),
 .sommaire-container,
 .sommaire-container p,
-.sommaire-container span:not(.font-mono),
+.sommaire-container span,
 .sommaire-container a,
 .sommaire-container li {
   font-family: 'Times New Roman', Times, 'Cambria', serif !important;

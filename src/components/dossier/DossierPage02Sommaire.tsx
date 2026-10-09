@@ -58,7 +58,7 @@ export const DossierPage02Sommaire: React.FC<DossierPageProps> = ({
               Introduction Générale et Problématique Stratégique
             </span>
             <span className="flex-1 mx-2 border-b border-dotted border-gray-400 group-hover:border-blue-800 min-w-[20px]" />
-            <span className="font-mono font-bold text-[12pt] shrink-0 whitespace-nowrap ml-2">Page 3</span>
+            <span className="font-bold text-[12pt] shrink-0 whitespace-nowrap ml-2">Page 3</span>
           </a>
         </div>
 
@@ -77,7 +77,7 @@ export const DossierPage02Sommaire: React.FC<DossierPageProps> = ({
               Partie 1 — Présentation de l&apos;Organisation Choisie
             </span>
             <span className="flex-1 mx-2 border-b border-dotted border-gray-400 group-hover:border-blue-800 min-w-[20px]" />
-            <span className="font-mono font-bold text-[12pt] shrink-0 whitespace-nowrap ml-2">Page 4</span>
+            <span className="font-bold text-[12pt] shrink-0 whitespace-nowrap ml-2">Page 4</span>
           </a>
           <div className="pl-5 space-y-0.5 text-[12pt] leading-[1.5] text-gray-800">
             <a
@@ -89,7 +89,7 @@ export const DossierPage02Sommaire: React.FC<DossierPageProps> = ({
                 1.1 Genèse historique, statut juridique SAS et culture PME
               </span>
               <span className="flex-1 mx-2 border-b border-dotted border-gray-300 min-w-[20px]" />
-              <span className="font-mono text-gray-700 shrink-0 whitespace-nowrap ml-2">4</span>
+              <span className="text-gray-700 shrink-0 whitespace-nowrap ml-2">4</span>
             </a>
             <a
               href="#dossier-page-5"
@@ -100,7 +100,7 @@ export const DossierPage02Sommaire: React.FC<DossierPageProps> = ({
                 1.2 Rapprochements clés : GM Sports Consulting, TV Sport Events et Dragons
               </span>
               <span className="flex-1 mx-2 border-b border-dotted border-gray-300 min-w-[20px]" />
-              <span className="font-mono text-gray-700 shrink-0 whitespace-nowrap ml-2">5</span>
+              <span className="text-gray-700 shrink-0 whitespace-nowrap ml-2">5</span>
             </a>
             <a
               href="#dossier-page-6"
@@ -111,7 +111,7 @@ export const DossierPage02Sommaire: React.FC<DossierPageProps> = ({
                 1.3 Portefeuille multisport d&apos;événements (NBA, All Star Game, WTA, Marathon)
               </span>
               <span className="flex-1 mx-2 border-b border-dotted border-gray-300 min-w-[20px]" />
-              <span className="font-mono text-gray-700 shrink-0 whitespace-nowrap ml-2">6</span>
+              <span className="text-gray-700 shrink-0 whitespace-nowrap ml-2">6</span>
             </a>
           </div>
         </div>
@@ -131,7 +131,7 @@ export const DossierPage02Sommaire: React.FC<DossierPageProps> = ({
               Partie 2 — Analyse de l&apos;Environnement (Macro et Micro)
             </span>
             <span className="flex-1 mx-2 border-b border-dotted border-gray-400 group-hover:border-blue-800 min-w-[20px]" />
-            <span className="font-mono font-bold text-[12pt] shrink-0 whitespace-nowrap ml-2">Page 7</span>
+            <span className="font-bold text-[12pt] shrink-0 whitespace-nowrap ml-2">Page 7</span>
           </a>
           <div className="pl-5 space-y-0.5 text-[12pt] leading-[1.5] text-gray-800">
             <a
@@ -143,7 +143,7 @@ export const DossierPage02Sommaire: React.FC<DossierPageProps> = ({
                 2.1 Diagnostic PESTEL : facteurs politiques et économiques
               </span>
               <span className="flex-1 mx-2 border-b border-dotted border-gray-300 min-w-[20px]" />
-              <span className="font-mono text-gray-700 shrink-0 whitespace-nowrap ml-2">7</span>
+              <span className="text-gray-700 shrink-0 whitespace-nowrap ml-2">7</span>
             </a>
             <a
               href="#dossier-page-8"
@@ -154,7 +154,7 @@ export const DossierPage02Sommaire: React.FC<DossierPageProps> = ({
                 2.2 Diagnostic PESTEL : facteurs socioculturels et technologiques
               </span>
               <span className="flex-1 mx-2 border-b border-dotted border-gray-300 min-w-[20px]" />
-              <span className="font-mono text-gray-700 shrink-0 whitespace-nowrap ml-2">8</span>
+              <span className="text-gray-700 shrink-0 whitespace-nowrap ml-2">8</span>
             </a>
             <a
               href="#dossier-page-9"
@@ -165,7 +165,7 @@ export const DossierPage02Sommaire: React.FC<DossierPageProps> = ({
                 2.3 Diagnostic PESTEL : facteurs écologiques et légaux
               </span>
               <span className="flex-1 mx-2 border-b border-dotted border-gray-300 min-w-[20px]" />
-              <span className="font-mono text-gray-700 shrink-0 whitespace-nowrap ml-2">9</span>
+              <span className="text-gray-700 shrink-0 whitespace-nowrap ml-2">9</span>
             </a>
             <a
               href="#dossier-page-10"
@@ -176,7 +176,7 @@ export const DossierPage02Sommaire: React.FC<DossierPageProps> = ({
                 2.4 Analyse sectorielle : le modèle des 5 forces (+1) de Michael Porter
               </span>
               <span className="flex-1 mx-2 border-b border-dotted border-gray-300 min-w-[20px]" />
-              <span className="font-mono text-gray-700 shrink-0 whitespace-nowrap ml-2">10</span>
+              <span className="text-gray-700 shrink-0 whitespace-nowrap ml-2">10</span>
             </a>
             <a
               href="#dossier-page-11"
@@ -187,7 +187,7 @@ export const DossierPage02Sommaire: React.FC<DossierPageProps> = ({
                 2.5 Diagnostic stratégique croisé : matrice SWOT globale de l&apos;agence
               </span>
               <span className="flex-1 mx-2 border-b border-dotted border-gray-300 min-w-[20px]" />
-              <span className="font-mono text-gray-700 shrink-0 whitespace-nowrap ml-2">11</span>
+              <span className="text-gray-700 shrink-0 whitespace-nowrap ml-2">11</span>
             </a>
           </div>
         </div>
@@ -207,7 +207,7 @@ export const DossierPage02Sommaire: React.FC<DossierPageProps> = ({
               Partie 3 — Analyse du Modèle d&apos;Affaires (Business Model)
             </span>
             <span className="flex-1 mx-2 border-b border-dotted border-gray-400 group-hover:border-blue-800 min-w-[20px]" />
-            <span className="font-mono font-bold text-[12pt] shrink-0 whitespace-nowrap ml-2">Page 12</span>
+            <span className="font-bold text-[12pt] shrink-0 whitespace-nowrap ml-2">Page 12</span>
           </a>
           <div className="pl-5 space-y-0.5 text-[12pt] leading-[1.5] text-gray-800">
             <a
@@ -219,7 +219,7 @@ export const DossierPage02Sommaire: React.FC<DossierPageProps> = ({
                 3.1 Définition conceptuelle et spécificités des OS 2 (RCOV &amp; Magretta)
               </span>
               <span className="flex-1 mx-2 border-b border-dotted border-gray-300 min-w-[20px]" />
-              <span className="font-mono text-gray-700 shrink-0 whitespace-nowrap ml-2">12</span>
+              <span className="text-gray-700 shrink-0 whitespace-nowrap ml-2">12</span>
             </a>
             <a
               href="#dossier-page-13"
@@ -230,7 +230,7 @@ export const DossierPage02Sommaire: React.FC<DossierPageProps> = ({
                 3.2 Cartographie des parties prenantes apporteuses de ressources (Freeman)
               </span>
               <span className="flex-1 mx-2 border-b border-dotted border-gray-300 min-w-[20px]" />
-              <span className="font-mono text-gray-700 shrink-0 whitespace-nowrap ml-2">13</span>
+              <span className="text-gray-700 shrink-0 whitespace-nowrap ml-2">13</span>
             </a>
             <a
               href="#dossier-page-14"
@@ -241,7 +241,7 @@ export const DossierPage02Sommaire: React.FC<DossierPageProps> = ({
                 3.3 Provenance des ressources tangibles et intangibles (Théorie RBV)
               </span>
               <span className="flex-1 mx-2 border-b border-dotted border-gray-300 min-w-[20px]" />
-              <span className="font-mono text-gray-700 shrink-0 whitespace-nowrap ml-2">14</span>
+              <span className="text-gray-700 shrink-0 whitespace-nowrap ml-2">14</span>
             </a>
             <a
               href="#dossier-page-15"
@@ -252,7 +252,7 @@ export const DossierPage02Sommaire: React.FC<DossierPageProps> = ({
                 3.4 Évaluation stratégique des ressources : le modèle VRIO de Barney
               </span>
               <span className="flex-1 mx-2 border-b border-dotted border-gray-300 min-w-[20px]" />
-              <span className="font-mono text-gray-700 shrink-0 whitespace-nowrap ml-2">15</span>
+              <span className="text-gray-700 shrink-0 whitespace-nowrap ml-2">15</span>
             </a>
           </div>
         </div>
@@ -272,7 +272,7 @@ export const DossierPage02Sommaire: React.FC<DossierPageProps> = ({
               Partie 4 — Analyse des Stratégies à l&apos;Œuvre
             </span>
             <span className="flex-1 mx-2 border-b border-dotted border-gray-400 group-hover:border-blue-800 min-w-[20px]" />
-            <span className="font-mono font-bold text-[12pt] shrink-0 whitespace-nowrap ml-2">Page 16</span>
+            <span className="font-bold text-[12pt] shrink-0 whitespace-nowrap ml-2">Page 16</span>
           </a>
           <div className="pl-5 space-y-0.5 text-[12pt] leading-[1.5] text-gray-800">
             <a
@@ -284,7 +284,7 @@ export const DossierPage02Sommaire: React.FC<DossierPageProps> = ({
                 4.1 Stratégie sportive : opérateur d&apos;élite et synergies Dragons (RHE 76)
               </span>
               <span className="flex-1 mx-2 border-b border-dotted border-gray-300 min-w-[20px]" />
-              <span className="font-mono text-gray-700 shrink-0 whitespace-nowrap ml-2">16</span>
+              <span className="text-gray-700 shrink-0 whitespace-nowrap ml-2">16</span>
             </a>
             <a
               href="#dossier-page-17"
@@ -295,7 +295,7 @@ export const DossierPage02Sommaire: React.FC<DossierPageProps> = ({
                 4.2 Stratégie commerciale : régie, naming CDES et hospitalités B2B
               </span>
               <span className="flex-1 mx-2 border-b border-dotted border-gray-300 min-w-[20px]" />
-              <span className="font-mono text-gray-700 shrink-0 whitespace-nowrap ml-2">17</span>
+              <span className="text-gray-700 shrink-0 whitespace-nowrap ml-2">17</span>
             </a>
             <a
               href="#dossier-page-18"
@@ -306,7 +306,7 @@ export const DossierPage02Sommaire: React.FC<DossierPageProps> = ({
                 4.3 Stratégie territoriale : attractivité métropolitaine et acteurs publics
               </span>
               <span className="flex-1 mx-2 border-b border-dotted border-gray-300 min-w-[20px]" />
-              <span className="font-mono text-gray-700 shrink-0 whitespace-nowrap ml-2">18</span>
+              <span className="text-gray-700 shrink-0 whitespace-nowrap ml-2">18</span>
             </a>
             <a
               href="#dossier-page-19"
@@ -317,7 +317,7 @@ export const DossierPage02Sommaire: React.FC<DossierPageProps> = ({
                 4.4 Stratégie sociétale : parité (WTA 250) et écoresponsabilité RSE
               </span>
               <span className="flex-1 mx-2 border-b border-dotted border-gray-300 min-w-[20px]" />
-              <span className="font-mono text-gray-700 shrink-0 whitespace-nowrap ml-2">19</span>
+              <span className="text-gray-700 shrink-0 whitespace-nowrap ml-2">19</span>
             </a>
           </div>
         </div>
@@ -337,7 +337,7 @@ export const DossierPage02Sommaire: React.FC<DossierPageProps> = ({
               Partie 5 — Analyse Prospective (Valant Conclusion)
             </span>
             <span className="flex-1 mx-2 border-b border-dotted border-gray-400 group-hover:border-blue-800 min-w-[20px]" />
-            <span className="font-mono font-bold text-[12pt] shrink-0 whitespace-nowrap ml-2">Page 20</span>
+            <span className="font-bold text-[12pt] shrink-0 whitespace-nowrap ml-2">Page 20</span>
           </a>
           <div className="pl-5 space-y-0.5 text-[12pt] leading-[1.5] text-gray-800">
             <a
@@ -349,7 +349,7 @@ export const DossierPage02Sommaire: React.FC<DossierPageProps> = ({
                 5.1 Tendances prospectives du secteur : hybridation digitale et climat
               </span>
               <span className="flex-1 mx-2 border-b border-dotted border-gray-300 min-w-[20px]" />
-              <span className="font-mono text-gray-700 shrink-0 whitespace-nowrap ml-2">20</span>
+              <span className="text-gray-700 shrink-0 whitespace-nowrap ml-2">20</span>
             </a>
             <a
               href="#dossier-page-20"
@@ -360,7 +360,7 @@ export const DossierPage02Sommaire: React.FC<DossierPageProps> = ({
                 5.2 La fable de Mintzberg et la vision stratégique holistique
               </span>
               <span className="flex-1 mx-2 border-b border-dotted border-gray-300 min-w-[20px]" />
-              <span className="font-mono text-gray-700 shrink-0 whitespace-nowrap ml-2">20</span>
+              <span className="text-gray-700 shrink-0 whitespace-nowrap ml-2">20</span>
             </a>
           </div>
         </div>
@@ -380,7 +380,7 @@ export const DossierPage02Sommaire: React.FC<DossierPageProps> = ({
               Partie 6 — Sources et Bibliographie Académique Complète
             </span>
             <span className="flex-1 mx-2 border-b border-dotted border-gray-400 group-hover:border-blue-800 min-w-[16px]" />
-            <span className="font-mono font-bold text-[12pt] shrink-0 whitespace-nowrap ml-2">Page 21</span>
+            <span className="font-bold text-[12pt] shrink-0 whitespace-nowrap ml-2">Page 21</span>
           </a>
           <div className="pl-5 space-y-0.5 text-[12pt] leading-[1.5] text-gray-800">
             <a
@@ -392,7 +392,7 @@ export const DossierPage02Sommaire: React.FC<DossierPageProps> = ({
                 6.1 Ouvrages fondamentaux et articles scientifiques de référence
               </span>
               <span className="flex-1 mx-2 border-b border-dotted border-gray-300 min-w-[16px]" />
-              <span className="font-mono text-gray-700 shrink-0 whitespace-nowrap ml-2">21</span>
+              <span className="text-gray-700 shrink-0 whitespace-nowrap ml-2">21</span>
             </a>
             <a
               href="#dossier-page-21"
@@ -403,7 +403,7 @@ export const DossierPage02Sommaire: React.FC<DossierPageProps> = ({
                 6.2 Supports pédagogiques universitaires et cours magistraux
               </span>
               <span className="flex-1 mx-2 border-b border-dotted border-gray-300 min-w-[16px]" />
-              <span className="font-mono text-gray-700 shrink-0 whitespace-nowrap ml-2">21</span>
+              <span className="text-gray-700 shrink-0 whitespace-nowrap ml-2">21</span>
             </a>
             <a
               href="#dossier-page-21"
@@ -414,7 +414,7 @@ export const DossierPage02Sommaire: React.FC<DossierPageProps> = ({
                 6.3 Rapports institutionnels, observatoires et données d&apos;entreprise
               </span>
               <span className="flex-1 mx-2 border-b border-dotted border-gray-300 min-w-[16px]" />
-              <span className="font-mono text-gray-700 shrink-0 whitespace-nowrap ml-2">21</span>
+              <span className="text-gray-700 shrink-0 whitespace-nowrap ml-2">21</span>
             </a>
           </div>
         </div>
@@ -423,7 +423,7 @@ export const DossierPage02Sommaire: React.FC<DossierPageProps> = ({
       {/* Pied de page académique centré */}
       <div className="pt-2 flex items-center justify-between text-[10pt] text-gray-700 border-t border-gray-400 shrink-0 mt-auto w-full relative">
         <span className="text-left whitespace-nowrap">Université de Rouen Normandie — UFR STAPS</span>
-        <span className="absolute left-1/2 -translate-x-1/2 font-mono font-medium text-[10.5pt]">{pageNumber}</span>
+        <span className="absolute left-1/2 -translate-x-1/2 font-medium text-[10.5pt]">{pageNumber}</span>
         <span className="text-right italic whitespace-nowrap">Note collective de synthèse</span>
       </div>
     </div>

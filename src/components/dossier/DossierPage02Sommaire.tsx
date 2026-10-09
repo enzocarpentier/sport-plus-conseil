@@ -26,9 +26,9 @@ export const DossierPage02Sommaire: React.FC<DossierPageProps> = ({
       style={{ boxSizing: 'border-box' }}
     >
       {/* En-tête courant académique */}
-      <div className="pb-1 mb-2 flex items-center justify-between text-[10pt] text-gray-700 border-b border-gray-400 shrink-0">
-        <span className="uppercase tracking-wider">Stratégie des OS — Cas Sport Plus Conseil</span>
-        <span className="italic">Sommaire Général</span>
+      <div className="page-header pb-1 mb-2 flex items-center justify-between text-[10pt] text-gray-700 border-b border-gray-400 shrink-0 w-full overflow-hidden">
+        <span className="uppercase tracking-wide whitespace-nowrap shrink-0">Stratégie des OS — Cas Sport Plus Conseil</span>
+        <span className="italic whitespace-nowrap shrink-0">Sommaire Général</span>
       </div>
 
       {/* Corps du Sommaire — strict TNR 12pt, interligne 1,5, alignement à gauche strict (zéro espace de justification) */}

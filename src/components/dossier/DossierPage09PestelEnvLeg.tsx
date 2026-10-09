@@ -17,9 +17,9 @@ export const DossierPage09PestelEnvLeg: React.FC<DossierPageProps> = ({
       style={{ boxSizing: 'border-box' }}
     >
       {/* En-tête courant académique */}
-      <div className="pb-1 mb-3 flex items-center justify-between text-[10pt] text-gray-700 border-b border-gray-400 shrink-0">
-        <span className="uppercase tracking-wider">Stratégie des OS — Cas Sport Plus Conseil</span>
-        <span className="italic">Partie 2 : PESTEL — Dimensions Écologique &amp; Légale</span>
+      <div className="page-header pb-1 mb-3 flex items-center justify-between text-[10pt] text-gray-700 border-b border-gray-400 shrink-0 w-full overflow-hidden">
+        <span className="uppercase tracking-wide whitespace-nowrap shrink-0">Stratégie des OS — Cas Sport Plus Conseil</span>
+        <span className="italic whitespace-nowrap shrink-0">Partie 2 : PESTEL — Écologique &amp; Légale</span>
       </div>
 
       {/* Corps du texte */}

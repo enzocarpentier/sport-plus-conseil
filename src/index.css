@@ -176,6 +176,21 @@
   }
 }
 
+/* EN-TÊTE COURANT ACADÉMIQUE : TOUJOURS STRICTEMENT SUR UNE SEULE LIGNE */
+.page-header {
+  white-space: nowrap !important;
+  overflow: hidden !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+  width: 100% !important;
+}
+
+.page-header span {
+  white-space: nowrap !important;
+  flex-shrink: 0 !important;
+}
+
 /* VERROUILLAGE TNR 12 PT & INTERLIGNE 1,5 SUR TOUT LE CONTENU ACADÉMIQUE */
 .academic-body,
 .academic-body p,

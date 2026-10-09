@@ -79,7 +79,7 @@ export const DossierPage02Sommaire: React.FC<DossierPageProps> = ({
             <span className="flex-1 mx-2 border-b border-dotted border-gray-400 group-hover:border-blue-800 min-w-[20px]" />
             <span className="font-mono font-bold text-[12pt] shrink-0 whitespace-nowrap ml-2">Page 4</span>
           </a>
-          <div className="pl-5 space-y-0.5 text-[11pt] text-gray-800">
+          <div className="pl-5 space-y-0.5 text-[12pt] leading-[1.5] text-gray-800">
             <a
               href="#dossier-page-4"
               onClick={(e) => handleClick(e, 4)}
@@ -133,7 +133,7 @@ export const DossierPage02Sommaire: React.FC<DossierPageProps> = ({
             <span className="flex-1 mx-2 border-b border-dotted border-gray-400 group-hover:border-blue-800 min-w-[20px]" />
             <span className="font-mono font-bold text-[12pt] shrink-0 whitespace-nowrap ml-2">Page 7</span>
           </a>
-          <div className="pl-5 space-y-0.5 text-[11pt] text-gray-800">
+          <div className="pl-5 space-y-0.5 text-[12pt] leading-[1.5] text-gray-800">
             <a
               href="#dossier-page-7"
               onClick={(e) => handleClick(e, 7)}
@@ -209,7 +209,7 @@ export const DossierPage02Sommaire: React.FC<DossierPageProps> = ({
             <span className="flex-1 mx-2 border-b border-dotted border-gray-400 group-hover:border-blue-800 min-w-[20px]" />
             <span className="font-mono font-bold text-[12pt] shrink-0 whitespace-nowrap ml-2">Page 12</span>
           </a>
-          <div className="pl-5 space-y-0.5 text-[11pt] text-gray-800">
+          <div className="pl-5 space-y-0.5 text-[12pt] leading-[1.5] text-gray-800">
             <a
               href="#dossier-page-12"
               onClick={(e) => handleClick(e, 12)}
@@ -274,7 +274,7 @@ export const DossierPage02Sommaire: React.FC<DossierPageProps> = ({
             <span className="flex-1 mx-2 border-b border-dotted border-gray-400 group-hover:border-blue-800 min-w-[20px]" />
             <span className="font-mono font-bold text-[12pt] shrink-0 whitespace-nowrap ml-2">Page 16</span>
           </a>
-          <div className="pl-5 space-y-0.5 text-[11pt] text-gray-800">
+          <div className="pl-5 space-y-0.5 text-[12pt] leading-[1.5] text-gray-800">
             <a
               href="#dossier-page-16"
               onClick={(e) => handleClick(e, 16)}
@@ -339,7 +339,7 @@ export const DossierPage02Sommaire: React.FC<DossierPageProps> = ({
             <span className="flex-1 mx-2 border-b border-dotted border-gray-400 group-hover:border-blue-800 min-w-[20px]" />
             <span className="font-mono font-bold text-[12pt] shrink-0 whitespace-nowrap ml-2">Page 20</span>
           </a>
-          <div className="pl-5 space-y-0.5 text-[11pt] text-gray-800">
+          <div className="pl-5 space-y-0.5 text-[12pt] leading-[1.5] text-gray-800">
             <a
               href="#dossier-page-20"
               onClick={(e) => handleClick(e, 20)}
@@ -382,7 +382,7 @@ export const DossierPage02Sommaire: React.FC<DossierPageProps> = ({
             <span className="flex-1 mx-2 border-b border-dotted border-gray-400 group-hover:border-blue-800 min-w-[16px]" />
             <span className="font-mono font-bold text-[12pt] shrink-0 whitespace-nowrap ml-2">Page 21</span>
           </a>
-          <div className="pl-5 space-y-0.5 text-[11pt] text-gray-800">
+          <div className="pl-5 space-y-0.5 text-[12pt] leading-[1.5] text-gray-800">
             <a
               href="#dossier-page-21"
               onClick={(e) => handleClick(e, 21)}

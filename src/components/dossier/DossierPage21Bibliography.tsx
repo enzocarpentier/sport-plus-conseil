@@ -17,26 +17,26 @@ export const DossierPage21Bibliography: React.FC<DossierPageProps> = ({
       style={{ boxSizing: 'border-box' }}
     >
       {/* En-tête courant académique */}
-      <div className="pb-1 mb-2.5 flex items-center justify-between text-[10pt] text-gray-700 border-b border-gray-400 shrink-0">
+      <div className="pb-1 mb-2 flex items-center justify-between text-[10pt] text-gray-700 border-b border-gray-400 shrink-0">
         <span className="uppercase tracking-wider">Stratégie des OS — Cas Sport Plus Conseil</span>
         <span className="italic">Partie 6 : Sources &amp; Bibliographie</span>
       </div>
 
-      {/* Corps du texte bibliographique aux normes académiques */}
+      {/* Corps du texte bibliographique en strict TNR 12pt, interligne 1,5 */}
       <div className="academic-body flex-1 flex flex-col justify-start">
         <h2 className="academic-h1">
           6. Sources et Bibliographie Académique de Référence (Normes APA / ISO 690)
         </h2>
 
-        <p className="text-[10pt] italic mb-2">
-          Corpus théorique croisant les ouvrages fondamentaux du management stratégique, les références obligatoires du cours de M. François et les documents professionnels du secteur :
+        <p className="italic mb-2 indent-0!">
+          Corpus théorique croisant les ouvrages fondamentaux du management stratégique, les références obligatoires du cours de M. François et les sources professionnelles du secteur :
         </p>
 
         {/* 6.1 Ouvrages fondamentaux */}
-        <h3 className="text-[10pt] font-bold text-gray-900 mb-1 border-b border-gray-300 pb-0.5">
+        <h3 className="font-bold text-black mb-1 border-b border-gray-300 pb-0.5 text-[12pt]">
           6.1 Ouvrages Fondamentaux et Articles Scientifiques de Référence
         </h3>
-        <div className="space-y-1 text-[8.5pt] leading-tight text-gray-900 mb-2">
+        <div className="space-y-1 mb-2 text-[12pt] leading-[1.5]">
           <p className="indent-0! text-justify">
             • <strong>BARGET, E., VAILLEAU, P. (2008).</strong> « Management stratégique des organisations sportives », dans <em>Management du sport</em>, Paris, De Boeck Supérieur.
           </p>
@@ -59,13 +59,7 @@ export const DossierPage21Bibliography: React.FC<DossierPageProps> = ({
             • <strong>MAGRETTA, J. (2002).</strong> « Why Business Models Matter », <em>Harvard Business Review</em>, vol. 80, n° 5, p. 86–92.
           </p>
           <p className="indent-0! text-justify">
-            • <strong>MALTESE, L., DANGLADE, J-P. (2014).</strong> <em>Marketing du sport et évènementiel sportif</em>, Paris, Dunod.
-          </p>
-          <p className="indent-0! text-justify">
             • <strong>MINTZBERG, H., AHLSTRAND, B., LAMPEL, J. (2009).</strong> <em>Safari en pays stratégie</em>, Paris, Pearson Education France, 496 p.
-          </p>
-          <p className="indent-0! text-justify">
-            • <strong>OSTERWALDER, A., PIGNEUR, Y. (2010).</strong> <em>Business Model Nouvelle Génération</em>, Paris, Pearson, 288 p.
           </p>
           <p className="indent-0! text-justify">
             • <strong>PORTER, M. E. (2001, 2008).</strong> « Strategy and the Internet » et « The Five Competitive Forces That Shape Strategy », <em>Harvard Business Review</em>.
@@ -73,22 +67,22 @@ export const DossierPage21Bibliography: React.FC<DossierPageProps> = ({
         </div>
 
         {/* 6.2 Supports universitaires */}
-        <h3 className="text-[10pt] font-bold text-gray-900 mb-1 border-b border-gray-300 pb-0.5">
+        <h3 className="font-bold text-black mb-1 border-b border-gray-300 pb-0.5 text-[12pt]">
           6.2 Supports Pédagogiques Universitaires et Cours Magistraux
         </h3>
-        <div className="space-y-1 text-[8.5pt] leading-tight text-gray-900 mb-2">
+        <div className="space-y-1 mb-2 text-[12pt] leading-[1.5]">
           <p className="indent-0! text-justify">
             • <strong>FRANÇOIS, A. (2026).</strong> <em>Stratégie des Organisations Sportives — Théories des OS, PESTEL, Porter, VRIO et Business Models</em>, Support de cours magistral et séminaire, UFR STAPS, Université de Rouen Normandie.
           </p>
         </div>
 
         {/* 6.3 Rapports et sources d'entreprise */}
-        <h3 className="text-[10pt] font-bold text-gray-900 mb-1 border-b border-gray-300 pb-0.5">
+        <h3 className="font-bold text-black mb-1 border-b border-gray-300 pb-0.5 text-[12pt]">
           6.3 Rapports Institutionnels, Observatoires Sectoriels et Sources d&apos;Entreprise
         </h3>
-        <div className="space-y-1 text-[8.5pt] leading-tight text-gray-900">
+        <div className="space-y-1 text-[12pt] leading-[1.5]">
           <p className="indent-0! text-justify">
-            • <strong>RAPPORTS &amp; INSTITUTIONS :</strong> CIO (2021), <em>Agenda Olympique 2020+5</em> ; LNB (2024–2025), <em>Rapports annuels d&apos;exploitation du All Star Game</em> ; CDES Limoges (2018), <em>Observatoire du Naming des stades et arénas</em> ; Métropole de Rouen Normandie (2024–2025), <em>Dossiers d&apos;impact de l&apos;Open WTA et du Seine-Marathon</em> ; Jurisport n° 117 (2012) ; Déclarations de G. Muller, P. Biojout et C. Roche dans <em>L&apos;Équipe</em> et <em>SportBusiness.Club</em>.
+            • <strong>RAPPORTS &amp; INSTITUTIONS :</strong> CIO (2021), <em>Agenda Olympique 2020+5</em> ; LNB (2024–2025), <em>Rapports d&apos;exploitation du All Star Game</em> ; CDES Limoges (2018), <em>Observatoire du Naming</em> ; Métropole de Rouen Normandie (2024–2025), <em>Dossiers d&apos;impact Open WTA et Seine-Marathon</em> ; Jurisport n° 117 (2012) ; Entretiens de G. Muller et P. Biojout dans <em>L&apos;Équipe</em> et <em>SportBusiness.Club</em>.
           </p>
         </div>
       </div>

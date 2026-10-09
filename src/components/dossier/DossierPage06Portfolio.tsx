@@ -50,7 +50,7 @@ export const DossierPage06Portfolio: React.FC<DossierPageProps> = ({
       </div>
 
       {/* Pied de page académique centré */}
-      <div className="page-footer pt-2 flex items-center justify-between text-[10pt] text-gray-700 border-t border-gray-400 shrink-0 mt-auto w-full relative">
+      <div className="page-footer pt-2 flex items-center justify-between text-[10pt] text-gray-700 border-t border-gray-400 shrink-0">
         <span className="text-left whitespace-nowrap">Université de Rouen Normandie — UFR STAPS</span>
         <span className="absolute left-1/2 -translate-x-1/2 font-medium text-[10.5pt]">{pageNumber}</span>
         <span className="text-right italic whitespace-nowrap">Note collective de synthèse</span>

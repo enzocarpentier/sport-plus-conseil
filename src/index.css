@@ -215,6 +215,8 @@
   position: absolute !important;
   left: 25mm !important;
   right: 25mm !important;
+  width: 160mm !important; /* Largeur exacte du contenu : 210mm - 25mm (gauche) - 25mm (droite) */
+  max-width: 160mm !important;
   bottom: 25mm !important; /* Scellé exactement sur la marge classique de 2,5 cm (25 mm) */
   height: 7mm !important;
   display: flex !important;

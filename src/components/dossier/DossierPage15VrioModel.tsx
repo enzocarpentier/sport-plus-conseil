@@ -6,7 +6,7 @@ interface DossierPageProps {
   totalPages: number
 }
 
-export const DossierPage14VrioModel: React.FC<DossierPageProps> = ({
+export const DossierPage15VrioModel: React.FC<DossierPageProps> = ({
   id,
   pageNumber
 }) => {

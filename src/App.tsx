@@ -1,24 +1,25 @@
 import { useState, useEffect } from 'react'
 import { DossierCoverPage } from './components/dossier/DossierCoverPage'
-import { DossierPage02Intro } from './components/dossier/DossierPage02Intro'
-import { DossierPage03Genesis } from './components/dossier/DossierPage03Genesis'
-import { DossierPage04Mergers } from './components/dossier/DossierPage04Mergers'
-import { DossierPage05Portfolio } from './components/dossier/DossierPage05Portfolio'
-import { DossierPage06PestelPolEco } from './components/dossier/DossierPage06PestelPolEco'
-import { DossierPage07PestelSocTech } from './components/dossier/DossierPage07PestelSocTech'
-import { DossierPage08PestelEnvLeg } from './components/dossier/DossierPage08PestelEnvLeg'
-import { DossierPage09PorterForces } from './components/dossier/DossierPage09PorterForces'
-import { DossierPage10Swot } from './components/dossier/DossierPage10Swot'
-import { DossierPage11BusinessModel } from './components/dossier/DossierPage11BusinessModel'
-import { DossierPage12Stakeholders } from './components/dossier/DossierPage12Stakeholders'
-import { DossierPage13ResourcesRbv } from './components/dossier/DossierPage13ResourcesRbv'
-import { DossierPage14VrioModel } from './components/dossier/DossierPage14VrioModel'
-import { DossierPage15SportStrategy } from './components/dossier/DossierPage15SportStrategy'
-import { DossierPage16CommercialStrategy } from './components/dossier/DossierPage16CommercialStrategy'
-import { DossierPage17TerritorialStrategy } from './components/dossier/DossierPage17TerritorialStrategy'
-import { DossierPage18RseStrategy } from './components/dossier/DossierPage18RseStrategy'
-import { DossierPage19ProspectiveMintzberg } from './components/dossier/DossierPage19ProspectiveMintzberg'
-import { DossierPage20Bibliography } from './components/dossier/DossierPage20Bibliography'
+import { DossierPage02Sommaire } from './components/dossier/DossierPage02Sommaire'
+import { DossierPage03Intro } from './components/dossier/DossierPage03Intro'
+import { DossierPage04Genesis } from './components/dossier/DossierPage04Genesis'
+import { DossierPage05Mergers } from './components/dossier/DossierPage05Mergers'
+import { DossierPage06Portfolio } from './components/dossier/DossierPage06Portfolio'
+import { DossierPage07PestelPolEco } from './components/dossier/DossierPage07PestelPolEco'
+import { DossierPage08PestelSocTech } from './components/dossier/DossierPage08PestelSocTech'
+import { DossierPage09PestelEnvLeg } from './components/dossier/DossierPage09PestelEnvLeg'
+import { DossierPage10PorterForces } from './components/dossier/DossierPage10PorterForces'
+import { DossierPage11Swot } from './components/dossier/DossierPage11Swot'
+import { DossierPage12BusinessModel } from './components/dossier/DossierPage12BusinessModel'
+import { DossierPage13Stakeholders } from './components/dossier/DossierPage13Stakeholders'
+import { DossierPage14ResourcesRbv } from './components/dossier/DossierPage14ResourcesRbv'
+import { DossierPage15VrioModel } from './components/dossier/DossierPage15VrioModel'
+import { DossierPage16SportStrategy } from './components/dossier/DossierPage16SportStrategy'
+import { DossierPage17CommercialStrategy } from './components/dossier/DossierPage17CommercialStrategy'
+import { DossierPage18TerritorialStrategy } from './components/dossier/DossierPage18TerritorialStrategy'
+import { DossierPage19RseStrategy } from './components/dossier/DossierPage19RseStrategy'
+import { DossierPage20ProspectiveMintzberg } from './components/dossier/DossierPage20ProspectiveMintzberg'
+import { DossierPage21Bibliography } from './components/dossier/DossierPage21Bibliography'
 
 import { CommentsPanel } from './components/CommentsPanel'
 import {
@@ -28,31 +29,38 @@ import {
 } from './lib/supabase'
 import { Printer, MessageSquare, ChevronDown } from 'lucide-react'
 
-const DOSSIER_PAGES = [
-  { num: 1, title: 'Page de Garde Académique', render: (p: number, t: number) => <DossierCoverPage pageNumber={p} totalPages={t} /> },
-  { num: 2, title: 'Sommaire & Introduction Générale', render: (p: number, t: number) => <DossierPage02Intro pageNumber={p} totalPages={t} /> },
-  { num: 3, title: 'Genèse, PME & Culture d\'Entreprise', render: (p: number, t: number) => <DossierPage03Genesis pageNumber={p} totalPages={t} /> },
-  { num: 4, title: 'Rapprochements & Alliances Stratégiques', render: (p: number, t: number) => <DossierPage04Mergers pageNumber={p} totalPages={t} /> },
-  { num: 5, title: 'Portefeuille Multisport d\'Événements', render: (p: number, t: number) => <DossierPage05Portfolio pageNumber={p} totalPages={t} /> },
-  { num: 6, title: 'PESTEL : Dimensions Politique & Économique', render: (p: number, t: number) => <DossierPage06PestelPolEco pageNumber={p} totalPages={t} /> },
-  { num: 7, title: 'PESTEL : Dimensions Sociale & Technologique', render: (p: number, t: number) => <DossierPage07PestelSocTech pageNumber={p} totalPages={t} /> },
-  { num: 8, title: 'PESTEL : Dimensions Écologique & Légale', render: (p: number, t: number) => <DossierPage08PestelEnvLeg pageNumber={p} totalPages={t} /> },
-  { num: 9, title: 'Modèle des 5 Forces de Porter', render: (p: number, t: number) => <DossierPage09PorterForces pageNumber={p} totalPages={t} /> },
-  { num: 10, title: 'Diagnostic SWOT Global', render: (p: number, t: number) => <DossierPage10Swot pageNumber={p} totalPages={t} /> },
-  { num: 11, title: 'Modèle d\'Affaires dans les OS 2', render: (p: number, t: number) => <DossierPage11BusinessModel pageNumber={p} totalPages={t} /> },
-  { num: 12, title: 'Cartographie des Parties Prenantes', render: (p: number, t: number) => <DossierPage12Stakeholders pageNumber={p} totalPages={t} /> },
-  { num: 13, title: 'Théorie des Ressources (RBV)', render: (p: number, t: number) => <DossierPage13ResourcesRbv pageNumber={p} totalPages={t} /> },
-  { num: 14, title: 'Modèle VRIO de Barney', render: (p: number, t: number) => <DossierPage14VrioModel pageNumber={p} totalPages={t} /> },
-  { num: 15, title: 'Stratégie Sportive de l\'Agence', render: (p: number, t: number) => <DossierPage15SportStrategy pageNumber={p} totalPages={t} /> },
-  { num: 16, title: 'Stratégie Commerciale & Hospitalités B2B', render: (p: number, t: number) => <DossierPage16CommercialStrategy pageNumber={p} totalPages={t} /> },
-  { num: 17, title: 'Stratégie Territoriale & Pouvoirs Publics', render: (p: number, t: number) => <DossierPage17TerritorialStrategy pageNumber={p} totalPages={t} /> },
-  { num: 18, title: 'Stratégie Sociétale, Parité & RSE', render: (p: number, t: number) => <DossierPage18RseStrategy pageNumber={p} totalPages={t} /> },
-  { num: 19, title: 'Prospective & Fable de Mintzberg', render: (p: number, t: number) => <DossierPage19ProspectiveMintzberg pageNumber={p} totalPages={t} /> },
-  { num: 20, title: 'Sources & Bibliographie Académique', render: (p: number, t: number) => <DossierPage20Bibliography pageNumber={p} totalPages={t} /> },
+interface DossierPageConfig {
+  num: number
+  title: string
+  render: (p: number, t: number, onNav?: (pn: number) => void) => React.ReactNode
+}
+
+const DOSSIER_PAGES: DossierPageConfig[] = [
+  { num: 1, title: 'Page de Garde Académique', render: (p, t) => <DossierCoverPage pageNumber={p} totalPages={t} /> },
+  { num: 2, title: 'Sommaire Général (Cliquable)', render: (p, t, onNav) => <DossierPage02Sommaire pageNumber={p} totalPages={t} onNavigatePage={onNav} /> },
+  { num: 3, title: 'Introduction Générale & Problématique', render: (p, t) => <DossierPage03Intro pageNumber={p} totalPages={t} /> },
+  { num: 4, title: "Genèse, PME & Culture d'Entreprise", render: (p, t) => <DossierPage04Genesis pageNumber={p} totalPages={t} /> },
+  { num: 5, title: 'Rapprochements & Alliances Stratégiques', render: (p, t) => <DossierPage05Mergers pageNumber={p} totalPages={t} /> },
+  { num: 6, title: "Portefeuille Multisport d'Événements", render: (p, t) => <DossierPage06Portfolio pageNumber={p} totalPages={t} /> },
+  { num: 7, title: 'PESTEL : Dimensions Politique & Économique', render: (p, t) => <DossierPage07PestelPolEco pageNumber={p} totalPages={t} /> },
+  { num: 8, title: 'PESTEL : Dimensions Sociale & Technologique', render: (p, t) => <DossierPage08PestelSocTech pageNumber={p} totalPages={t} /> },
+  { num: 9, title: 'PESTEL : Dimensions Écologique & Légale', render: (p, t) => <DossierPage09PestelEnvLeg pageNumber={p} totalPages={t} /> },
+  { num: 10, title: 'Modèle des 5 Forces (+1) de Porter', render: (p, t) => <DossierPage10PorterForces pageNumber={p} totalPages={t} /> },
+  { num: 11, title: 'Diagnostic SWOT Global', render: (p, t) => <DossierPage11Swot pageNumber={p} totalPages={t} /> },
+  { num: 12, title: "Modèle d'Affaires dans les OS 2 (RCOV)", render: (p, t) => <DossierPage12BusinessModel pageNumber={p} totalPages={t} /> },
+  { num: 13, title: 'Cartographie des Parties Prenantes', render: (p, t) => <DossierPage13Stakeholders pageNumber={p} totalPages={t} /> },
+  { num: 14, title: 'Théorie des Ressources (RBV)', render: (p, t) => <DossierPage14ResourcesRbv pageNumber={p} totalPages={t} /> },
+  { num: 15, title: 'Modèle VRIO de Barney', render: (p, t) => <DossierPage15VrioModel pageNumber={p} totalPages={t} /> },
+  { num: 16, title: "Stratégie Sportive de l'Agence", render: (p, t) => <DossierPage16SportStrategy pageNumber={p} totalPages={t} /> },
+  { num: 17, title: 'Stratégie Commerciale & Hospitalités B2B', render: (p, t) => <DossierPage17CommercialStrategy pageNumber={p} totalPages={t} /> },
+  { num: 18, title: 'Stratégie Territoriale & Pouvoirs Publics', render: (p, t) => <DossierPage18TerritorialStrategy pageNumber={p} totalPages={t} /> },
+  { num: 19, title: 'Stratégie Sociétale, Parité & RSE', render: (p, t) => <DossierPage19RseStrategy pageNumber={p} totalPages={t} /> },
+  { num: 20, title: 'Prospective & Fable de Mintzberg', render: (p, t) => <DossierPage20ProspectiveMintzberg pageNumber={p} totalPages={t} /> },
+  { num: 21, title: 'Sources & Bibliographie Académique', render: (p, t) => <DossierPage21Bibliography pageNumber={p} totalPages={t} /> },
 ]
 
 export function App() {
-  const totalPages = 20
+  const totalPages = 21
   const [comments, setComments] = useState<DossierComment[]>([])
   const [isCommentsOpen, setIsCommentsOpen] = useState(false)
   const [targetPage, setTargetPage] = useState<number>(1)
@@ -99,7 +107,7 @@ export function App() {
       {/* BARRE D'ACTIONS FLOTTANTE EN HAUT À DROITE */}
       <div className="no-print fixed top-4 right-4 z-40 flex items-center gap-2.5">
         
-        {/* SÉLECTEUR RAPIDE DE NAVIGATION ENTRE LES 20 PAGES */}
+        {/* SÉLECTEUR RAPIDE DE NAVIGATION ENTRE LES 21 PAGES */}
         <div className="relative hidden md:block">
           <select
             onChange={(e) => handleScrollToPage(Number(e.target.value))}
@@ -138,14 +146,14 @@ export function App() {
         <button
           onClick={handlePrint}
           className="flex items-center gap-2 bg-[#1c2d42] hover:bg-[#0f1b29] text-white px-3.5 py-2 rounded-md shadow-md hover:shadow-lg transition-all text-xs font-serif font-medium cursor-pointer border border-[#2b415e]"
-          title="Imprimer ou exporter en PDF officiel A4 (20 pages)"
+          title="Imprimer ou exporter en PDF officiel A4 (21 pages)"
         >
           <Printer size={14} />
           <span className="hidden sm:inline">Imprimer / PDF</span>
         </button>
       </div>
 
-      {/* LES 20 PAGES A4 DU DOSSIER ACADÉMIQUE */}
+      {/* LES 21 PAGES A4 DU DOSSIER ACADÉMIQUE */}
       <div className="flex flex-col items-center gap-12 w-full max-w-full">
         {DOSSIER_PAGES.map((page) => (
           <div key={page.num} className="relative flex flex-col items-center w-full">
@@ -167,7 +175,7 @@ export function App() {
               </button>
             </div>
             <div id={`dossier-page-${page.num}`} className="a4-page-wrapper">
-              {page.render(page.num, totalPages)}
+              {page.render(page.num, totalPages, handleScrollToPage)}
             </div>
           </div>
         ))}

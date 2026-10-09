@@ -35,25 +35,26 @@ const GROUP_MEMBERS = [
 
 const PAGE_NAMES: Record<number, string> = {
   1: 'Page 1 — Page de Garde Académique',
-  2: 'Page 2 — Sommaire & Introduction Générale',
-  3: 'Page 3 — Genèse, PME & Culture d\'Entreprise',
-  4: 'Page 4 — Rapprochements & Alliances Stratégiques',
-  5: 'Page 5 — Portefeuille Multisport d\'Événements',
-  6: 'Page 6 — PESTEL : Dimensions Politique & Économique',
-  7: 'Page 7 — PESTEL : Dimensions Sociale & Technologique',
-  8: 'Page 8 — PESTEL : Dimensions Écologique & Légale',
-  9: 'Page 9 — Modèle des 5 Forces de Porter',
-  10: 'Page 10 — Diagnostic SWOT Global',
-  11: 'Page 11 — Modèle d\'Affaires dans les OS 2',
-  12: 'Page 12 — Cartographie des Parties Prenantes',
-  13: 'Page 13 — Théorie des Ressources (RBV)',
-  14: 'Page 14 — Modèle VRIO de Barney',
-  15: 'Page 15 — Stratégie Sportive de l\'Agence',
-  16: 'Page 16 — Stratégie Commerciale & Hospitalités B2B',
-  17: 'Page 17 — Stratégie Territoriale & Pouvoirs Publics',
-  18: 'Page 18 — Stratégie Sociétale, Parité & RSE',
-  19: 'Page 19 — Prospective & Fable de Mintzberg',
-  20: 'Page 20 — Sources & Bibliographie Académique'
+  2: 'Page 2 — Sommaire Général (Cliquable)',
+  3: 'Page 3 — Introduction Générale & Problématique',
+  4: 'Page 4 — Genèse, PME & Culture d\'Entreprise',
+  5: 'Page 5 — Rapprochements & Alliances Stratégiques',
+  6: 'Page 6 — Portefeuille Multisport d\'Événements',
+  7: 'Page 7 — PESTEL : Dimensions Politique & Économique',
+  8: 'Page 8 — PESTEL : Dimensions Sociale & Technologique',
+  9: 'Page 9 — PESTEL : Dimensions Écologique & Légale',
+  10: 'Page 10 — Modèle des 5 Forces (+1) de Porter',
+  11: 'Page 11 — Diagnostic SWOT Global',
+  12: 'Page 12 — Modèle d\'Affaires dans les OS 2 (RCOV)',
+  13: 'Page 13 — Cartographie des Parties Prenantes (Freeman)',
+  14: 'Page 14 — Théorie des Ressources (RBV)',
+  15: 'Page 15 — Modèle VRIO de Barney',
+  16: 'Page 16 — Stratégie Sportive de l\'Agence',
+  17: 'Page 17 — Stratégie Commerciale & Hospitalités B2B',
+  18: 'Page 18 — Stratégie Territoriale & Commande Publique',
+  19: 'Page 19 — Stratégie Sociétale, Parité & RSE',
+  20: 'Page 20 — Prospective & Fable de Mintzberg',
+  21: 'Page 21 — Sources & Bibliographie Académique'
 }
 
 export const CommentsPanel: React.FC<CommentsPanelProps> = ({
@@ -178,7 +179,7 @@ export const CommentsPanel: React.FC<CommentsPanelProps> = ({
           >
             Tous ({comments.length})
           </button>
-          {Array.from({ length: 20 }, (_, i) => i + 1).map((page) => {
+          {Array.from({ length: 21 }, (_, i) => i + 1).map((page) => {
             const count = comments.filter((c) => c.page_number === page).length
             return (
               <button
@@ -270,7 +271,7 @@ export const CommentsPanel: React.FC<CommentsPanelProps> = ({
                 onChange={(e) => onTargetPageChange(Number(e.target.value))}
                 className="flex-1 px-2.5 py-1 text-xs border border-gray-300 rounded-md bg-white focus:outline-none focus:ring-1 focus:ring-blue-500 cursor-pointer"
               >
-                {Array.from({ length: 20 }, (_, i) => i + 1).map((pageNum) => (
+                {Array.from({ length: 21 }, (_, i) => i + 1).map((pageNum) => (
                   <option key={pageNum} value={pageNum}>
                     {PAGE_NAMES[pageNum] || `Page ${pageNum}`}
                   </option>

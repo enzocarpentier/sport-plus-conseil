@@ -68,11 +68,11 @@ export const DossierBudgetPage: React.FC<DossierBudgetPageProps> = ({
         </div>
       </div>
 
-      {/* Pied de page académique : Verrouillé à l'intérieur de la feuille A4 */}
-      <div className="pt-2 flex items-center justify-between text-[10pt] text-gray-700 border-t border-gray-400 shrink-0 mt-auto">
-        <span>Université de Rouen Normandie — UFR STAPS</span>
-        <span className="font-mono font-medium">{pageNumber}</span>
-        <span className="italic">Note collective de synthèse</span>
+      {/* Pied de page académique : Numéro de page STRICTEMENT centré */}
+      <div className="pt-2 grid grid-cols-3 items-center text-[10pt] text-gray-700 border-t border-gray-400 shrink-0 mt-auto w-full">
+        <span className="text-left">Université de Rouen Normandie — UFR STAPS</span>
+        <span className="text-center font-mono font-medium text-[10.5pt]">{pageNumber}</span>
+        <span className="text-right italic">Note collective de synthèse</span>
       </div>
     </div>
   )

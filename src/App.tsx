@@ -105,7 +105,7 @@ export function App() {
     <div className="min-h-screen bg-[#e5e7eb] py-12 px-4 flex flex-col items-center justify-start select-text relative print:min-h-0 print:bg-white print:p-0 print:m-0 print:block">
       
       {/* BARRE D'ACTIONS FLOTTANTE EN HAUT À DROITE */}
-      <div className="no-print fixed top-4 right-4 z-40 flex items-center gap-2.5">
+      <div className="no-print print:hidden fixed top-4 right-4 z-40 flex items-center gap-2.5">
         
         {/* SÉLECTEUR RAPIDE DE NAVIGATION ENTRE LES 21 PAGES */}
         <div className="relative hidden md:block">
@@ -156,8 +156,8 @@ export function App() {
       {/* LES 21 PAGES A4 DU DOSSIER ACADÉMIQUE */}
       <div className="flex flex-col items-center gap-12 w-full max-w-full print:block print:w-auto print:gap-0 print:p-0 print:m-0">
         {DOSSIER_PAGES.map((page) => (
-          <div key={page.num} className="relative flex flex-col items-center w-full print:block print:w-auto print:m-0 print:p-0">
-            <div className="no-print w-[210mm] max-w-full flex justify-between items-center mb-1.5 px-1 text-xs text-gray-600">
+          <div key={page.num} className="dossier-page-item relative flex flex-col items-center w-full print:block print:w-auto print:m-0 print:p-0">
+            <div className="no-print print:hidden w-[210mm] max-w-full flex justify-between items-center mb-1.5 px-1 text-xs text-gray-600">
               <span className="font-semibold text-gray-700">
                 Page {page.num} — {page.title}
               </span>

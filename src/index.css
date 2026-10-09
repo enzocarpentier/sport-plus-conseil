@@ -96,15 +96,32 @@
     width: 210mm !important;
   }
 
-  div[class*="items-center"][class*="w-full"] {
+  .dossier-page-item {
     display: block !important;
     margin: 0 !important;
     padding: 0 !important;
     width: 210mm !important;
+    page-break-inside: avoid !important;
+    break-inside: avoid !important;
   }
 
-  .no-print {
+  .no-print,
+  .print-hidden,
+  [class*="no-print"],
+  div.no-print,
+  div[class*="no-print"],
+  .no-print * {
     display: none !important;
+    visibility: hidden !important;
+    height: 0 !important;
+    min-height: 0 !important;
+    max-height: 0 !important;
+    width: 0 !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    opacity: 0 !important;
+    border: none !important;
+    overflow: hidden !important;
   }
 
   .print-only {
@@ -127,7 +144,8 @@
     break-after: page !important;
   }
 
-  .a4-page-wrapper:last-child {
+  .a4-page-wrapper:last-child,
+  .dossier-page-item:last-child .a4-page-wrapper {
     page-break-after: auto !important;
     break-after: auto !important;
   }
@@ -152,6 +170,8 @@
     background-color: #ffffff !important;
     page-break-inside: avoid !important;
     break-inside: avoid !important;
+    page-break-after: auto !important;
+    break-after: auto !important;
     font-family: 'Times New Roman', Times, 'Cambria', serif !important;
   }
 }

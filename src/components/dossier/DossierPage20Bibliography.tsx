@@ -17,7 +17,7 @@ export const DossierPage20Bibliography: React.FC<DossierPageProps> = ({
       style={{ boxSizing: 'border-box' }}
     >
       {/* En-tête courant académique */}
-      <div className="pb-1 mb-3 flex items-center justify-between text-[10pt] text-gray-700 border-b border-gray-400 shrink-0">
+      <div className="pb-1 mb-2.5 flex items-center justify-between text-[10pt] text-gray-700 border-b border-gray-400 shrink-0">
         <span className="uppercase tracking-wider">Stratégie des OS — Cas Sport Plus Conseil</span>
         <span className="italic">Partie 6 : Sources &amp; Bibliographie</span>
       </div>
@@ -28,13 +28,13 @@ export const DossierPage20Bibliography: React.FC<DossierPageProps> = ({
           6. Sources et Bibliographie Académique de Référence (Normes APA / ISO 690)
         </h2>
 
-        <p className="text-[11pt] italic mb-2">
-          Le présent travail d&apos;analyse stratégique s&apos;appuie sur un corpus théorique croisant les ouvrages fondateurs du management stratégique, les enseignements universitaires en économie du sport et la documentation professionnelle du secteur :
+        <p className="text-[10.5pt] italic mb-1.5">
+          Corpus théorique croisant les ouvrages fondamentaux du management stratégique, les références obligatoires du cours de M. François et les documents professionnels du secteur :
         </p>
 
-        <div className="space-y-1.5 text-[10pt] leading-tight text-gray-900">
+        <div className="space-y-1 text-[9pt] leading-tight text-gray-900">
           <p className="indent-0! text-justify">
-            • <strong>ANDREFF, W. (2018).</strong> <em>Mondialisation économique du sport : Manuel d&apos;économie du sport</em>, Bruxelles, De Boeck Supérieur, 416 p.
+            • <strong>BARGET, E., VAILLEAU, P. (2008).</strong> « Management stratégique des organisations sportives », dans <em>Management du sport</em>, Paris, De Boeck Supérieur.
           </p>
 
           <p className="indent-0! text-justify">
@@ -42,7 +42,15 @@ export const DossierPage20Bibliography: React.FC<DossierPageProps> = ({
           </p>
 
           <p className="indent-0! text-justify">
-            • <strong>FRANÇOIS, A. (2026).</strong> <em>Stratégie des Organisations Sportives — Théories des OS, Diagnostic Macro et Business Model</em>, Supports de cours magistraux et études de cas, Master Management du Sport, UFR STAPS, Université de Rouen Normandie.
+            • <strong>BAYLE, E. (2007, 2014).</strong> <em>Les grands dirigeants du sport. 23 portraits de stratégies de management</em>, Bruxelles, De Boeck Éditions.
+          </p>
+
+          <p className="indent-0! text-justify">
+            • <strong>DETCHENIQUE, G., CEZAR, F. (2023).</strong> « La remise en cause d’un business model dominant : le cas du football français », <em>Innovations</em>, vol. 71, p. 151–178.
+          </p>
+
+          <p className="indent-0! text-justify">
+            • <strong>FRANÇOIS, A. (2026).</strong> <em>Stratégie des Organisations Sportives — Théories des OS, PESTEL, Porter, VRIO et Business Models</em>, Support de cours magistral et séminaire, UFR STAPS, Université de Rouen Normandie.
           </p>
 
           <p className="indent-0! text-justify">
@@ -50,31 +58,31 @@ export const DossierPage20Bibliography: React.FC<DossierPageProps> = ({
           </p>
 
           <p className="indent-0! text-justify">
-            • <strong>KIM, W. C., MAUBORGNE, R. (2005).</strong> <em>Stratégie Océan Bleu : Comment créer de nouveaux espaces stratégiques</em>, Paris, Pearson Village Mondial.
+            • <strong>LECOCQ, X., DEMIL, B., WARNIER, V. (2006).</strong> « Le business model, un outil d&apos;analyse stratégique », <em>L&apos;Expansion Management Review</em>, n° 123, p. 96–109.
           </p>
 
           <p className="indent-0! text-justify">
-            • <strong>MINTZBERG, H., AHLSTRAND, B., LAMPEL, J. (2009).</strong> <em>Safari en pays stratégie : L&apos;exploration des grands courants de la pensée stratégique</em>, Paris, Pearson Education France, 496 p.
+            • <strong>MAGRETTA, J. (2002).</strong> « Why Business Models Matter », <em>Harvard Business Review</em>, vol. 80, n° 5, p. 86–92.
           </p>
 
           <p className="indent-0! text-justify">
-            • <strong>OSTERWALDER, A., PIGNEUR, Y. (2010).</strong> <em>Business Model Nouvelle Génération : Un guide pour visionnaires, révolutionnaires et novateurs</em>, Paris, Pearson, 288 p.
+            • <strong>MALTESE, L., DANGLADE, J-P. (2014).</strong> <em>Marketing du sport et évènementiel sportif</em>, Paris, Dunod.
           </p>
 
           <p className="indent-0! text-justify">
-            • <strong>PORTER, M. E. (2001).</strong> « Strategy and the Internet », <em>Harvard Business Review</em>, vol. 79, n° 3, p. 62–78.
+            • <strong>MINTZBERG, H., AHLSTRAND, B., LAMPEL, J. (2009).</strong> <em>Safari en pays stratégie</em>, Paris, Pearson Education France, 496 p.
           </p>
 
           <p className="indent-0! text-justify">
-            • <strong>PORTER, M. E. (2008).</strong> « The Five Competitive Forces That Shape Strategy », <em>Harvard Business Review</em>, vol. 86, n° 1, p. 78–93.
+            • <strong>OSTERWALDER, A., PIGNEUR, Y. (2010).</strong> <em>Business Model Nouvelle Génération</em>, Paris, Pearson, 288 p.
           </p>
 
           <p className="indent-0! text-justify">
-            • <strong>WERNERFELT, B. (1984).</strong> « A Resource-Based View of the Firm », <em>Strategic Management Journal</em>, vol. 5, n° 2, p. 171–180.
+            • <strong>PORTER, M. E. (2001, 2008).</strong> « Strategy and the Internet » et « The Five Competitive Forces That Shape Strategy », <em>Harvard Business Review</em>.
           </p>
 
           <p className="indent-0! text-justify">
-            • <strong>DOCUMENTS PROFESSIONNELS ET INSTITUTIONNELS :</strong> Rapports annuels de la Ligue Nationale de Basket (LNB, 2024–2025) ; Délibérations et dossiers d&apos;impact économique de la Métropole de Rouen Normandie (2024–2025) ; Cahiers des charges officiels du WTA Tour (WTA Rulebook 2025) et de la National Basketball Association (NBA) ; Entretiens de presse spécialisée de Gaëtan Muller, Pascal Biojout, Charles Roche et Samir Boudjemaa parus dans <em>L&apos;Équipe</em>, <em>Sport Stratégies</em> et <em>SportBusiness.Club</em> (2022–2026).
+            • <strong>RAPPORTS &amp; INSTITUTIONS :</strong> CIO (2021), <em>Agenda Olympique 2020+5</em> ; LNB (2024–2025), <em>Rapports annuels d&apos;exploitation du All Star Game</em> ; CDES Limoges (2018), <em>Observatoire du Naming des stades et arénas</em> ; Métropole de Rouen Normandie (2024–2025), <em>Dossiers d&apos;impact de l&apos;Open WTA et du Seine-Marathon</em> ; Jurisport n° 117 (2012) ; Déclarations de G. Muller, P. Biojout et C. Roche dans <em>L&apos;Équipe</em> et <em>SportBusiness.Club</em>.
           </p>
         </div>
       </div>

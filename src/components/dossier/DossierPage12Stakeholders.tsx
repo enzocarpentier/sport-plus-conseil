@@ -33,7 +33,7 @@ export const DossierPage12Stakeholders: React.FC<DossierPageProps> = ({
         </p>
 
         <p>
-          Au premier rang figurent les parties prenantes primaires, avec lesquelles l&apos;agence entretient des relations contractuelles directes et indispensables à son fonctionnement économique. Celles-ci regroupent : les institutions et ligues délégataires (NBA, LNB, WTA, FFHB), qui concèdent des droits d&apos;exploitation opérationnelle sous réserve de cahiers des charges rigoureux ; les collectivités territoriales hôtes (Métropole de Rouen Normandie, Région Normandie, Ville de Paris), qui apportent subventions, caution politique et mise à disposition d&apos;infrastructures d&apos;exception (Kindarena, Accor Arena) ; les partenaires commerciaux privés (Capfinances partenaire-titre, sponsors arénas et acheteurs de loges VIP B2B), garantissant l&apos;apport de trésorerie privée ; et enfin les clients finaux (coureurs du Seine-Marathon et spectateurs des tribunes), pourvoyeurs de recettes directes de billetterie.
+          Au premier rang figurent les parties prenantes primaires, analysées dans le cours d&apos;Aurélien François comme de véritables <em>apporteuses de ressources</em> indispensables : les ligues délégataires (NBA, LNB, WTA) concèdent des droits d&apos;exploitation d&apos;élite ; les collectivités publiques (Métropole de Rouen, Région, Ville de Paris) apportent subventions territoriales, caution institutionnelle et mise à disposition d&apos;arénas (Kindarena, Accor Arena) ; les partenaires privés (Capfinances, sponsors B2B) fournissent le flux de trésorerie marchande ; et les spectateurs et coureurs finaux apportent les recettes directes de billetterie.
         </p>
 
         <h2 className="academic-h1">

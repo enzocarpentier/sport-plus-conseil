@@ -33,7 +33,7 @@ export const DossierPage16CommercialStrategy: React.FC<DossierPageProps> = ({
         </p>
 
         <p>
-          Sur le versant des partenariats privés, Sport Plus Conseil a su négocier des contrats de naming structurants, à l&apos;image du partenariat pluriannuel conclu avec le courtier financier Capfinances pour le tournoi WTA de Rouen. Au-delà du naming, l&apos;agence opère une régie publicitaire intégrée exploitant l&apos;ensemble des supports visuels : panneautique LED dynamique en bord de court ou de parquet, marquages au sol haute adhérence et incrustations publicitaires virtuelles lors des retransmissions télévisées produites par TV Sport Events, offrant aux marques une exposition multi-supports à forte rentabilité.
+          Suivant la distinction du cours entre ressources <em>Match Day</em> (billetterie, buvettes) et <em>Hors Match Day</em> (activations de marque, hospitalités permanentes), l&apos;agence a négocié un contrat de naming structurant avec le courtier Capfinances pour le tournoi WTA de Rouen, pratique analysée en cours à travers l&apos;Observatoire du Naming du CDES de Limoges. L&apos;agence opère une régie publicitaire intégrée exploitant panneautique LED dynamique, marquages au sol et incrustations virtuelles lors des retransmissions de TV Sport Events, offrant aux marques une exposition multi-écrans à haute rentabilité.
         </p>
 
         <h2 className="academic-h1">

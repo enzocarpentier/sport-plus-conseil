@@ -29,7 +29,7 @@ export const DossierPage08PestelEnvLeg: React.FC<DossierPageProps> = ({
         </h2>
 
         <p>
-          La dimension environnementale constitue aujourd&apos;hui un impératif stratégique incontournable pour les opérateurs événementiels. Sous l&apos;impulsion des chartes nationales du Ministère des Sports et de l&apos;accord cadre WWF sur les éco-événements, Sport Plus Conseil intègre la sobriété écologique au cœur de sa conception opérationnelle. L&apos;empreinte carbone d&apos;une compétition sportive provient majoritairement des déplacements des spectateurs et des participants : l&apos;agence met donc en œuvre des partenariats avec les réseaux de transport en commun (comme la gratuité du réseau Astuce pour les coureurs du Seine-Marathon 76) et incite activement aux mobilités douces.
+          La dimension environnementale constitue aujourd&apos;hui un impératif stratégique incontournable pour les opérateurs événementiels. Sous l&apos;impulsion des recommandations de l&apos;Agenda Olympique 2020+5 du CIO et des cadres d&apos;analyse de la responsabilité sociétale (Jurisport n° 117), Sport Plus Conseil intègre la sobriété écologique et les principes de la norme ISO 26000 au cœur de sa conception opérationnelle. L&apos;empreinte carbone d&apos;une compétition sportive provient majoritairement des mobilités : l&apos;agence déploie des partenariats avec les réseaux de transport urbain (gratuité du réseau Astuce pour les inscrits du Seine-Marathon 76) et incite activement aux mobilités douces.
         </p>
 
         <p>

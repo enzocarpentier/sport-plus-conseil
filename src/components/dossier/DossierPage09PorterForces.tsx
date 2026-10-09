@@ -41,7 +41,7 @@ export const DossierPage09PorterForces: React.FC<DossierPageProps> = ({
         </h2>
 
         <p>
-          La menace des nouveaux entrants est modérée par des barrières à l&apos;entrée structurelles très élevées. L&apos;organisation d&apos;événements sportifs télévisés requiert un capital réputationnel considérable, des garanties financières et d&apos;assurance à hauteur de plusieurs millions d&apos;euros, ainsi qu&apos;une maîtrise intime des réglementations administratives et préfectorales. Les ligues majeures refusent de confier leurs opérations à des acteurs émergents dépourvus d&apos;un historique irréprochable : l&apos;antériorité de Sport Plus Conseil depuis 1996 constitue donc un rempart concurrentiel majeur, difficilement reproductible par un nouvel arrivant.
+          La menace des nouveaux entrants est contenue par des barrières à l&apos;entrée structurelles majeures : cautionnements bancaires de plusieurs millions d&apos;euros, certifications de ligues mondiales et réputation historique depuis 1996. De surcroît, comme le formalise le modèle des 5 forces (+1) enseigné par Aurélien François, la sixième force déterminante réside dans l&apos;intervention des pouvoirs publics et des autorités régaliennes (État, préfectures, commissions de sécurité ERP) dont les agréments et arrêtés de circulation conditionnent l&apos;existence même des épreuves sur voie publique ou en aréna.
         </p>
 
         <p>

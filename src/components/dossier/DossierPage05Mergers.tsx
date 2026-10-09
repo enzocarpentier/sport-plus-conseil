@@ -33,7 +33,7 @@ export const DossierPage05Mergers: React.FC<DossierPageProps> = ({
         </p>
 
         <p>
-          Cette alliance a permis de conjuguer l&apos;expertise logistique historique forgée par Pascal Biojout avec une vision commerciale offensive axée sur le développement de partenariats premium et la monétisation des hospitalités B2B. La gouvernance bicéphale ainsi instaurée a insufflé une dynamique d&apos;expansion maîtrisée, renforçant la stature de Sport Plus Conseil en tant qu&apos;interlocuteur de confiance auprès de la Ligue Nationale de Basket et de la Fédération Française de Basket-Ball.
+          Cette alliance a permis de conjuguer l&apos;expertise logistique historique forgée par Pascal Biojout avec une vision commerciale offensive axée sur le développement de partenariats premium et la monétisation des hospitalités B2B. La gouvernance bicéphale ainsi instaurée a insufflé une dynamique d&apos;expansion maîtrisée, renforçant la stature de Sport Plus Conseil en tant qu&apos;interlocuteur de confiance incontournable auprès de la Ligue Nationale de Basket et de la Fédération Française de Basket-Ball, scellant des accords d&apos;exploitation pluriannuels majeurs.
         </p>
 
         <h2 className="academic-h1">

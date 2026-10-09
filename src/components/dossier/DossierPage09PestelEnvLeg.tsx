@@ -41,11 +41,11 @@ export const DossierPage09PestelEnvLeg: React.FC<DossierPageProps> = ({
         </h2>
 
         <p>
-          Le cadre juridique régissant l&apos;événementiel sportif en France figure parmi les plus stricts au monde. L&apos;exploitation d&apos;arénas fermées (Accor Arena, Kindarena) impose le respect des normes des Établissements Recevant du Public (ERP) de 1ère catégorie : commissions de sécurité, dimensionnement des issues de secours, désenfumage et accessibilité PMR. L&apos;agence doit en outre articuler ses dispositifs avec le niveau Urgence Attentat de Vigipirate, mobilisant des agents cynophiles et de sécurité agréés CNAPS, tout en coordonnant les postes médicaux avec le SAMU et la Croix-Rouge.
+          Le cadre juridique régissant l&apos;événementiel sportif en France figure parmi les plus stricts au monde. L&apos;exploitation d&apos;arénas fermées de premier plan (Accor Arena, Kindarena) impose le respect rigoureux des normes relatives aux Établissements Recevant du Public (ERP) de 1ère catégorie : commissions préfectorales de sécurité, dimensionnement des issues de secours, systèmes de désenfumage et accessibilité PMR intégrale. L&apos;agence doit en outre articuler ses dispositifs opérationnels avec le niveau Urgence Attentat du plan Vigipirate, mobilisant des agents cynophiles et des stadiers agréés CNAPS, tout en coordonnant les postes médicaux avancés avec le SAMU et la Croix-Rouge.
         </p>
 
         <p>
-          Au-delà du droit public, l&apos;agence se conforme aux cahiers des charges rigoureux des ligues délégataires (NBA, WTA) : droits à l&apos;image des athlètes, protection contre l&apos;<em>ambush marketing</em> dans les périmètres d&apos;exclusion commerciale et normes d&apos;éclairage TV. Enfin, la gestion des billetteries et listes d&apos;invités d&apos;affaires impose une stricte conformité au RGPD, écartant tout risque de contentieux ou d&apos;atteinte réputationnelle.
+          Au-delà du droit public et administratif, l&apos;agence se conforme aux cahiers des charges particulièrement exigeants des ligues mondiales et ayants droit délégataires (NBA, WTA) : cession des droits à l&apos;image des athlètes internationaux, protection contractuelle contre l&apos;<em>ambush marketing</em> dans les périmètres d&apos;exclusion commerciale et étalonnage des normes d&apos;éclairage pour la retransmission TV. Enfin, la collecte des données de billetterie dématérialisée et des fichiers d&apos;invités d&apos;affaires impose une conformité exemplaire au RGPD, écartant tout risque de contentieux juridique ou d&apos;atteinte réputationnelle préjudiciable.
         </p>
       </div>
 

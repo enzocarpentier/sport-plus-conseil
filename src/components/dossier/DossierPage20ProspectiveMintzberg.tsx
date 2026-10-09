@@ -33,7 +33,7 @@ export const DossierPage20ProspectiveMintzberg: React.FC<DossierPageProps> = ({
         </p>
 
         <p>
-          Parallèlement, la décarbonation totale constituera le défi existentiel de la prochaine décennie. L&apos;éco-conditionnalité des aides publiques et des contrats de sponsoring imposera de mesurer et de compenser les scopes 1, 2 et 3 du bilan carbone. L&apos;agence devra accentuer la logistique verte du Seine-Marathon et optimiser la performance énergétique des installations temporaires au Kindarena et à l&apos;Accor Arena pour préserver sa légitimité territoriale.
+          Parallèlement, la décarbonation totale constituera le défi existentiel majeur de la prochaine décennie. L&apos;éco-conditionnalité des aides publiques et des contrats de sponsoring imposera de mesurer et de compenser rigoureusement les scopes 1, 2 et 3 du bilan carbone global. L&apos;agence devra accentuer la logistique verte du Seine-Marathon et optimiser la performance énergétique des installations temporaires au Kindarena et à l&apos;Accor Arena pour préserver sa légitimité territoriale et sa licence sociale d&apos;exploitation auprès des générations futures.
         </p>
 
         <h2 className="academic-h1">
@@ -45,7 +45,7 @@ export const DossierPage20ProspectiveMintzberg: React.FC<DossierPageProps> = ({
         </p>
 
         <p>
-          Transposée au management d&apos;une organisation sportive de niveau 2, cette métaphore illustre le piège du réductionnisme managérial. Réduire Sport Plus Conseil à sa seule machinerie logistique, à son bilan d&apos;hospitalités B2B ou à sa visibilité médiatique reviendrait à méconnaître l&apos;essence de son modèle. Sa pérennité depuis 1996 repose sur sa capacité à articuler agilité de PME, excellence opérationnelle, modèle marchand autonome, ancrage normand et engagement sociétal. C&apos;est cette vision holistique qui assure à l&apos;agence un avantage concurrentiel durable au sommet du sport spectacle.
+          Transposée au management d&apos;une organisation sportive de niveau 2, cette métaphore illustre le piège du réductionnisme managérial. Réduire Sport Plus Conseil à sa seule machinerie logistique, à son bilan d&apos;hospitalités B2B ou à sa visibilité médiatique reviendrait à méconnaître l&apos;essence de son modèle d&apos;affaires. Sa pérennité depuis 1996 repose sur sa capacité à articuler agilité de PME, excellence opérationnelle, modèle marchand autonome, ancrage normand et engagement sociétal. C&apos;est cette vision holistique qui assure à l&apos;agence un avantage concurrentiel durable au sommet du sport spectacle français et européen face aux géants mondiaux.
         </p>
       </div>
 

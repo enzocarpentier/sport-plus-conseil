@@ -41,7 +41,7 @@ export const DossierPage03Intro: React.FC<DossierPageProps> = ({
         </p>
 
         <p>
-          Dès lors, la problématique centrale de cette étude s&apos;énonce ainsi : <em>comment une organisation sportive de niveau 2 à taille humaine parvient-elle à capter une valeur marchande durable face aux conglomérats du divertissement, en articulant excellence opérationnelle, ancrage territorial et engagement sociétal ?</em> Notre démarche articulera la présentation de la firme (Partie 1), son diagnostic environnemental (Partie 2), son modèle d&apos;affaires (Partie 3), ses stratégies à l&apos;œuvre (Partie 4), sa prospective selon Mintzberg (Partie 5) et ses sources (Partie 6).
+          Dès lors, la problématique centrale de cette étude s&apos;énonce ainsi : <em>comment une organisation sportive de niveau 2 à taille humaine parvient-elle à capter une valeur marchande durable face aux conglomérats du divertissement, en articulant excellence opérationnelle, ancrage territorial et engagement sociétal ?</em> Notre démarche articulera la présentation de la firme (Partie 1), son diagnostic macro et micro-environnemental (Partie 2), son modèle d&apos;affaires (Partie 3), ses orientations stratégiques opérationnelles (Partie 4), sa prospective holistique selon Mintzberg (Partie 5) et son appareil bibliographique universitaire (Partie 6).
         </p>
       </div>
 

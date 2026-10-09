@@ -45,7 +45,7 @@ export const DossierPage10PorterForces: React.FC<DossierPageProps> = ({
         </p>
 
         <p>
-          Enfin, la menace des produits de substitution s&apos;avère prégnante. Les événements sportifs rivalisent directement pour capter le budget loisir des ménages et les investissements de relations publiques B2B face aux concerts en arénas, festivals, compétitions d&apos;e-sport et plateformes de streaming haute définition. Pour contrer cette concurrence, Sport Plus Conseil mise sur l&apos;exclusivité de l&apos;émotion vécue en présentiel et sur le prestige relationnel des salons VIP, inimitables à distance.
+          Enfin, la menace des produits de substitution s&apos;avère prégnante. Les événements sportifs rivalisent directement pour capter le budget loisir des ménages et les investissements de relations publiques B2B face aux concerts en arénas, festivals, compétitions d&apos;e-sport et plateformes de streaming haute définition. Pour contrer cette concurrence, Sport Plus Conseil mise sur l&apos;exclusivité de l&apos;émotion sportive vécue en présentiel et sur le prestige relationnel de ses salons VIP, absolument impossibles à répliquer derrière un écran domestique.
         </p>
       </div>
 

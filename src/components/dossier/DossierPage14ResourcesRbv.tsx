@@ -33,7 +33,7 @@ export const DossierPage14ResourcesRbv: React.FC<DossierPageProps> = ({
         </p>
 
         <p>
-          Pour une organisation sportive de niveau 2 dont l&apos;activité est immatérielle et événementielle, l&apos;analyse des ressources impose une distinction rigoureuse entre les actifs matériels directement tangibles et les ressources intangibles, souvent invisibles dans le bilan comptable mais constitutives de la valeur marchande réelle de l&apos;agence.
+          Pour une organisation sportive de niveau 2 dont l&apos;activité est par essence immatérielle et événementielle, l&apos;analyse des ressources impose une distinction rigoureuse entre les actifs matériels directement tangibles et les ressources intangibles. Souvent invisibles dans le bilan comptable traditionnel, ces dernières constituent pourtant le véritable moteur de la valeur marchande réelle et de la rentabilité opérationnelle de l&apos;agence sur ses différents marchés d&apos;intervention.
         </p>
 
         <h2 className="academic-h1">

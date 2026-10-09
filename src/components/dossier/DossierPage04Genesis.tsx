@@ -33,7 +33,7 @@ export const DossierPage04Genesis: React.FC<DossierPageProps> = ({
         </p>
 
         <p>
-          Depuis près de trois décennies, l&apos;entreprise a traversé les mutations successives du spectacle sportif hexagonal, passant de simples prestations d&apos;animation à l&apos;ingénierie globale de méga-événements. Sa culture d&apos;entreprise, marquée par l&apos;amour du jeu et une exigence maniaque du détail sur le terrain, puise ses racines dans le parcours de ses fondateurs, pour qui chaque rendez-vous sportif constitue une œuvre éphémère devant concilier émotions collectives et rigueur protocolaire.
+          Depuis près de trois décennies, l&apos;entreprise a traversé les mutations successives du spectacle sportif hexagonal, passant de simples prestations d&apos;animation à l&apos;ingénierie globale de méga-événements. Sa culture d&apos;entreprise, marquée par l&apos;amour du jeu et une exigence maniaque du détail sur le terrain, puise ses racines dans le parcours de ses fondateurs, pour qui chaque rendez-vous sportif constitue une œuvre éphémère devant concilier intensité des émotions collectives, rigueur protocolaire d&apos;accueil et sécurité sans faille des spectateurs.
         </p>
 
         <h2 className="academic-h1">

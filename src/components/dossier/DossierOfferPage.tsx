@@ -19,7 +19,7 @@ export const DossierOfferPage: React.FC<DossierOfferPageProps> = ({
       }}
     >
       {/* En-tête courant académique (10 pt) */}
-      <div className="pb-1 mb-3 flex items-center justify-between text-[10pt] text-gray-700 border-b border-gray-400">
+      <div className="pb-1 mb-3 flex items-center justify-between text-[10pt] text-gray-700 border-b border-gray-400 shrink-0">
         <span className="uppercase tracking-wider">Stratégie des OS — Cas Sport Plus Conseil</span>
         <span className="italic">Parties 3 &amp; 4 : SWOT &amp; Modèle d&apos;Affaires</span>
       </div>
@@ -56,7 +56,7 @@ export const DossierOfferPage: React.FC<DossierOfferPageProps> = ({
       </div>
 
       {/* Pied de page académique : Numéro de page centré en 10 pt */}
-      <div className="pt-2 flex items-center justify-between text-[10pt] text-gray-700 border-t border-gray-400">
+      <div className="pt-2 flex items-center justify-between text-[10pt] text-gray-700 border-t border-gray-400 shrink-0 mt-auto">
         <span>Université de Rouen Normandie — UFR STAPS</span>
         <span className="font-mono font-medium">{pageNumber}</span>
         <span className="italic">Note collective de synthèse</span>

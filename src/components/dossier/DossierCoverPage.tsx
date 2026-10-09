@@ -16,7 +16,7 @@ export const DossierCoverPage: React.FC<DossierCoverPageProps> = ({ id }) => {
       }}
     >
       {/* En-tête universitaire officiel conforme à la fiche d'évaluation */}
-      <div className="text-center space-y-0.5">
+      <div className="text-center space-y-0.5 shrink-0">
         <p className="text-[12pt] font-bold uppercase tracking-wider">
           Université de Rouen Normandie
         </p>
@@ -30,7 +30,7 @@ export const DossierCoverPage: React.FC<DossierCoverPageProps> = ({ id }) => {
       </div>
 
       {/* Centre : Titre, nature et objet d'étude concret */}
-      <div className="text-center space-y-4 py-4">
+      <div className="text-center space-y-4 py-4 my-auto">
         <p className="text-[10pt] uppercase tracking-[0.2em] text-gray-600 font-medium">
           Dossier d&apos;Évaluation Continue — Note Stratégique (75 %)
         </p>
@@ -47,7 +47,7 @@ export const DossierCoverPage: React.FC<DossierCoverPageProps> = ({ id }) => {
       </div>
 
       {/* Bas de page compact : Les 5 étudiants, encadrement et mention */}
-      <div className="space-y-3 pt-3 border-t border-black text-[11pt]">
+      <div className="space-y-3 pt-3 border-t border-black text-[11pt] shrink-0 mt-auto">
         <div className="grid grid-cols-2 gap-6 items-start text-left">
           {/* Auteurs du dossier formatés de manière compacte */}
           <div>

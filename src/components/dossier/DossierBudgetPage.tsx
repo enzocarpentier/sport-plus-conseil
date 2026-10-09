@@ -46,30 +46,30 @@ export const DossierBudgetPage: React.FC<DossierBudgetPageProps> = ({
           En guise d&apos;analyse prospective valant conclusion, l&apos;avenir de Sport Plus Conseil repose sur sa capacité à hybrider l&apos;accueil de méga-événements mondiaux (NBA), l&apos;ancrage d&apos;épreuves régionales propriétaires (Seine-Marathon 76, Open Capfinances) et l&apos;expertise audiovisuelle de TV Sport Events. Comme le rappelle la métaphore des aveugles et des éléphants formalisée par Henry Mintzberg et ses coauteurs (2009) dans <em>Safari en pays stratégie</em>, la gouvernance d&apos;une agence sportive ne peut se limiter à une perception cloisonnée : l&apos;équilibre pérenne de son modèle d&apos;affaires exige une vision stratégique intégrée, unissant rigueur économique, logistique de terrain et responsabilité citoyenne.
         </p>
 
-        <div className="text-[10.5pt] leading-normal space-y-0.5 pt-1 border-t border-gray-300" style={{ textIndent: 0 }}>
-          <p style={{ textIndent: 0 }}>
+        <div className="academic-biblio">
+          <p>
             • <strong>BARNEY, J. B. (1991).</strong> « Firm Resources and Sustained Competitive Advantage », <em>Journal of Management</em>, vol. 17, n° 1, p. 99–120.
           </p>
-          <p style={{ textIndent: 0 }}>
+          <p>
             • <strong>FRANÇOIS, A. (2026).</strong> <em>Stratégie des organisations sportives</em>, Support de cours magistral et séminaire, UFR STAPS Rouen.
           </p>
-          <p style={{ textIndent: 0 }}>
+          <p>
             • <strong>FREEMAN, R. E. (1984).</strong> <em>Strategic Management: A Stakeholder Approach</em>, Boston, Pitman Publishing.
           </p>
-          <p style={{ textIndent: 0 }}>
+          <p>
             • <strong>MINTZBERG, H., AHLSTRAND, B., LAMPEL, J. (2009).</strong> <em>Safari en pays stratégie</em>, Paris, Pearson Education France.
           </p>
-          <p style={{ textIndent: 0 }}>
+          <p>
             • <strong>PORTER, M. E. (2001).</strong> « Strategy and the Internet », <em>Harvard Business Review</em>, vol. 79, n° 3, p. 62–78.
           </p>
-          <p style={{ textIndent: 0 }}>
+          <p>
             • <strong>OSTERWALDER, A., PIGNEUR, Y. (2010).</strong> <em>Business Model Nouvelle Génération</em>, Paris, Pearson.
           </p>
         </div>
       </div>
 
-      {/* Pied de page académique : Numéro de page centré en 10 pt */}
-      <div className="pt-2 flex items-center justify-between text-[10pt] text-gray-700 border-t border-gray-400">
+      {/* Pied de page académique : Verrouillé à l'intérieur de la feuille A4 */}
+      <div className="pt-2 flex items-center justify-between text-[10pt] text-gray-700 border-t border-gray-400 shrink-0 mt-auto">
         <span>Université de Rouen Normandie — UFR STAPS</span>
         <span className="font-mono font-medium">{pageNumber}</span>
         <span className="italic">Note collective de synthèse</span>

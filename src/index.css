@@ -39,7 +39,7 @@
     padding-top: 25mm !important;
     padding-left: 25mm !important;
     padding-right: 25mm !important;
-    padding-bottom: 27mm !important; /* Réserve de 27 mm au bas pour le pied de page verrouillé */
+    padding-bottom: 35mm !important; /* Réserve de 35 mm au bas : 25 mm de marge + 7 mm de footer + 3 mm de garde */
     font-family: 'Times New Roman', Times, 'Cambria', serif !important;
     color: #000000 !important;
     margin-left: auto !important;
@@ -166,7 +166,7 @@
     padding-top: 25mm !important;
     padding-left: 25mm !important;
     padding-right: 25mm !important;
-    padding-bottom: 27mm !important; /* Réserve de 27 mm au bas pour le pied de page verrouillé */
+    padding-bottom: 35mm !important; /* Réserve de 35 mm au bas : 25 mm de marge + 7 mm de footer + 3 mm de garde */
     display: flex !important;
     flex-direction: column !important;
     justify-content: flex-start !important;
@@ -205,16 +205,17 @@
   flex-shrink: 0 !important;
 }
 
-/* PIED DE PAGE ACADÉMIQUE : VERROUILLAGE PHYSIQUE ABSOLU À HAUTEUR CONSTANTE
-   • Norme officielle universitaire française : 1,8 cm du bord inférieur de la feuille
-   • Filet supérieur : placé à 2,3 cm du bord inférieur (23 mm)
-   • Texte et folio centré : scellés à 1,8 cm du bord inférieur (18 mm)
-   • Rigoureusement immobile et identique au millimètre près sur les 20 pages */
+/* PIED DE PAGE ACADÉMIQUE : VERROUILLAGE PHYSIQUE SUR LE CADRE DES MARGES CLASSIQUES (2,5 CM)
+   • Norme officielle universitaire française : aligné rigoureusement sur la marge inférieure de 2,5 cm (25 mm)
+   • Alignement parfait avec les marges gauche (25 mm), droite (25 mm) et haute (25 mm)
+   • Filet supérieur : placé à 3,2 cm du bord inférieur (32 mm)
+   • Texte et folio centré : scellés à 2,5 cm du bord inférieur (25 mm)
+   • Rigoureusement immobile et identique au millimètre près sur l'ensemble des 20 pages */
 .page-footer {
   position: absolute !important;
   left: 25mm !important;
   right: 25mm !important;
-  bottom: 16mm !important; /* Scellé à 16 mm du bord inférieur */
+  bottom: 25mm !important; /* Scellé exactement sur la marge classique de 2,5 cm (25 mm) */
   height: 7mm !important;
   display: flex !important;
   align-items: center !important;

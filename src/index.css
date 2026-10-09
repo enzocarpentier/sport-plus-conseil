@@ -94,6 +94,16 @@
   color: #000000 !important;
 }
 
+/* Sommaire académique : alignement à gauche strict, aucun espacement pour justifier */
+.sommaire-container,
+.sommaire-container a,
+.sommaire-container span,
+.sommaire-container div {
+  text-align: left !important;
+  text-justify: none !important;
+  word-spacing: normal !important;
+}
+
 .academic-body p {
   font-family: 'Times New Roman', Times, 'Cambria', serif !important;
   font-size: 12pt !important;

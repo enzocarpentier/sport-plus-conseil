@@ -34,9 +34,12 @@
     box-sizing: border-box !important;
     display: flex !important;
     flex-direction: column !important;
-    justify-content: space-between !important;
+    justify-content: flex-start !important;
     overflow: hidden !important;
-    padding: 25mm !important; /* Marges classiques exactes : 2,5 cm sur les 4 côtés */
+    padding-top: 25mm !important;
+    padding-left: 25mm !important;
+    padding-right: 25mm !important;
+    padding-bottom: 27mm !important; /* Réserve de 27 mm au bas pour le pied de page verrouillé */
     font-family: 'Times New Roman', Times, 'Cambria', serif !important;
     color: #000000 !important;
     margin-left: auto !important;
@@ -160,13 +163,17 @@
     max-height: 296.8mm !important;
     box-sizing: border-box !important;
     margin: 0 !important;
-    padding: 25mm !important; /* Marges classiques exactes : 2,5 cm sur les 4 côtés */
+    padding-top: 25mm !important;
+    padding-left: 25mm !important;
+    padding-right: 25mm !important;
+    padding-bottom: 27mm !important; /* Réserve de 27 mm au bas pour le pied de page verrouillé */
     display: flex !important;
     flex-direction: column !important;
-    justify-content: space-between !important;
+    justify-content: flex-start !important;
     box-shadow: none !important;
     border: none !important;
     overflow: hidden !important;
+    position: relative !important;
     background-color: #ffffff !important;
     page-break-inside: avoid !important;
     break-inside: avoid !important;
@@ -174,6 +181,13 @@
     break-after: auto !important;
     font-family: 'Times New Roman', Times, 'Cambria', serif !important;
   }
+}
+
+/* EXCEPTION PAGE DE GARDE (PAGE 1) : ÉTALEMENT VERTICAL HARMONIEUX */
+#dossier-page-1,
+.cover-page-container {
+  justify-content: space-between !important;
+  padding-bottom: 25mm !important;
 }
 
 /* EN-TÊTE COURANT ACADÉMIQUE : TOUJOURS STRICTEMENT SUR UNE SEULE LIGNE */
@@ -189,6 +203,38 @@
 .page-header span {
   white-space: nowrap !important;
   flex-shrink: 0 !important;
+}
+
+/* PIED DE PAGE ACADÉMIQUE : VERROUILLAGE PHYSIQUE ABSOLU À HAUTEUR CONSTANTE
+   • Norme officielle universitaire française : 1,8 cm du bord inférieur de la feuille
+   • Filet supérieur : placé à 2,3 cm du bord inférieur (23 mm)
+   • Texte et folio centré : scellés à 1,8 cm du bord inférieur (18 mm)
+   • Rigoureusement immobile et identique au millimètre près sur les 20 pages */
+.page-footer {
+  position: absolute !important;
+  left: 25mm !important;
+  right: 25mm !important;
+  bottom: 16mm !important; /* Scellé à 16 mm du bord inférieur */
+  height: 7mm !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+  border-top: 1px solid #9ca3af !important; /* Filet académique border-gray-400 */
+  padding-top: 1.5mm !important;
+  margin: 0 !important;
+  font-size: 10pt !important;
+  color: #374151 !important; /* text-gray-700 */
+  font-family: 'Times New Roman', Times, 'Cambria', serif !important;
+  background-color: transparent !important;
+  z-index: 20 !important;
+  white-space: nowrap !important;
+  box-sizing: border-box !important;
+}
+
+.page-footer span {
+  font-family: 'Times New Roman', Times, 'Cambria', serif !important;
+  font-size: 10pt !important;
+  white-space: nowrap !important;
 }
 
 /* VERROUILLAGE TNR 12 PT & INTERLIGNE 1,5 SUR TOUT LE CONTENU ACADÉMIQUE */

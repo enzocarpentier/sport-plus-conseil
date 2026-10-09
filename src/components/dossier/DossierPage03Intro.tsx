@@ -33,7 +33,7 @@ export const DossierPage03Intro: React.FC<DossierPageProps> = ({
         </p>
 
         <p>
-          Au sein de cet écosystème, la typologie des organisations sportives établie par Emmanuel Bayle (2007) et enseignée par Aurélien François offre une grille d&apos;analyse particulièrement féconde en distinguant quatre niveaux d&apos;acteurs. Alors que les organisations de niveau 1 (fédérations internationales, ligues professionnelles, clubs affiliés) sont investies d&apos;une mission d&apos;intérêt général centrée sur la production du jeu et la régulation compétitive, les organisations de niveau 2 — au rang desquelles figurent les agences de conseil, les régies commerciales et les opérateurs d&apos;ingénierie événementielle — s&apos;inscrivent dans une logique marchande d&apos;entreprise de services. Pour ces dernières, la captation de valeur économique marchande, la rentabilité financière et la couverture des risques d&apos;exploitation ne sont pas accessoires : elles conditionnent leur existence même.
+          Au sein de cet écosystème, la typologie des organisations sportives établie par Emmanuel Bayle (2007) et enseignée par Aurélien François distingue quatre niveaux d&apos;acteurs. Alors que le niveau 1 (fédérations, ligues, clubs) assure la régulation compétitive et la production du jeu sous mandat d&apos;intérêt général, les organisations de niveau 2 — agences de conseil, régies et opérateurs événementiels — relèvent d&apos;une logique marchande de prestation de services. Pour ces dernières, la captation de valeur économique, l&apos;équilibre financier et la maîtrise des risques d&apos;exploitation conditionnent directement leur survie et leur autonomie stratégique.
         </p>
 
         <p>
@@ -41,12 +41,12 @@ export const DossierPage03Intro: React.FC<DossierPageProps> = ({
         </p>
 
         <p>
-          Dès lors, la problématique centrale de cette étude s&apos;énonce ainsi : <em>comment une organisation sportive de niveau 2 à taille humaine parvient-elle à créer et capter une valeur marchande durable face à la concurrence des conglomérats mondiaux du divertissement, en articulant excellence opérationnelle, maillage territorial de proximité et engagement sociétal ?</em> Pour y répondre, notre analyse déploiera successivement la présentation de la firme (Partie 1), le diagnostic de son environnement (Partie 2), la modélisation de son modèle d&apos;affaires (Partie 3), l&apos;examen de ses stratégies à l&apos;œuvre (Partie 4), une prospective éclairée par la fable de Mintzberg (Partie 5) et notre corpus bibliographique (Partie 6).
+          Dès lors, la problématique centrale de cette étude s&apos;énonce ainsi : <em>comment une organisation sportive de niveau 2 à taille humaine parvient-elle à capter une valeur marchande durable face aux conglomérats du divertissement, en articulant excellence opérationnelle, ancrage territorial et engagement sociétal ?</em> Notre démarche articulera la présentation de la firme (Partie 1), son diagnostic environnemental (Partie 2), son modèle d&apos;affaires (Partie 3), ses stratégies à l&apos;œuvre (Partie 4), sa prospective selon Mintzberg (Partie 5) et ses sources (Partie 6).
         </p>
       </div>
 
       {/* Pied de page académique centré */}
-      <div className="pt-2 flex items-center justify-between text-[10pt] text-gray-700 border-t border-gray-400 shrink-0 mt-auto w-full relative">
+      <div className="page-footer pt-2 flex items-center justify-between text-[10pt] text-gray-700 border-t border-gray-400 shrink-0 mt-auto w-full relative">
         <span className="text-left whitespace-nowrap">Université de Rouen Normandie — UFR STAPS</span>
         <span className="absolute left-1/2 -translate-x-1/2 font-medium text-[10.5pt]">{pageNumber}</span>
         <span className="text-right italic whitespace-nowrap">Note collective de synthèse</span>

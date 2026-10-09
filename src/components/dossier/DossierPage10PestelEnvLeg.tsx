@@ -6,7 +6,7 @@ interface DossierPageProps {
   totalPages: number
 }
 
-export const DossierPage09PestelEnvLeg: React.FC<DossierPageProps> = ({
+export const DossierPage10PestelEnvLeg: React.FC<DossierPageProps> = ({
   id,
   pageNumber
 }) => {

@@ -6,7 +6,7 @@ interface DossierPageProps {
   totalPages: number
 }
 
-export const DossierPage10PorterForces: React.FC<DossierPageProps> = ({
+export const DossierPage11PorterForces: React.FC<DossierPageProps> = ({
   id,
   pageNumber
 }) => {

@@ -19,33 +19,33 @@ export const DossierPage10PorterForces: React.FC<DossierPageProps> = ({
       {/* En-tête courant académique */}
       <div className="page-header pb-1 mb-3 flex items-center justify-between text-[10pt] text-gray-700 border-b border-gray-400 shrink-0 w-full overflow-hidden">
         <span className="uppercase tracking-wide whitespace-nowrap shrink-0">Stratégie des OS — Cas Sport Plus Conseil</span>
-        <span className="italic whitespace-nowrap shrink-0">Partie 2 : Modèle des 5 Forces de Porter</span>
+        <span className="italic whitespace-nowrap shrink-0">Partie 2 : Analyse Interne &amp; Externe (SWOT 1/2)</span>
       </div>
 
       {/* Corps du texte */}
       <div className="academic-body flex-1 flex flex-col justify-start">
         <h2 className="academic-h1">
-          2.7 Rivalité Sectorielle et Pouvoir de Négociation des Clients et Fournisseurs
+          2.7 Justification Épistémologique : Choix du PESTEL et du SWOT face aux Limites de Porter
         </h2>
 
         <p>
-          Pour cartographier le micro-environnement concurrentiel, le modèle des 5 forces (+1) de Michael Porter s&apos;avère particulièrement pertinent : une agence de niveau 2 opère à la croisée d&apos;un marché biface, soumise simultanément aux exigences d&apos;ayants droit en amont et de clients en aval. L&apos;intensité de la rivalité sectorielle y est particulièrement vive : l&apos;agence affronte des groupes transnationaux aux capitaux massifs (Live Nation Entertainment, IMG Events, Infront Sports &amp; Media, consortium AEG / Lagardère). Face à ces géants capables d&apos;injecter des garanties considérables, Sport Plus Conseil fait prévaloir sa réactivité de PME indépendante, son ancrage territorial intime et son savoir-faire d&apos;ingénierie opérationnelle.
+          L&apos;analyse stratégique de l&apos;environnement d&apos;une organisation sportive de niveau 2 requiert une vigilance méthodologique fondamentale quant au choix des cadres conceptuels mobilisés. Si le modèle des 5 forces de Michael Porter (1980) constitue une référence classique pour apprécier la dynamique concurrentielle des marchés industriels conventionnels, son application directe au cas de Sport Plus Conseil se heurte à des limites théoriques majeures soulevées par la littérature contemporaine du management du sport (Bayle, 2007 ; Desbordes, 2019).
         </p>
 
         <p>
-          Le pouvoir de négociation des clients est très élevé, qu&apos;il s&apos;agisse des ayants droit (NBA, LNB, WTA) ou des collectivités locales délégantes, qui imposent des procédures d&apos;appel d&apos;offres d&apos;une extrême rigueur. Côté fournisseurs, le pouvoir de négociation est également substantiel : les exploitants d&apos;arénas sportives de premier plan (Accor Arena à Paris-Bercy, Kindarena de Rouen) exercent une situation de quasi-monopole d&apos;infrastructure couverte dans leurs bassins respectifs. Les prestataires de sécurité privée agréés CNAPS et les techniciens spécialisés dans les parquets homologués FIBA bénéficient aussi d&apos;un levier tarifaire lié à la rareté de leurs compétences certifiées.
+          En effet, Sport Plus Conseil se caractérise par une forte intégration verticale et un modèle de co-production hybride qui estompent les frontières catégorielles étanches du schéma porterien. L&apos;agence dispose en interne de sa propre filiale de production audiovisuelle (TV Sport Events), détient en propre la majorité du capital d&apos;un club d&apos;élite (les Dragons de Rouen en Ligue Magnus) et opère comme régisseur délégué d&apos;arénas publiques. Dès lors, les acteurs de son écosystème ne se cantonnent pas à un rôle univoque : les ayants droit mondiaux (NBA, WTA, LNB) agissent simultanément comme des concédants de licences, des clients prescripteurs et des partenaires opérationnels au sein d&apos;un marché biface. Face à cet effacement des clivages entre fournisseurs, clients et concurrents, l&apos;articulation entre un diagnostic macro-environnemental PESTEL approfondi et une matrice SWOT stratégique croisée s&apos;avère scientifiquement bien plus féconde et robuste pour appréhender le positionnement de la firme.
         </p>
 
         <h2 className="academic-h1">
-          2.8 Menaces des Entrants Potentiels et des Produits de Substitution
+          2.8 Diagnostic Interne Détaillé : Forces Compétitives et Vulnérabilités de la PME
         </h2>
 
         <p>
-          La menace des nouveaux entrants est contenue par de fortes barrières structurelles : cautionnements bancaires de plusieurs millions d&apos;euros, certifications de ligues mondiales et réputation historique depuis 1996. De surcroît, comme le formalise le modèle des 5 forces (+1) enseigné par Aurélien François, la sixième force déterminante réside dans l&apos;intervention des pouvoirs publics et autorités régaliennes (État, préfectures, commissions ERP) dont les agréments conditionnent l&apos;existence même des épreuves sur voie publique ou en aréna.
+          Le versant interne de l&apos;analyse SWOT met en lumière un socle de forces distinctives rares. La première réside dans la diversification équilibrée de son portefeuille multisport (sport-spectacle NBA, tournoi WTA 250, All Star Game LNB, running populaire du Seine-Marathon 76 et club professionnel de hockey sur glace), immunisant l&apos;entreprise contre les aléas conjoncturels d&apos;une discipline isolée. La deuxième force découle de la maîtrise complète de la chaîne de valeur événementielle, de la conception à la diffusion audiovisuelle. Enfin, le capital social et relationnel exceptionnel de ses dirigeants (Pascal Biojout, Gaëtan Muller) constitue un actif immatériel déterminant pour remporter la confiance des ligues mondiales et des décideurs économiques régionaux.
         </p>
 
         <p>
-          Enfin, la menace des produits de substitution s&apos;avère prégnante. Les événements sportifs rivalisent directement pour capter le budget loisir des ménages et les investissements de relations publiques B2B face aux concerts en arénas, festivals, compétitions d&apos;e-sport et plateformes de streaming haute définition. Pour contrer cette concurrence, Sport Plus Conseil mise sur l&apos;exclusivité de l&apos;émotion sportive vécue en présentiel et sur le prestige relationnel de ses salons VIP, absolument impossibles à répliquer derrière un écran domestique.
+          À l&apos;inverse, les faiblesses organisationnelles procèdent principalement de sa structure de PME resserrée d&apos;une quinzaine de collaborateurs permanents. Cette taille humaine génère une forte intensité de charge lors des pics calendaires et implique une dépendance critique envers des prestataires techniques externalisés ainsi qu&apos;envers un vivier de centaines de bénévoles indispensables à l&apos;équilibre économique des courses sur route.
         </p>
       </div>
 

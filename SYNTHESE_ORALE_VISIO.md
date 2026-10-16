@@ -133,10 +133,11 @@
 * **Professionnalisation :** Passage d'un artisanat événementiel né en 1996 à une PME hautement professionnalisée conforme aux standards les plus drastiques de la planète (NBA, WTA, FIBA), intégrant billetterie dynamique digitalisée, CRM qualifié et protocoles sécuritaires ERP de 1ère catégorie.
 
 ### 📌 Point 2 : Analyse de l'Environnement
-* **Quels outils ?** PESTEL (macro) + 5 (+1) Forces de Porter (micro) + Matrice SWOT (synthèse matricielle).
-* **Pertinence des outils pour une OS 2 :** 
-  - Une OS 2 est une agence commerciale privée sans mandat régalien : elle subit directement les variables macro (PESTEL) comme les politiques publiques locales, l'inflation des coûts d'énergie ou le risque de change EUR/USD sur les contrats NBA/WTA.
-  - Sur le plan micro (Porter), elle opère sur un marché biface : forte dépendance envers les ayants droit en amont et forte concurrence des loisirs de substitution (e-sport, concerts, streaming) en aval.
+* **Quels outils ?** Grand PESTEL complet (macro) + Diagnostic SWOT étendu avec matrice TOWS (confrontation stratégique).
+* **Pourquoi avoir délibérément écarté Porter ? (Argument clé vis-à-vis du professeur) :**
+  - Le modèle classique de Porter (1980) suppose des frontières étanches entre Fournisseurs, Clients et Concurrents. Or, **Sport Plus Conseil est hautement intégrée verticalement** : elle possède sa propre filiale de production TV (*TV Sport Events*), détient en direct un club professionnel d'élite (*Dragons de Rouen*) et co-produit ses événements avec les ligues.
+  - Les ayants droit (NBA, WTA, LNB) sont à la fois des concédants de droits, des clients et des partenaires opérationnels au sein d'un marché biface.
+  - Appliquer Porter conduisait à forcer artificiellement les cases. Le choix méthodologique s'est donc porté sur un **PESTEL approfondi** (l'OS 2 subit directement le macro-environnement : subventions locales, inflation énergie, risque de change USD/EUR) et un **SWOT/TOWS croisé** bien plus fidèle à la réalité hybride de l'agence.
 
 ### 📌 Point 3 : Analyse du Modèle d'Affaires (Business Model)
 * **Parties prenantes apporteuses de ressources (Freeman 1984) :**

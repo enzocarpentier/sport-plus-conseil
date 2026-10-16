@@ -19,33 +19,33 @@ export const DossierPage11Swot: React.FC<DossierPageProps> = ({
       {/* En-tête courant académique */}
       <div className="page-header pb-1 mb-3 flex items-center justify-between text-[10pt] text-gray-700 border-b border-gray-400 shrink-0 w-full overflow-hidden">
         <span className="uppercase tracking-wide whitespace-nowrap shrink-0">Stratégie des OS — Cas Sport Plus Conseil</span>
-        <span className="italic whitespace-nowrap shrink-0">Partie 2 : Diagnostic SWOT Global</span>
+        <span className="italic whitespace-nowrap shrink-0">Partie 2 : Diagnostic SWOT Croisé (SWOT 2/2)</span>
       </div>
 
       {/* Corps du texte */}
       <div className="academic-body flex-1 flex flex-col justify-start">
         <h2 className="academic-h1">
-          2.9 Diagnostic Interne : Forces Distinctives et Vulnérabilités Organisationnelles
+          2.9 Diagnostic Externe : Opportunités de Croissance et Menaces Environnementales
         </h2>
 
         <p>
-          Le diagnostic interne de Sport Plus Conseil met en évidence des forces compétitives de premier rang. La première réside dans son portefeuille multisport équilibré (basket-ball d&apos;élite avec la NBA et la LNB, running populaire avec le Seine-Marathon 76, tennis WTA 250, handball fédéral), prémunissant l&apos;entreprise contre les aléas d&apos;une discipline unique. La deuxième force est son intégration verticale : de l&apos;ingénierie commerciale à la captation audiovisuelle via TV Sport Events, l&apos;agence maîtrise toute la chaîne de valeur. Enfin, la notoriété et le réseau d&apos;influence de ses dirigeants (Gaëtan Muller, Pascal Biojout, Charles Roche) constituent un accélérateur d&apos;affaires décisif.
+          Sur le versant externe, les opportunités issues du macro-environnement confortent la trajectoire d&apos;expansion de Sport Plus Conseil. L&apos;appétence renouvelée des entreprises pour les relations publiques expérientielles et les hospitalités VIP permet de dégager des marges unitaires substantielles sur les événements d&apos;élite. L&apos;essor continu du « sportainment », la médiatisation accélérée du sport féminin (WTA) et l&apos;exigence sociétale de décarbonation constituent des leviers puissants pour séduire de nouveaux commanditaires privés sensibles aux engagements RSE. Par ailleurs, la détention des Dragons de Rouen ouvre des perspectives fécondes de synergies territoriales et de fidélisation d&apos;abonnés dans le bassin normand.
         </p>
 
         <p>
-          À l&apos;opposé, les vulnérabilités découlent de son modèle de PME. Avec 10 à 19 salariés permanents, l&apos;agence subit une tension opérationnelle intense lors de la concomitance de grands rendez-vous (All Star Game en décembre, Open de Rouen au printemps). Cette taille modeste induit une dépendance envers des prestataires techniques externalisés et un vivier de centaines de bénévoles dont la fidélisation demeure un enjeu constant. Enfin, certaines manifestations régionales restent sensibles au maintien des subventions publiques des collectivités locales.
+          Néanmoins, les menaces externes imposent une vigilance managériale permanente. La concurrence des groupes mondiaux du spectacle (Live Nation, Infront, IMG), capables d&apos;engager des garanties financières considérables, exerce une pression concurrentielle sur les droits d&apos;exploitation. À cela s&apos;ajoutent l&apos;inflation persistante des coûts opérationnels (sécurité agréée CNAPS, énergie pour le chauffage de la terre battue indoor, loyers d&apos;arénas) et le risque de rationalisation des subventions des collectivités publiques dans le contexte budgétaire post-olympique.
         </p>
 
         <h2 className="academic-h1">
-          2.10 Diagnostic Externe : Opportunités de Croissance et Menaces du Marché
+          2.10 Matrice Stratégique Croisée (TOWS) et Alignement des Orientations
         </h2>
 
         <p>
-          Sur le versant externe, les opportunités de marché sont particulièrement attractives. L&apos;appétence des entreprises pour les hospitalités VIP offre des marges unitaires élevées sur les événements de prestige. L&apos;essor du « sportainment », la médiatisation du sport féminin et l&apos;exigence écologique constituent des leviers puissants pour séduire de nouveaux annonceurs soucieux de valoriser leur politique RSE. De surcroît, le rachat des Dragons de Rouen (RHE 76) ouvre un champ fertile de mutualisations commerciales et d&apos;abonnements croisés dans la métropole rouennaise.
+          La confrontation des forces et faiblesses internes avec les opportunités et menaces externes (matrice stratégique TOWS de Weihrich, 1982) permet de dégager quatre orientations opérationnelles majeures pour Sport Plus Conseil :
         </p>
 
         <p>
-          Cependant, les menaces environnementales imposent une vigilance managériale soutenue. La concurrence des multinationales de l&apos;événementiel (Live Nation, Infront, IMG), capables d&apos;absorber des déficits initiaux pour remporter des appels d&apos;offres, exerce une pression sur les marges de l&apos;agence. S&apos;y ajoutent le resserrement prévisible des budgets des collectivités territoriales et l&apos;inflation persistante des coûts d&apos;exploitation des grandes arénas (Accor Arena, Kindarena), de la sécurité et de l&apos;énergie, rognant la rentabilité nette des opérations.
+          Premièrement, l&apos;axe <em>Forces-Opportunités (Maxi-Maxi)</em> consiste à exploiter l&apos;expertise technique de l&apos;agence et ses labels prestigieux (NBA, WTA) pour capter la demande croissante d&apos;hospitalités B2B régionales. Deuxièmement, l&apos;axe <em>Faiblesses-Opportunités (Mini-Maxi)</em> vise à compenser la taille resserrée de la PME en nouant des alliances pluriannuelles avec les collectivités et les associations de bénévoles, convertissant les ressources territoriales en leviers d&apos;agilité. Troisièmement, l&apos;axe <em>Forces-Menaces (Maxi-Mini)</em> mobilise l&apos;intégration verticale (TV Sport Events, régie) et l&apos;ancrage local pour résister aux tentatives de prédation des multinationales du divertissement. Enfin, l&apos;axe <em>Faiblesses-Menaces (Mini-Mini)</em> impose de pré-financer systématiquement les productions événementielles par des contrats de partenariat amont, sanctuarisant la rentabilité face aux risques d&apos;inflation des coûts.
         </p>
       </div>
 

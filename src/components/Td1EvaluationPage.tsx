@@ -343,37 +343,33 @@ export const Td1EvaluationPage: React.FC<Td1EvaluationPageProps> = ({
                     onClick={() => onNavigateToDossierPage(7)}
                     className="text-xs text-amber-700 hover:text-amber-900 font-medium bg-amber-50 px-2 py-0.5 rounded border border-amber-200 transition-colors cursor-pointer"
                   >
-                    P.7 PESTEL
+                    P.7-9 PESTEL
                   </button>
                   <button
                     onClick={() => onNavigateToDossierPage(10)}
                     className="text-xs text-amber-700 hover:text-amber-900 font-medium bg-amber-50 px-2 py-0.5 rounded border border-amber-200 transition-colors cursor-pointer"
                   >
-                    P.10 Porter
+                    P.10 SWOT (1/2)
                   </button>
                   <button
                     onClick={() => onNavigateToDossierPage(11)}
                     className="text-xs text-amber-700 hover:text-amber-900 font-medium bg-amber-50 px-2 py-0.5 rounded border border-amber-200 transition-colors cursor-pointer"
                   >
-                    P.11 SWOT
+                    P.11 SWOT (2/2) &amp; TOWS
                   </button>
                 </div>
               </div>
               <p>
-                Trois outils théoriques complémentaires issus du management stratégique :
+                Deux outils méthodologiques centraux, complémentaires et scientifiquement éprouvés pour une OS 2 :
               </p>
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-3 pt-1 text-xs">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-3 pt-1 text-xs">
                 <div className="bg-amber-50/50 p-3 rounded-lg border border-amber-100">
-                  <strong className="text-amber-900 block mb-1">1. Matrice PESTEL (Macro)</strong>
-                  Étude exhaustive des 6 dimensions : Politique, Économique, Sociale, Technologique, Écologique et Légale.
+                  <strong className="text-amber-900 block mb-1">1. Matrice PESTEL Approfondie (Macro)</strong>
+                  Étude exhaustive des 6 dimensions macro-environnementales : Politique, Économique, Sociale, Technologique, Écologique et Légale (Pages 7 à 9 du dossier).
                 </div>
                 <div className="bg-amber-50/50 p-3 rounded-lg border border-amber-100">
-                  <strong className="text-amber-900 block mb-1">2. 5 Forces (+1) de Porter (Micro)</strong>
-                  Cartographie des pressions concurrentielles, du pouvoir des ayants droit, et de l&apos;intervention régalienne de l&apos;État.
-                </div>
-                <div className="bg-amber-50/50 p-3 rounded-lg border border-amber-100">
-                  <strong className="text-amber-900 block mb-1">3. Diagnostic SWOT</strong>
-                  Synthèse croisée des Forces / Faiblesses internes face aux Opportunités / Menaces externes.
+                  <strong className="text-amber-900 block mb-1">2. Diagnostic SWOT Étendu &amp; Matrice TOWS (Micro/Méso)</strong>
+                  Confrontation rigoureuse des Forces / Faiblesses internes face aux Opportunités / Menaces externes, débouchant sur 4 axes stratégiques croisés (Pages 10 et 11).
                 </div>
               </div>
             </div>
@@ -381,13 +377,13 @@ export const Td1EvaluationPage: React.FC<Td1EvaluationPageProps> = ({
             {/* PERTINENCE DE L'OUTIL PAR RAPPORT À L'ORGANISATION CHOISIE */}
             <div className="border-l-4 border-purple-600 pl-4 py-1 space-y-3">
               <h3 className="font-bold text-gray-900 text-base">
-                § Pertinence de l’outil par rapport à l’organisation choisie
+                § Pertinence de l’outil et justification du retrait de Porter
               </h3>
               
               <div className="space-y-3 text-xs sm:text-sm">
                 <div className="bg-purple-50/40 p-3.5 rounded-lg border border-purple-100">
                   <strong className="text-purple-950 font-serif block mb-1 text-sm">
-                    Pourquoi le PESTEL est-il pertinent pour une OS 2 ?
+                    Pourquoi le PESTEL est-il l&apos;outil d&apos;analyse roi pour une OS 2 ?
                   </strong>
                   <p className="text-gray-700">
                     Contrairement aux organisations de niveau 1 (fédérations ou ligues) qui disposent d&apos;une autorité réglementaire et d&apos;un monopole délégué par l&apos;État, une organisation sportive de niveau 2 comme Sport Plus Conseil est une <strong>société commerciale privée exposée de plein fouet aux variables macro-économiques</strong>. Elle ne maîtrise ni les arrêtés préfectoraux de sécurité, ni l&apos;inflation des coûts de l&apos;énergie, ni les arbitrages de subventions publiques des collectivités. Le PESTEL est donc indispensable pour identifier les risques régaliens et les fenêtres sociétales favorables (parité, sport-santé).
@@ -396,10 +392,10 @@ export const Td1EvaluationPage: React.FC<Td1EvaluationPageProps> = ({
 
                 <div className="bg-purple-50/40 p-3.5 rounded-lg border border-purple-100">
                   <strong className="text-purple-950 font-serif block mb-1 text-sm">
-                    Pourquoi les 5 Forces (+1) de Porter sont-elles pertinentes ?
+                    Pourquoi écarter le modèle des 5 forces de Porter au profit d&apos;un grand SWOT ?
                   </strong>
                   <p className="text-gray-700">
-                    Sport Plus Conseil opère au cœur d&apos;un <strong>marché biface</strong> : elle doit négocier en amont avec des fournisseurs/ayants droit monopolistiques tout-puissants (la NBA ou la WTA imposant des cahiers des charges drastiques), tout en commercialisant en aval auprès de spectateurs et d&apos;entreprises courtisés par une multitude de substituts de divertissement (concerts, streaming, parcs à thème). L&apos;intensité concurrentielle y est exacerbée par la présence de mastodontes mondiaux (Live Nation, Infront, IMG).
+                    Comme l&apos;enseigne la littérature académique contemporaine, <strong>le modèle de Porter (1980) est inadapté à une firme hautement intégrée verticalement telle que Sport Plus Conseil</strong>. En effet, l&apos;agence dispose de sa propre filiale de production audiovisuelle (TV Sport Events), détient en direct un club professionnel (les Dragons de Rouen) et co-produit ses événements avec les ligues. Les frontières porteriennes classiques entre « fournisseurs », « concurrents » et « clients » s&apos;estompent complètement. Un SWOT étendu complété par la matrice TOWS permet d&apos;analyser avec bien plus de justesse la dynamique relationnelle hybride de la firme.
                   </p>
                 </div>
               </div>

@@ -29,7 +29,7 @@ export const DossierPage04Genesis: React.FC<DossierPageProps> = ({
         </h2>
 
         <p>
-          Fondée en 1996 sous l&apos;impulsion de Pascal Biojout, Sport Plus Conseil s&apos;est constituée avec l&apos;ambition de combler le déficit de professionnalisme dans la commercialisation et l&apos;exploitation opérationnelle des spectacles sportifs en France. Évoluant sous la forme d&apos;une Société par Actions Simplifiée (SAS), l&apos;agence incarne de manière archétypale le concept d&apos;organisation sportive de niveau 2 développé dans la littérature académique du management du sport : elle ne produit pas directement la performance athlétique mais structure les conditions logistiques, marchandes et médiatiques nécessaires à sa valorisation.
+          Fondée en 1996 sous l&apos;impulsion de Pascal Biojout, Sport Plus Conseil s&apos;est constituée avec l&apos;ambition d&apos;accompagner la professionnalisation du spectacle sportif français et de jouer sur plusieurs tableaux stratégiques complémentaires (ingénierie d&apos;arénas, régie commerciale, conseil aux ayants droit, production TV et gestion de club). Évoluant sous la forme d&apos;une Société par Actions Simplifiée (SAS), l&apos;agence incarne de manière archétypale le concept d&apos;organisation sportive de niveau 2 développé dans la littérature académique du management du sport : elle ne produit pas directement la performance athlétique mais structure les conditions logistiques, marchandes et médiatiques nécessaires à sa valorisation.
         </p>
 
         <p>

@@ -29,7 +29,7 @@ export const DossierPage07PestelPolEco: React.FC<DossierPageProps> = ({
         </h2>
 
         <p>
-          L&apos;analyse macro-environnementale par la méthode PESTEL débute par l&apos;examen des facteurs politiques, qui exercent une influence prépondérante sur le secteur événementiel sportif français. L&apos;organisation des Jeux Olympiques et Paralympiques de Paris 2024 a insufflé un élan étatique en faveur de la pratique sportive et des grands rassemblements populaires. Toutefois, dans cette phase post-olympique, les politiques publiques font face à de fortes restrictions budgétaires, contraignant l&apos;État et les collectivités territoriales à réévaluer leurs priorités d&apos;attribution de subventions aux projets événementiels privés.
+          L&apos;analyse de l&apos;environnement requiert le choix d&apos;outils rigoureux et adaptés à la structure étudiée. Pour une organisation sportive de niveau 2 telle que Sport Plus Conseil, la méthode PESTEL s&apos;avère particulièrement pertinente : n&apos;ayant pas de pouvoir régalien sur son marché, l&apos;agence commerciale privée est directement tributaire des variables macro-environnementales. L&apos;examen de ces déterminants débute par les facteurs politiques, qui exercent une influence prépondérante sur le secteur événementiel français. Si les Jeux de Paris 2024 ont insufflé un élan étatique au sport, la phase post-olympique est marquée par des restrictions budgétaires, contraignant l&apos;État et les collectivités territoriales à réévaluer leurs subventions aux projets événementiels privés.
         </p>
 
         <p>

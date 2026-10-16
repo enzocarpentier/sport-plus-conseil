@@ -122,7 +122,50 @@
 
 ---
 
-## 💡 4. LES 4 QUESTIONS PIÈGES DU JURY (Et les répliques parfaites)
+## 🎯 4. LA GRILLE OFFICIELLE DU PROFESSEUR — CHECKLIST TD N°1 (Aurélien François)
+> *Cette section répond mot pour mot aux points de contrôle exigés dans la fiche `docs/consignes/TD 1 - Point davancée du dossier.pdf`.*
+
+### 📌 Point 1 : Pertinence du choix de Sport Plus Conseil
+* **Accès et qualité de l'information :** Données financières et juridiques vérifiées (SAS, bilans, registre du commerce), déclarations publiques de Pascal Biojout et Gaëtan Muller, presse spécialisée (*L'Équipe*, *SportBusiness.Club*, *Sport Stratégies*).
+* **Jouer sur plusieurs tableaux :** Oui, c'est l'essence même de l'agence !
+  - *Multisport :* Basket (NBA, All Star Game LNB, 3x3), Tennis féminin (WTA 250), Running de masse (Seine-Marathon 76), Hockey sur glace professionnel (Dragons de Rouen).
+  - *Multiactivité :* Ingénierie logistique d'arénas, régie commerciale B2B, conseil aux ayants droit, production TV intégrée (*TV Sport Events*), gestion d'un club pro à l'année.
+* **Professionnalisation :** Passage d'un artisanat événementiel né en 1996 à une PME hautement professionnalisée conforme aux standards les plus drastiques de la planète (NBA, WTA, FIBA), intégrant billetterie dynamique digitalisée, CRM qualifié et protocoles sécuritaires ERP de 1ère catégorie.
+
+### 📌 Point 2 : Analyse de l'Environnement
+* **Quels outils ?** PESTEL (macro) + 5 (+1) Forces de Porter (micro) + Matrice SWOT (synthèse matricielle).
+* **Pertinence des outils pour une OS 2 :** 
+  - Une OS 2 est une agence commerciale privée sans mandat régalien : elle subit directement les variables macro (PESTEL) comme les politiques publiques locales, l'inflation des coûts d'énergie ou le risque de change EUR/USD sur les contrats NBA/WTA.
+  - Sur le plan micro (Porter), elle opère sur un marché biface : forte dépendance envers les ayants droit en amont et forte concurrence des loisirs de substitution (e-sport, concerts, streaming) en aval.
+
+### 📌 Point 3 : Analyse du Modèle d'Affaires (Business Model)
+* **Parties prenantes apporteuses de ressources (Freeman 1984) :**
+  - *Flux de revenus financiers :* Billetterie B2C grand public, sponsoring & loges d'hospitalités VIP B2B, subventions et commandes publiques, honoraires de conseil.
+  - *Ressources NON financières indispensables :*
+    1. *Légitimité sportive et institutionnelle* (labels NBA, WTA, LNB).
+    2. *Capital relationnel et réputationnel* (réseau de Gaëtan Muller en EuroLeague, 30 ans de probité de Pascal Biojout).
+    3. *Ressources humaines bénévoles* (800 bénévoles sur le marathon, 200 à l'Open de Rouen).
+    4. *Mise à disposition d'arénas publiques* (Kindarena, domaine public métropolitain).
+    5. *Sécurisation policière et préfectorale*.
+* **Comment ces ressources configurent le modèle d'affaires (Modèle RCOV) :**
+  - L'accès à ces ressources externes et immatérielles permet à l'agence de rester une PME légère (15 salariés) sans s'endetter dans des infrastructures en béton, maximisant son agilité et protégeant ses marges nettes.
+
+### 📌 Point 4 : Les Stratégies à l'Œuvre
+* **Les 3 grands types de stratégies :**
+  1. *Stratégie sportive* (production d'actifs d'élite, rachat des Dragons de Rouen).
+  2. *Stratégie commerciale* (monétisation des loges VIP B2B, désensibilisation aux subventions).
+  3. *Stratégie territoriale & sociétale* (marketing urbain pour Rouen/Normandie, parité WTA, éco-responsabilité 0 plastique).
+* **Lien de parenté des stratégies :**
+  - Lien organique en cascade : la stratégie sportive crée l'attraction $\rightarrow$ la stratégie commerciale transforme l'attraction en cash $\rightarrow$ la stratégie territoriale pérennise l'ancrage local $\rightarrow$ la stratégie RSE légitime l'accès aux arénas et aux commandes publiques.
+* **Réponse aux menaces et opportunités :**
+  - *Opportunités :* Engouement pour le sport féminin (WTA), besoin d'hospitalités B2B des entreprises régionales, statut de Rouen comme capitale du sport normand.
+  - *Menaces :* Baisse des subventions publiques (riposte par les loges privées), inflation des coûts logistiques, prédation par les géants mondiaux du divertissement.
+* **Renforcement du Business Model & Complémentarité :**
+  - Complémentarité totale : le B2B finance la RSE ; le prestige sportif ouvre les arénas publiques ; la gestion des Dragons de Rouen lisse la saisonnalité des revenus sur 12 mois.
+
+---
+
+## 💡 5. LES 4 QUESTIONS PIÈGES DU JURY (Et les répliques parfaites)
 
 ### ❓ Question 1 : « Pourquoi l'agence reste-t-elle une PME de 15 salariés au lieu de grossir comme ses concurrents ? »
 > **Réponse clé :** *« C'est un choix stratégique délibéré. Dans le modèle VRIO de Barney, l'Organisation (O) de Sport Plus Conseil repose sur des circuits de décision ultra-courts. Face aux aléas du direct ou aux exigences de dernière minute de la NBA, une équipe resserrée et polyvalente réagit en quelques minutes, là où les filiales des grands groupes multinationaux s'enlisent dans des validations hiérarchiques lourdes. De plus, cela limite les coûts fixes structurels lors des saisons creuses. »*

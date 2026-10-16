@@ -29,7 +29,7 @@ export const DossierPage10PorterForces: React.FC<DossierPageProps> = ({
         </h2>
 
         <p>
-          L&apos;application du modèle des cinq forces de Michael Porter permet de cartographier la dynamique concurrentielle de l&apos;industrie événementielle sportive dans laquelle opère Sport Plus Conseil. L&apos;intensité de la rivalité sectorielle y est particulièrement vive : l&apos;agence affronte des groupes transnationaux aux capitaux massifs (Live Nation Entertainment, IMG Events, Infront Sports &amp; Media, consortium AEG / Lagardère). Face à ces géants capables d&apos;injecter des garanties financières considérables, Sport Plus Conseil fait prévaloir sa réactivité de PME indépendante, son ancrage territorial intime et son savoir-faire d&apos;ingénierie opérationnelle.
+          Pour cartographier le micro-environnement concurrentiel, le modèle des 5 forces (+1) de Michael Porter s&apos;avère particulièrement pertinent : une agence de niveau 2 opère à la croisée d&apos;un marché biface, soumise simultanément aux exigences d&apos;ayants droit en amont et de clients en aval. L&apos;intensité de la rivalité sectorielle y est particulièrement vive : l&apos;agence affronte des groupes transnationaux aux capitaux massifs (Live Nation Entertainment, IMG Events, Infront Sports &amp; Media, consortium AEG / Lagardère). Face à ces géants capables d&apos;injecter des garanties considérables, Sport Plus Conseil fait prévaloir sa réactivité de PME indépendante, son ancrage territorial intime et son savoir-faire d&apos;ingénierie opérationnelle.
         </p>
 
         <p>

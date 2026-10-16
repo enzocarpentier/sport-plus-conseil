@@ -41,7 +41,7 @@ export const DossierPage13Stakeholders: React.FC<DossierPageProps> = ({
         </h2>
 
         <p>
-          Les parties prenantes secondaires rassemblent les acteurs qui, sans lien contractuel direct, influencent l&apos;exploitation. La composante la plus critique est la communauté des bénévoles : sans l&apos;engagement de plus de 800 volontaires sur le Seine-Marathon et 200 à l&apos;Open de Rouen (accueil, orientation, ramasseurs de balles, ravitaillements), l&apos;équation économique de l&apos;agence serait intenable. S&apos;y ajoutent les services de l&apos;État (préfectures, police, SAMU), dont les autorisations conditionnent les épreuves, ainsi que les médias régionaux et les riverains impactés.
+          Les parties prenantes secondaires rassemblent les acteurs qui, sans lien contractuel direct, apportent des ressources non financières capitales. La composante la plus critique réside dans la communauté des bénévoles : sans l&apos;engagement de 800 volontaires sur le marathon et 200 à l&apos;Open de tennis, l&apos;équation économique de l&apos;agence serait intenable. S&apos;y ajoutent les services de l&apos;État (préfectures, police, SAMU) et les collectivités qui mettent à disposition voirie et arénas. Ces ressources non financières configurent directement le modèle d&apos;affaires : elles permettent à une structure de 15 salariés de délivrer des événements de standard mondial sans supporter les coûts fixes d&apos;infrastructures lourdes.
         </p>
 
         <p>

@@ -29,7 +29,7 @@ export const DossierPage16SportStrategy: React.FC<DossierPageProps> = ({
         </h2>
 
         <p>
-          L&apos;analyse des stratégies délibérées de Sport Plus Conseil débute par sa stratégie sportive. Contrairement à une idée reçue réduisant l&apos;agence d&apos;événementiel à un simple distributeur de billets ou animateur commercial, le positionnement de l&apos;entreprise repose sur une expertise pointue des conditions de la haute performance athlétique. L&apos;agence se positionne comme l&apos;opérateur technique de confiance des ligues les plus exigeantes de la planète, capable de garantir l&apos;intégrité physique des athlètes et l&apos;équité absolue des compétitions.
+          L&apos;analyse des orientations de Sport Plus Conseil révèle un lien de parenté organique et une complémentarité étroite entre trois axes stratégiques : le volet sportif (création d&apos;actifs d&apos;élite), le volet commercial (monétisation B2B) et le volet territorial et sociétale (légitimité publique et RSE). En réponse directe aux opportunités de l&apos;environnement (essor du sportainment et du sport féminin) et à ses menaces (inflation des coûts, concurrence des géants du divertissement), ces stratégies renforcent mutuellement le modèle d&apos;affaires : l&apos;excellence sportive crédibilise l&apos;offre commerciale, dont les marges financent l&apos;ancrage territorial. Ce triptyque débute par la stratégie sportive.
         </p>
 
         <p>

@@ -17,6 +17,7 @@ CREATE TABLE IF NOT EXISTS dossier_comments (
   author_name VARCHAR(100) NOT NULL,
   page_number INT NOT NULL,
   comment_text TEXT NOT NULL,
+  is_resolved BOOLEAN DEFAULT FALSE,
   created_at TIMESTAMP WITH TIME ZONE DEFAULT timezone('utc'::text, now()) NOT NULL
 );
 
@@ -55,4 +56,5 @@ CREATE POLICY "Suppression de commentaires autorisée"
 -- 6. Activation du Temps Réel Supabase (Realtime broadcast)
 -- Permet la synchronisation instantanée entre tous les étudiants connectés
 ALTER PUBLICATION supabase_realtime ADD TABLE dossier_comments;
+ALTER PUBLICATION supabase_realtime ADD TABLE dossier_sections;
 

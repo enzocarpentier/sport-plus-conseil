@@ -9,13 +9,15 @@ import {
   Filter,
   CheckCircle2,
   AlertCircle,
-  Trash2
+  Trash2,
+  RotateCcw
 } from 'lucide-react'
 import {
   type DossierComment,
   addDossierComment,
   updateDossierCommentPage,
-  deleteDossierComment
+  deleteDossierComment,
+  toggleDossierCommentResolved
 } from '../lib/supabase'
 
 interface CommentsPanelProps {
@@ -24,6 +26,7 @@ interface CommentsPanelProps {
   comments: DossierComment[]
   onRefreshComments: () => void
   onDeleteComment?: (id: string) => Promise<{ success: boolean; error: string | null }>
+  onToggleResolved?: (id: string, resolved: boolean) => Promise<{ success: boolean; error: string | null }>
   targetPage: number
   onTargetPageChange: (page: number) => void
   onScrollToPage: (page: number) => void
@@ -68,6 +71,7 @@ export const CommentsPanel: React.FC<CommentsPanelProps> = ({
   comments,
   onRefreshComments,
   onDeleteComment,
+  onToggleResolved,
   targetPage,
   onTargetPageChange,
   onScrollToPage,
@@ -80,6 +84,7 @@ export const CommentsPanel: React.FC<CommentsPanelProps> = ({
   const [isCustomAuthor, setIsCustomAuthor] = useState(false)
   const [commentText, setCommentText] = useState('')
   const [filterPage, setFilterPage] = useState<number | null>(null)
+  const [statusFilter, setStatusFilter] = useState<'all' | 'pending' | 'resolved'>('all')
   const [isSubmitting, setIsSubmitting] = useState(false)
   const [statusMessage, setStatusMessage] = useState<{ type: 'success' | 'error'; text: string } | null>(null)
 
@@ -91,6 +96,9 @@ export const CommentsPanel: React.FC<CommentsPanelProps> = ({
   // Gestion de la suppression d'un commentaire
   const [confirmDeleteId, setConfirmDeleteId] = useState<string | null>(null)
   const [isDeleting, setIsDeleting] = useState(false)
+
+  // Gestion de la bascule réglé / en cours
+  const [isTogglingResolvedId, setIsTogglingResolvedId] = useState<string | null>(null)
 
   // Sauvegarder l'auteur sélectionné
   useEffect(() => {
@@ -170,9 +178,41 @@ export const CommentsPanel: React.FC<CommentsPanelProps> = ({
     }
   }
 
-  const filteredComments = filterPage
+  const handleToggleResolved = async (commentId: string, resolved: boolean) => {
+    setIsTogglingResolvedId(commentId)
+    let res: { success: boolean; error: string | null }
+    if (onToggleResolved) {
+      res = await onToggleResolved(commentId, resolved)
+    } else {
+      res = await toggleDossierCommentResolved(commentId, resolved)
+      onRefreshComments()
+    }
+    setIsTogglingResolvedId(null)
+    if (res.error) {
+      setStatusMessage({ type: 'error', text: `Erreur : ${res.error}` })
+    } else {
+      setStatusMessage({
+        type: 'success',
+        text: resolved
+          ? 'Remarque marquée comme réglée !'
+          : 'Remarque réouverte (en cours).'
+      })
+      setTimeout(() => setStatusMessage(null), 3500)
+    }
+  }
+
+  const unresolvedCount = comments.filter((c) => !c.is_resolved).length
+  const resolvedCount = comments.filter((c) => c.is_resolved).length
+
+  let filteredComments = filterPage
     ? comments.filter((c) => c.page_number === filterPage)
     : comments
+
+  if (statusFilter === 'pending') {
+    filteredComments = filteredComments.filter((c) => !c.is_resolved)
+  } else if (statusFilter === 'resolved') {
+    filteredComments = filteredComments.filter((c) => c.is_resolved)
+  }
 
   if (!isOpen) return null
 
@@ -189,7 +229,7 @@ export const CommentsPanel: React.FC<CommentsPanelProps> = ({
             <div>
               <h2 className="text-sm font-semibold tracking-wide">Commentaires &amp; Remarques</h2>
               <p className="text-[11px] text-gray-300">
-                Espace d&apos;échange du groupe ({comments.length} avis)
+                Espace d&apos;échange du groupe ({comments.length} avis • {unresolvedCount} en cours)
               </p>
             </div>
           </div>
@@ -209,6 +249,50 @@ export const CommentsPanel: React.FC<CommentsPanelProps> = ({
               <X size={18} />
             </button>
           </div>
+        </div>
+
+        {/* BARRE D'ÉTAT DES REMARQUES : TOUS / EN COURS / RÉGLÉS */}
+        <div className="px-4 py-2 bg-[#f8fafc] border-b border-gray-200 flex items-center justify-between gap-2 text-xs shrink-0">
+          <div className="flex items-center gap-1 bg-gray-200/80 p-0.5 rounded-lg text-[11px]">
+            <button
+              onClick={() => setStatusFilter('all')}
+              className={`px-2.5 py-1 rounded-md font-medium transition-all cursor-pointer ${
+                statusFilter === 'all'
+                  ? 'bg-white text-gray-900 shadow-2xs font-semibold'
+                  : 'text-gray-600 hover:text-gray-900'
+              }`}
+            >
+              Tous ({comments.length})
+            </button>
+            <button
+              onClick={() => setStatusFilter('pending')}
+              className={`px-2.5 py-1 rounded-md font-medium transition-all cursor-pointer flex items-center gap-1.5 ${
+                statusFilter === 'pending'
+                  ? 'bg-amber-100 text-amber-900 shadow-2xs font-semibold'
+                  : 'text-gray-600 hover:text-gray-900'
+              }`}
+            >
+              <span className="w-1.5 h-1.5 rounded-full bg-amber-500"></span>
+              <span>En cours ({unresolvedCount})</span>
+            </button>
+            <button
+              onClick={() => setStatusFilter('resolved')}
+              className={`px-2.5 py-1 rounded-md font-medium transition-all cursor-pointer flex items-center gap-1.5 ${
+                statusFilter === 'resolved'
+                  ? 'bg-emerald-600 text-white shadow-2xs font-semibold'
+                  : 'text-gray-600 hover:text-gray-900'
+              }`}
+            >
+              <CheckCircle2 size={11} />
+              <span>Réglés ({resolvedCount})</span>
+            </button>
+          </div>
+
+          {unresolvedCount === 0 && comments.length > 0 && (
+            <span className="text-[10.5px] text-emerald-800 bg-emerald-50 border border-emerald-200 px-2 py-0.5 rounded-full font-medium flex items-center gap-1">
+              <CheckCircle2 size={11} className="text-emerald-600" /> Tout est réglé !
+            </span>
+          )}
         </div>
 
         {/* FILTRES PAR PAGE */}
@@ -470,7 +554,11 @@ export const CommentsPanel: React.FC<CommentsPanelProps> = ({
                 return (
                   <div
                     key={comment.id}
-                    className="p-3 bg-white border border-gray-200 rounded-lg shadow-xs hover:border-gray-300 transition-colors space-y-2"
+                    className={`p-3 rounded-lg shadow-xs transition-colors space-y-2 border ${
+                      comment.is_resolved
+                        ? 'bg-emerald-50/40 border-emerald-300'
+                        : 'bg-white border-gray-200 hover:border-gray-300'
+                    }`}
                   >
                     <div className="flex items-center justify-between">
                       <div className="flex items-center gap-2">
@@ -482,6 +570,12 @@ export const CommentsPanel: React.FC<CommentsPanelProps> = ({
                         <span className="text-xs font-semibold text-gray-900">
                           {comment.author_name}
                         </span>
+                        {comment.is_resolved && (
+                          <span className="inline-flex items-center gap-1 px-1.5 py-0.5 rounded text-[10px] font-semibold bg-emerald-100 text-emerald-800 border border-emerald-300">
+                            <CheckCircle2 size={10} className="text-emerald-700" />
+                            Réglé
+                          </span>
+                        )}
                       </div>
                       <div className="flex items-center gap-1 text-[11px] text-gray-400">
                         <Clock size={11} />
@@ -489,7 +583,11 @@ export const CommentsPanel: React.FC<CommentsPanelProps> = ({
                       </div>
                     </div>
 
-                    <p className="text-xs text-gray-800 leading-relaxed whitespace-pre-wrap pl-7">
+                    <p
+                      className={`text-xs leading-relaxed whitespace-pre-wrap pl-7 ${
+                        comment.is_resolved ? 'text-gray-600 italic' : 'text-gray-800'
+                      }`}
+                    >
                       {comment.comment_text}
                     </p>
 
@@ -545,7 +643,32 @@ export const CommentsPanel: React.FC<CommentsPanelProps> = ({
                         )}
                       </div>
 
-                      <div className="flex items-center gap-2">
+                      <div className="flex items-center gap-1.5 flex-wrap">
+                        {/* BOUTON RÉGLER / ROUVRIR */}
+                        {comment.is_resolved ? (
+                          <button
+                            type="button"
+                            disabled={isTogglingResolvedId === comment.id}
+                            onClick={() => handleToggleResolved(comment.id, false)}
+                            className="text-gray-600 hover:text-gray-800 hover:bg-gray-100 border border-gray-300 px-2 py-0.5 rounded text-[10.5px] font-medium flex items-center gap-1 transition-all cursor-pointer disabled:opacity-50"
+                            title="Remettre cette remarque en cours"
+                          >
+                            <RotateCcw size={10.5} />
+                            <span>Rouvrir</span>
+                          </button>
+                        ) : (
+                          <button
+                            type="button"
+                            disabled={isTogglingResolvedId === comment.id}
+                            onClick={() => handleToggleResolved(comment.id, true)}
+                            className="text-emerald-700 hover:text-emerald-800 bg-emerald-50 hover:bg-emerald-100 border border-emerald-300 px-2 py-0.5 rounded text-[10.5px] font-semibold flex items-center gap-1 transition-all cursor-pointer shadow-2xs disabled:opacity-50"
+                            title="Marquer cette remarque comme réglée"
+                          >
+                            <CheckCircle2 size={11} className="text-emerald-600" />
+                            <span>Régler</span>
+                          </button>
+                        )}
+
                         <button
                           type="button"
                           onClick={() => {

@@ -26,7 +26,8 @@ import {
   type DossierComment,
   fetchDossierComments,
   subscribeToDossierComments,
-  deleteDossierComment
+  deleteDossierComment,
+  toggleDossierCommentResolved
 } from './lib/supabase'
 import { Printer, MessageSquare, ChevronDown } from 'lucide-react'
 
@@ -136,6 +137,9 @@ export function App() {
       },
       (deletedId) => {
         setComments((prev) => prev.filter((c) => c.id !== deletedId))
+      },
+      () => {
+        fetchDossierComments().then(setComments)
       }
     )
 
@@ -186,6 +190,23 @@ export function App() {
     return { success: true, error: null }
   }
 
+  // Marquer un commentaire comme réglé ou le rouvrir (synchronisé avec Supabase)
+  const handleToggleResolved = async (
+    id: string,
+    resolved: boolean
+  ): Promise<{ success: boolean; error: string | null }> => {
+    setComments((prev) =>
+      prev.map((c) => (c.id === id ? { ...c, is_resolved: resolved } : c))
+    )
+    const result = await toggleDossierCommentResolved(id, resolved)
+    if (result.error) {
+      const refreshed = await fetchDossierComments()
+      setComments(refreshed)
+      return result
+    }
+    return { success: true, error: null }
+  }
+
   return (
     <div className="min-h-screen bg-[#e5e7eb] py-12 px-4 flex flex-col items-center justify-start select-text relative print:min-h-0 print:bg-white print:p-0 print:m-0 print:block">
       
@@ -209,7 +230,7 @@ export function App() {
           <ChevronDown size={13} className="absolute right-2 top-1/2 -translate-y-1/2 text-gray-500 pointer-events-none" />
         </div>
 
-        {/* BOUTON COMMENTAIRES / COLLABORATION AVEC INDICATEUR DE PAGE */}
+        {/* BOUTON COMMENTAIRES / COLLABORATION AVEC INDICATEUR DE PAGE ET STATUT RÉGLÉ */}
         <button
           onClick={handleOpenComments}
           className="flex items-center gap-2 bg-white hover:bg-gray-50 text-gray-800 px-3.5 py-2 rounded-md shadow-md hover:shadow-lg transition-all text-xs font-sans font-medium cursor-pointer border border-gray-300"
@@ -218,8 +239,19 @@ export function App() {
           <div className="relative">
             <MessageSquare size={15} className="text-blue-600" />
             {comments.length > 0 && (
-              <span className="absolute -top-1.5 -right-2 bg-blue-600 text-white text-[9px] font-bold w-4 h-4 rounded-full flex items-center justify-center">
-                {comments.length}
+              <span
+                className={`absolute -top-1.5 -right-2 text-white text-[9px] font-bold w-4 h-4 rounded-full flex items-center justify-center ${
+                  comments.some((c) => !c.is_resolved) ? 'bg-amber-600' : 'bg-emerald-600'
+                }`}
+                title={
+                  comments.some((c) => !c.is_resolved)
+                    ? `${comments.filter((c) => !c.is_resolved).length} remarque(s) en attente`
+                    : 'Toutes les remarques sont réglées'
+                }
+              >
+                {comments.filter((c) => !c.is_resolved).length > 0
+                  ? comments.filter((c) => !c.is_resolved).length
+                  : '✓'}
               </span>
             )}
           </div>
@@ -275,6 +307,7 @@ export function App() {
         comments={comments}
         onRefreshComments={() => fetchDossierComments().then(setComments)}
         onDeleteComment={handleDeleteComment}
+        onToggleResolved={handleToggleResolved}
         targetPage={targetPage}
         onTargetPageChange={setTargetPage}
         onScrollToPage={handleScrollToPage}

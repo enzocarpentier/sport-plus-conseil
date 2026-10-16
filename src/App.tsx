@@ -64,17 +64,79 @@ export function App() {
   const [comments, setComments] = useState<DossierComment[]>([])
   const [isCommentsOpen, setIsCommentsOpen] = useState(false)
   const [targetPage, setTargetPage] = useState<number>(1)
+  const [currentVisiblePage, setCurrentVisiblePage] = useState<number>(1)
+
+  // Calcule dynamiquement quelle page A4 est actuellement la plus visible dans le viewport
+  const calculateVisiblePage = (): number => {
+    const viewportHeight = window.innerHeight
+    const viewportMiddle = viewportHeight / 2
+    let bestPage = 1
+    let bestVisibleArea = -1
+
+    for (let i = 1; i <= totalPages; i++) {
+      const el = document.getElementById(`dossier-page-${i}`) || document.getElementById(`page-wrapper-${i}`)
+      if (el) {
+        const rect = el.getBoundingClientRect()
+        // Si le centre de l'écran croise cette page, c'est immédiatement la page active
+        if (rect.top <= viewportMiddle && rect.bottom >= viewportMiddle) {
+          return i
+        }
+        // Sinon, on mesure la hauteur visible de cette page à l'écran
+        const visibleTop = Math.max(0, rect.top)
+        const visibleBottom = Math.min(viewportHeight, rect.bottom)
+        const visibleHeight = Math.max(0, visibleBottom - visibleTop)
+        if (visibleHeight > bestVisibleArea) {
+          bestVisibleArea = visibleHeight
+          bestPage = i
+        }
+      }
+    }
+    return bestPage
+  }
+
+  // Écouteur de défilement pour synchroniser la page active à l'écran
+  useEffect(() => {
+    let ticking = false
+    const handleScroll = () => {
+      if (!ticking) {
+        window.requestAnimationFrame(() => {
+          const visible = calculateVisiblePage()
+          setCurrentVisiblePage(visible)
+          ticking = false
+        })
+        ticking = true
+      }
+    }
+
+    window.addEventListener('scroll', handleScroll, { passive: true })
+    const initialPage = calculateVisiblePage()
+    setCurrentVisiblePage(initialPage)
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll)
+    }
+  }, [totalPages])
 
   // Chargement initial des commentaires et écoute temps réel
   useEffect(() => {
     fetchDossierComments().then(setComments)
 
-    const unsubscribe = subscribeToDossierComments((newComment) => {
-      setComments((prev) => {
-        if (prev.some((c) => c.id === newComment.id)) return prev
-        return [newComment, ...prev]
-      })
-    })
+    const unsubscribe = subscribeToDossierComments(
+      (newComment) => {
+        setComments((prev) => {
+          if (prev.some((c) => c.id === newComment.id)) return prev
+          return [newComment, ...prev]
+        })
+      },
+      (updatedComment) => {
+        setComments((prev) =>
+          prev.map((c) => (c.id === updatedComment.id ? updatedComment : c))
+        )
+      },
+      (deletedId) => {
+        setComments((prev) => prev.filter((c) => c.id !== deletedId))
+      }
+    )
 
     return () => {
       unsubscribe()
@@ -85,6 +147,15 @@ export function App() {
     window.print()
   }
 
+  // Ouverture des commentaires depuis le bouton fixe : détecte la page actuellement à l'écran
+  const handleOpenComments = () => {
+    const visible = calculateVisiblePage()
+    setCurrentVisiblePage(visible)
+    setTargetPage(visible)
+    setIsCommentsOpen(true)
+  }
+
+  // Ouverture des commentaires depuis l'en-tête d'une page spécifique
   const handleOpenCommentsForPage = (pageNum: number) => {
     setTargetPage(pageNum)
     setIsCommentsOpen(true)
@@ -94,6 +165,7 @@ export function App() {
     const el = document.getElementById(`dossier-page-${pageNum}`)
     if (el) {
       el.scrollIntoView({ behavior: 'smooth', block: 'start' })
+      setCurrentVisiblePage(pageNum)
     }
   }
 
@@ -107,15 +179,14 @@ export function App() {
       {/* BARRE D'ACTIONS FLOTTANTE EN HAUT À DROITE */}
       <div className="no-print print:hidden fixed top-4 right-4 z-40 flex items-center gap-2.5">
         
-        {/* SÉLECTEUR RAPIDE DE NAVIGATION ENTRE LES 21 PAGES */}
+        {/* SÉLECTEUR RAPIDE DE NAVIGATION ENTRE LES 21 PAGES AVEC PAGE ACTIVE */}
         <div className="relative hidden md:block">
           <select
+            value={currentVisiblePage}
             onChange={(e) => handleScrollToPage(Number(e.target.value))}
-            defaultValue=""
             className="appearance-none bg-white hover:bg-gray-50 text-gray-800 text-xs font-sans font-medium px-3 py-2 pr-7 rounded-md border border-gray-300 shadow-md cursor-pointer transition-all"
             title="Naviguer directement vers une page du dossier"
           >
-            <option value="" disabled>Aller à la page...</option>
             {DOSSIER_PAGES.map((page) => (
               <option key={page.num} value={page.num}>
                 P.{page.num} : {page.title}
@@ -125,11 +196,11 @@ export function App() {
           <ChevronDown size={13} className="absolute right-2 top-1/2 -translate-y-1/2 text-gray-500 pointer-events-none" />
         </div>
 
-        {/* BOUTON COMMENTAIRES / COLLABORATION */}
+        {/* BOUTON COMMENTAIRES / COLLABORATION AVEC INDICATEUR DE PAGE */}
         <button
-          onClick={() => setIsCommentsOpen(true)}
+          onClick={handleOpenComments}
           className="flex items-center gap-2 bg-white hover:bg-gray-50 text-gray-800 px-3.5 py-2 rounded-md shadow-md hover:shadow-lg transition-all text-xs font-sans font-medium cursor-pointer border border-gray-300"
-          title="Ouvrir les remarques du groupe"
+          title={`Ouvrir les remarques (Page visible à l'écran : P.${currentVisiblePage})`}
         >
           <div className="relative">
             <MessageSquare size={15} className="text-blue-600" />
@@ -140,6 +211,9 @@ export function App() {
             )}
           </div>
           <span>Commentaires</span>
+          <span className="bg-blue-50 text-blue-700 font-semibold text-[10.5pt] px-1.5 py-0.5 rounded border border-blue-200">
+            P.{currentVisiblePage}
+          </span>
         </button>
 
         {/* BOUTON D'IMPRESSION / EXPORT PDF ACADÉMIQUE */}
@@ -190,6 +264,7 @@ export function App() {
         targetPage={targetPage}
         onTargetPageChange={setTargetPage}
         onScrollToPage={handleScrollToPage}
+        currentVisiblePage={currentVisiblePage}
       />
     </div>
   )

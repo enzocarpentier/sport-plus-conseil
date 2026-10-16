@@ -8,11 +8,14 @@ import {
   ArrowRight,
   Filter,
   CheckCircle2,
-  AlertCircle
+  AlertCircle,
+  Trash2
 } from 'lucide-react'
 import {
   type DossierComment,
-  addDossierComment
+  addDossierComment,
+  updateDossierCommentPage,
+  deleteDossierComment
 } from '../lib/supabase'
 
 interface CommentsPanelProps {
@@ -23,6 +26,7 @@ interface CommentsPanelProps {
   targetPage: number
   onTargetPageChange: (page: number) => void
   onScrollToPage: (page: number) => void
+  currentVisiblePage: number
 }
 
 const GROUP_MEMBERS = [
@@ -64,7 +68,8 @@ export const CommentsPanel: React.FC<CommentsPanelProps> = ({
   onRefreshComments,
   targetPage,
   onTargetPageChange,
-  onScrollToPage
+  onScrollToPage,
+  currentVisiblePage
 }) => {
   const [selectedAuthor, setSelectedAuthor] = useState<string>(() => {
     return localStorage.getItem('dossier_comment_author') || 'Enzo Carpentier'
@@ -75,6 +80,11 @@ export const CommentsPanel: React.FC<CommentsPanelProps> = ({
   const [filterPage, setFilterPage] = useState<number | null>(null)
   const [isSubmitting, setIsSubmitting] = useState(false)
   const [statusMessage, setStatusMessage] = useState<{ type: 'success' | 'error'; text: string } | null>(null)
+
+  // Gestion de la modification de page d'un commentaire existant
+  const [editingCommentId, setEditingCommentId] = useState<string | null>(null)
+  const [editPageNumber, setEditPageNumber] = useState<number>(1)
+  const [isUpdatingPage, setIsUpdatingPage] = useState(false)
 
   // Sauvegarder l'auteur sélectionné
   useEffect(() => {
@@ -120,6 +130,29 @@ export const CommentsPanel: React.FC<CommentsPanelProps> = ({
       setStatusMessage({ type: 'success', text: 'Commentaire publié avec succès !' })
       onRefreshComments()
       setTimeout(() => setStatusMessage(null), 4000)
+    }
+  }
+
+  const handleMoveComment = async (commentId: string, newPage: number) => {
+    setIsUpdatingPage(true)
+    const result = await updateDossierCommentPage(commentId, newPage)
+    setIsUpdatingPage(false)
+    if (result.error) {
+      alert(`Erreur lors du déplacement : ${result.error}`)
+    } else {
+      setEditingCommentId(null)
+      onRefreshComments()
+    }
+  }
+
+  const handleDeleteComment = async (commentId: string) => {
+    if (window.confirm('Supprimer définitivement ce commentaire ?')) {
+      const result = await deleteDossierComment(commentId)
+      if (result.error) {
+        alert(`Erreur de suppression : ${result.error}`)
+      } else {
+        onRefreshComments()
+      }
     }
   }
 
@@ -179,6 +212,17 @@ export const CommentsPanel: React.FC<CommentsPanelProps> = ({
           >
             Tous ({comments.length})
           </button>
+          <button
+            onClick={() => setFilterPage(currentVisiblePage)}
+            className={`px-2.5 py-1 rounded-full text-[11px] font-medium transition-colors cursor-pointer shrink-0 flex items-center gap-1 ${
+              filterPage === currentVisiblePage
+                ? 'bg-blue-600 text-white shadow-xs'
+                : 'bg-blue-50 text-blue-800 border border-blue-200 hover:bg-blue-100'
+            }`}
+            title={`Filtrer uniquement sur la page visible à l'écran (P.${currentVisiblePage})`}
+          >
+            <span>📍 P.{currentVisiblePage} (à l&apos;écran)</span>
+          </button>
           {Array.from({ length: 21 }, (_, i) => i + 1).map((page) => {
             const count = comments.filter((c) => c.page_number === page).length
             return (
@@ -209,9 +253,25 @@ export const CommentsPanel: React.FC<CommentsPanelProps> = ({
               <span className="text-xs font-semibold text-gray-800 uppercase tracking-wider">
                 Ajouter une remarque
               </span>
-              <span className="text-[11px] text-blue-700 font-medium">
-                {PAGE_NAMES[targetPage] || `Page ${targetPage}`}
-              </span>
+              <div className="flex items-center gap-1.5">
+                <span className="text-[11px] text-blue-700 font-medium">
+                  {PAGE_NAMES[targetPage] || `Page ${targetPage}`}
+                </span>
+                {targetPage === currentVisiblePage ? (
+                  <span className="text-[10px] bg-emerald-100 text-emerald-800 px-1.5 py-0.5 rounded font-medium">
+                    📍 À l&apos;écran
+                  </span>
+                ) : (
+                  <button
+                    type="button"
+                    onClick={() => onTargetPageChange(currentVisiblePage)}
+                    className="text-[10px] bg-blue-50 hover:bg-blue-100 text-blue-700 border border-blue-200 px-1.5 py-0.5 rounded transition-colors cursor-pointer"
+                    title={`Changer pour la page ${currentVisiblePage} actuellement visible`}
+                  >
+                    🎯 Remettre P.{currentVisiblePage}
+                  </button>
+                )}
+              </div>
             </div>
 
             {/* SÉLECTEUR DE MEMBRE DU GROUPE */}
@@ -262,18 +322,31 @@ export const CommentsPanel: React.FC<CommentsPanelProps> = ({
             </div>
 
             {/* SÉLECTEUR DE LA PAGE CIBLÉE */}
-            <div className="flex items-center gap-2">
-              <label className="text-[11px] font-medium text-gray-600 whitespace-nowrap">
-                Sur quelle page ?
-              </label>
+            <div className="space-y-1">
+              <div className="flex items-center justify-between text-[11px]">
+                <label className="font-medium text-gray-700">
+                  Sur quelle page porte ce commentaire ?
+                </label>
+                {targetPage !== currentVisiblePage && (
+                  <button
+                    type="button"
+                    onClick={() => onTargetPageChange(currentVisiblePage)}
+                    className="text-[11px] text-blue-600 hover:underline cursor-pointer"
+                  >
+                    📍 Caler sur la page visible (P.{currentVisiblePage})
+                  </button>
+                )}
+              </div>
               <select
                 value={targetPage}
                 onChange={(e) => onTargetPageChange(Number(e.target.value))}
-                className="flex-1 px-2.5 py-1 text-xs border border-gray-300 rounded-md bg-white focus:outline-none focus:ring-1 focus:ring-blue-500 cursor-pointer"
+                className="w-full px-2.5 py-1.5 text-xs border border-gray-300 rounded-md bg-white focus:outline-none focus:ring-1 focus:ring-blue-500 cursor-pointer font-medium text-gray-800"
               >
                 {Array.from({ length: 21 }, (_, i) => i + 1).map((pageNum) => (
                   <option key={pageNum} value={pageNum}>
+                    {pageNum === currentVisiblePage ? '📍 ' : ''}
                     {PAGE_NAMES[pageNum] || `Page ${pageNum}`}
+                    {pageNum === currentVisiblePage ? ' [À L\'ÉCRAN]' : ''}
                   </option>
                 ))}
               </select>
@@ -379,21 +452,79 @@ export const CommentsPanel: React.FC<CommentsPanelProps> = ({
                       {comment.comment_text}
                     </p>
 
-                    <div className="flex items-center justify-between pt-1 border-t border-gray-100 text-[11px]">
-                      <span className="inline-flex items-center px-2 py-0.5 rounded text-[10px] font-medium bg-blue-50 text-blue-700 border border-blue-200">
-                        Page {comment.page_number}
-                      </span>
-                      <button
-                        type="button"
-                        onClick={() => {
-                          onScrollToPage(comment.page_number)
-                          onClose()
-                        }}
-                        className="text-gray-500 hover:text-blue-700 flex items-center gap-1 font-medium transition-colors cursor-pointer"
-                      >
-                        <span>Voir la page</span>
-                        <ArrowRight size={11} />
-                      </button>
+                    <div className="flex items-center justify-between pt-1.5 border-t border-gray-100 text-[11px] gap-2 flex-wrap">
+                      <div className="flex items-center gap-1.5 flex-wrap">
+                        <span className="inline-flex items-center px-2 py-0.5 rounded text-[10px] font-medium bg-blue-50 text-blue-700 border border-blue-200">
+                          Page {comment.page_number}
+                        </span>
+
+                        {editingCommentId === comment.id ? (
+                          <div className="flex items-center gap-1 bg-amber-50 border border-amber-300 px-1.5 py-0.5 rounded animate-in fade-in">
+                            <span className="text-[10px] text-amber-800 font-medium">Vers :</span>
+                            <select
+                              value={editPageNumber}
+                              onChange={(e) => setEditPageNumber(Number(e.target.value))}
+                              className="text-[10px] bg-white border border-gray-300 rounded px-1 py-0.5 cursor-pointer"
+                            >
+                              {Array.from({ length: 21 }, (_, i) => i + 1).map((p) => (
+                                <option key={p} value={p}>
+                                  P.{p} {p === currentVisiblePage ? '(à l\'écran)' : ''}
+                                </option>
+                              ))}
+                            </select>
+                            <button
+                              type="button"
+                              disabled={isUpdatingPage}
+                              onClick={() => handleMoveComment(comment.id, editPageNumber)}
+                              className="text-[10px] bg-emerald-600 hover:bg-emerald-700 text-white px-1.5 py-0.5 rounded font-medium cursor-pointer disabled:opacity-50"
+                            >
+                              {isUpdatingPage ? '...' : 'OK'}
+                            </button>
+                            <button
+                              type="button"
+                              onClick={() => setEditingCommentId(null)}
+                              className="text-[10px] text-gray-500 hover:text-gray-700 px-1 cursor-pointer"
+                              title="Annuler"
+                            >
+                              ✕
+                            </button>
+                          </div>
+                        ) : (
+                          <button
+                            type="button"
+                            onClick={() => {
+                              setEditingCommentId(comment.id)
+                              setEditPageNumber(currentVisiblePage || comment.page_number)
+                            }}
+                            className="text-[10px] text-gray-500 hover:text-blue-700 hover:underline cursor-pointer"
+                            title="Déplacer cette remarque vers une autre page"
+                          >
+                            Déplacer
+                          </button>
+                        )}
+                      </div>
+
+                      <div className="flex items-center gap-2.5">
+                        <button
+                          type="button"
+                          onClick={() => {
+                            onScrollToPage(comment.page_number)
+                            onClose()
+                          }}
+                          className="text-gray-500 hover:text-blue-700 flex items-center gap-1 font-medium transition-colors cursor-pointer"
+                        >
+                          <span>Voir la page</span>
+                          <ArrowRight size={11} />
+                        </button>
+                        <button
+                          type="button"
+                          onClick={() => handleDeleteComment(comment.id)}
+                          className="text-gray-400 hover:text-red-600 p-0.5 transition-colors cursor-pointer"
+                          title="Supprimer ce commentaire"
+                        >
+                          <Trash2 size={12} />
+                        </button>
+                      </div>
                     </div>
                   </div>
                 )

@@ -29,7 +29,7 @@ export const DossierPage15VrioModel: React.FC<DossierPageProps> = ({
         </h2>
 
         <p>
-          Pour déterminer si les ressources identifiées génèrent un avantage concurrentiel temporaire ou soutenable, Jay Barney (1991) propose la grille VRIO, structurée autour de quatre interrogations cumulatives fondamentales : la Valeur (V), la Rareté (R), l&apos;Inimitabilité (I) et l&apos;Organisation (O). L&apos;application systématique de ce prisme théorique à l&apos;agence Sport Plus Conseil permet d&apos;objectiver la solidité intrinsèque de son modèle face aux conglomérats du divertissement.
+          Pour déterminer si les ressources identifiées génèrent un avantage concurrentiel temporaire ou soutenable, Jay Barney (1991) propose la grille VRIO, structurée autour de quatre interrogations cumulatives fondamentales : la Valeur (V), la Rareté (R), l&apos;Inimitabilité (I) et l&apos;Organisation (O). L&apos;application systématique de ce prisme théorique à l&apos;agence Sport Plus Conseil permet d&apos;objectiver la solidité intrinsèque de son modèle face aux géants du sport spectacle et du divertissement.
         </p>
 
         <p>

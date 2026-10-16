@@ -125,7 +125,7 @@
 ## 💡 4. LES 4 QUESTIONS PIÈGES DU JURY (Et les répliques parfaites)
 
 ### ❓ Question 1 : « Pourquoi l'agence reste-t-elle une PME de 15 salariés au lieu de grossir comme ses concurrents ? »
-> **Réponse clé :** *« C'est un choix stratégique délibéré. Dans le modèle VRIO de Barney, l'Organisation (O) de Sport Plus Conseil repose sur des circuits de décision ultra-courts. Face aux aléas du direct ou aux exigences de dernière minute de la NBA, une équipe resserrée et polyvalente réagit en quelques minutes, là où les filiales de conglomérats s'enlisent dans des validations hiérarchiques lourdes. De plus, cela limite les coûts fixes structurels lors des saisons creuses. »*
+> **Réponse clé :** *« C'est un choix stratégique délibéré. Dans le modèle VRIO de Barney, l'Organisation (O) de Sport Plus Conseil repose sur des circuits de décision ultra-courts. Face aux aléas du direct ou aux exigences de dernière minute de la NBA, une équipe resserrée et polyvalente réagit en quelques minutes, là où les filiales des grands groupes multinationaux s'enlisent dans des validations hiérarchiques lourdes. De plus, cela limite les coûts fixes structurels lors des saisons creuses. »*
 
 ### ❓ Question 2 : « L'agence ne risque-t-elle pas de mourir si la NBA ou la WTA ne renouvellent pas leurs contrats ? »
 > **Réponse clé :** *« C'est précisément pour cela que Sport Plus Conseil a mis en place une stratégie de diversification de portefeuille : elle équilibre des licences internationales temporaires (NBA, WTA) avec des propriétés nationales récurrentes (All Star Game LNB), un événement grand public récurrent (Seine-Marathon 76) et, depuis 2024–2025, le rachat majoritaire des Dragons de Rouen, qui lui confère une activité pérenne de club professionnel à l'année. »*

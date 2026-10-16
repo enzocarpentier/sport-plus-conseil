@@ -41,7 +41,7 @@ export const DossierPage04Genesis: React.FC<DossierPageProps> = ({
         </h2>
 
         <p>
-          Contrairement aux conglomérats multinationaux cotés en bourse, Sport Plus Conseil a préservé un modèle d&apos;affaires à dimension humaine, s&apos;appuyant sur un effectif stable de 10 à 19 salariés permanents. Cette structure légère confère à l&apos;organisation une agilité stratégique décisive : les circuits de validation hiérarchique y sont courts, favorisant une réactivité immédiate face aux aléas de terrain ou aux requêtes urgentes des ayants droit. En contrepartie, ce dimensionnement impose une forte polyvalence interne, chaque collaborateur occupant des responsabilités croisées allant de la négociation commerciale à la coordination des flux de sécurité.
+          Contrairement aux multinationales et grands groupes cotés en bourse, Sport Plus Conseil a préservé un modèle d&apos;affaires à dimension humaine, s&apos;appuyant sur un effectif stable de 10 à 19 salariés permanents. Cette structure légère confère à l&apos;organisation une agilité stratégique décisive : les circuits de validation hiérarchique y sont courts, favorisant une réactivité immédiate face aux aléas de terrain ou aux requêtes urgentes des ayants droit. En contrepartie, ce dimensionnement impose une forte polyvalence interne, chaque collaborateur occupant des responsabilités croisées allant de la négociation commerciale à la coordination des flux de sécurité.
         </p>
 
         <p>

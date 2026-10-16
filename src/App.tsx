@@ -20,6 +20,7 @@ import { DossierPage18TerritorialStrategy } from './components/dossier/DossierPa
 import { DossierPage19RseStrategy } from './components/dossier/DossierPage19RseStrategy'
 import { DossierPage20ProspectiveMintzberg } from './components/dossier/DossierPage20ProspectiveMintzberg'
 import { DossierPage21Bibliography } from './components/dossier/DossierPage21Bibliography'
+import { Td1EvaluationPage } from './components/Td1EvaluationPage'
 
 import { CommentsPanel } from './components/CommentsPanel'
 import {
@@ -29,7 +30,7 @@ import {
   deleteDossierComment,
   toggleDossierCommentResolved
 } from './lib/supabase'
-import { Printer, MessageSquare, ChevronDown } from 'lucide-react'
+import { Printer, MessageSquare, ChevronDown, FileText, Target } from 'lucide-react'
 
 interface DossierPageConfig {
   num: number
@@ -67,6 +68,38 @@ export function App() {
   const [isCommentsOpen, setIsCommentsOpen] = useState(false)
   const [targetPage, setTargetPage] = useState<number>(1)
   const [currentVisiblePage, setCurrentVisiblePage] = useState<number>(1)
+  const [activeView, setActiveView] = useState<'dossier' | 'td1'>('dossier')
+
+  // Synchronisation avec l'ancre URL (#td1 ou #dossier)
+  useEffect(() => {
+    const handleHash = () => {
+      const hash = window.location.hash.toLowerCase()
+      if (hash.includes('td1') || hash.includes('evaluation') || hash.includes('point')) {
+        setActiveView('td1')
+      } else if (hash.includes('dossier')) {
+        setActiveView('dossier')
+      }
+    }
+    handleHash()
+    window.addEventListener('hashchange', handleHash)
+    return () => window.removeEventListener('hashchange', handleHash)
+  }, [])
+
+  const handleSwitchView = (view: 'dossier' | 'td1') => {
+    setActiveView(view)
+    window.location.hash = view === 'td1' ? '#td1' : '#dossier'
+    if (view === 'dossier') {
+      window.scrollTo({ top: 0, behavior: 'smooth' })
+    }
+  }
+
+  const handleNavigateToDossierPage = (pageNum: number) => {
+    setActiveView('dossier')
+    window.location.hash = '#dossier'
+    setTimeout(() => {
+      handleScrollToPage(pageNum)
+    }, 80)
+  }
 
   // Calcule dynamiquement quelle page A4 est actuellement la plus visible dans le viewport
   const calculateVisiblePage = (): number => {
@@ -210,30 +243,63 @@ export function App() {
   return (
     <div className="min-h-screen bg-[#e5e7eb] py-12 px-4 flex flex-col items-center justify-start select-text relative print:min-h-0 print:bg-white print:p-0 print:m-0 print:block">
       
-      {/* BARRE D'ACTIONS FLOTTANTE EN HAUT À DROITE */}
-      <div className="no-print print:hidden fixed top-4 right-4 z-40 flex items-center gap-2.5">
+      {/* BARRE DE NAVIGATION ET D'ACTIONS FLOTTANTE EN HAUT */}
+      <div className="no-print print:hidden fixed top-3 right-4 z-40 flex items-center gap-2 max-w-[calc(100vw-2rem)]">
         
-        {/* SÉLECTEUR RAPIDE DE NAVIGATION ENTRE LES 21 PAGES AVEC PAGE ACTIVE */}
-        <div className="relative hidden md:block">
-          <select
-            value={currentVisiblePage}
-            onChange={(e) => handleScrollToPage(Number(e.target.value))}
-            className="appearance-none bg-white hover:bg-gray-50 text-gray-800 text-xs font-sans font-medium px-3 py-2 pr-7 rounded-md border border-gray-300 shadow-md cursor-pointer transition-all"
-            title="Naviguer directement vers une page du dossier"
+        {/* COMMUTATEUR DE VUE : DOSSIER (21 PAGES) VS FICHE TD 1 */}
+        <div className="flex items-center bg-white/95 backdrop-blur-md p-1 rounded-lg border border-gray-300 shadow-md">
+          <button
+            onClick={() => handleSwitchView('dossier')}
+            className={`flex items-center gap-1.5 px-3 py-1.5 rounded-md text-xs font-medium transition-all cursor-pointer ${
+              activeView === 'dossier'
+                ? 'bg-[#1c2d42] text-white shadow-xs font-semibold'
+                : 'text-gray-700 hover:text-gray-900 hover:bg-gray-100'
+            }`}
+            title="Afficher le dossier académique complet au format A4 officiel (21 pages)"
           >
-            {DOSSIER_PAGES.map((page) => (
-              <option key={page.num} value={page.num}>
-                P.{page.num} : {page.title}
-              </option>
-            ))}
-          </select>
-          <ChevronDown size={13} className="absolute right-2 top-1/2 -translate-y-1/2 text-gray-500 pointer-events-none" />
+            <FileText size={13} />
+            <span className="hidden sm:inline">Dossier Académique</span>
+            <span className="sm:hidden">Dossier</span>
+            <span className="text-[10px] opacity-80">(21p)</span>
+          </button>
+          <button
+            onClick={() => handleSwitchView('td1')}
+            className={`flex items-center gap-1.5 px-3 py-1.5 rounded-md text-xs font-medium transition-all cursor-pointer ${
+              activeView === 'td1'
+                ? 'bg-blue-600 text-white shadow-xs font-semibold'
+                : 'text-gray-700 hover:text-gray-900 hover:bg-gray-100'
+            }`}
+            title="Afficher la fiche d'évaluation et réponses aux questions du TD 1 d'Aurélien François"
+          >
+            <Target size={13} />
+            <span className="hidden sm:inline">Fiche Évaluation</span>
+            <span>TD 1</span>
+          </button>
         </div>
 
-        {/* BOUTON COMMENTAIRES / COLLABORATION AVEC INDICATEUR DE PAGE ET STATUT RÉGLÉ */}
+        {/* SÉLECTEUR RAPIDE DE NAVIGATION ENTRE LES 21 PAGES (ACTIF EN VUE DOSSIER) */}
+        {activeView === 'dossier' && (
+          <div className="relative hidden lg:block">
+            <select
+              value={currentVisiblePage}
+              onChange={(e) => handleScrollToPage(Number(e.target.value))}
+              className="appearance-none bg-white hover:bg-gray-50 text-gray-800 text-xs font-sans font-medium px-3 py-2 pr-7 rounded-md border border-gray-300 shadow-md cursor-pointer transition-all"
+              title="Naviguer directement vers une page du dossier"
+            >
+              {DOSSIER_PAGES.map((page) => (
+                <option key={page.num} value={page.num}>
+                  P.{page.num} : {page.title}
+                </option>
+              ))}
+            </select>
+            <ChevronDown size={13} className="absolute right-2 top-1/2 -translate-y-1/2 text-gray-500 pointer-events-none" />
+          </div>
+        )}
+
+        {/* BOUTON COMMENTAIRES / COLLABORATION */}
         <button
           onClick={handleOpenComments}
-          className="flex items-center gap-2 bg-white hover:bg-gray-50 text-gray-800 px-3.5 py-2 rounded-md shadow-md hover:shadow-lg transition-all text-xs font-sans font-medium cursor-pointer border border-gray-300"
+          className="flex items-center gap-2 bg-white hover:bg-gray-50 text-gray-800 px-3 py-2 rounded-md shadow-md hover:shadow-lg transition-all text-xs font-sans font-medium cursor-pointer border border-gray-300"
           title={`Ouvrir les remarques (Page visible à l'écran : P.${currentVisiblePage})`}
         >
           <div className="relative">
@@ -255,50 +321,60 @@ export function App() {
               </span>
             )}
           </div>
-          <span>Commentaires</span>
-          <span className="bg-blue-50 text-blue-700 font-semibold text-[10.5pt] px-1.5 py-0.5 rounded border border-blue-200">
-            P.{currentVisiblePage}
-          </span>
+          <span className="hidden sm:inline">Commentaires</span>
+          {activeView === 'dossier' && (
+            <span className="bg-blue-50 text-blue-700 font-semibold text-[10.5pt] px-1.5 py-0.5 rounded border border-blue-200">
+              P.{currentVisiblePage}
+            </span>
+          )}
         </button>
 
         {/* BOUTON D'IMPRESSION / EXPORT PDF ACADÉMIQUE */}
         <button
           onClick={handlePrint}
           className="flex items-center gap-2 bg-[#1c2d42] hover:bg-[#0f1b29] text-white px-3.5 py-2 rounded-md shadow-md hover:shadow-lg transition-all text-xs font-serif font-medium cursor-pointer border border-[#2b415e]"
-          title="Imprimer ou exporter en PDF officiel A4 (21 pages)"
+          title={activeView === 'dossier' ? "Imprimer ou exporter en PDF officiel A4 (21 pages)" : "Imprimer la fiche d'évaluation TD 1"}
         >
           <Printer size={14} />
-          <span className="hidden sm:inline">Imprimer / PDF</span>
+          <span className="hidden sm:inline">Imprimer</span>
         </button>
       </div>
 
-      {/* LES 21 PAGES A4 DU DOSSIER ACADÉMIQUE */}
-      <div className="flex flex-col items-center gap-12 w-full max-w-full print:block print:w-auto print:gap-0 print:p-0 print:m-0">
-        {DOSSIER_PAGES.map((page) => (
-          <div key={page.num} className="dossier-page-item relative flex flex-col items-center w-full print:block print:w-auto print:m-0 print:p-0">
-            <div className="no-print print:hidden w-[210mm] max-w-full flex justify-between items-center mb-1.5 px-1 text-xs text-gray-600">
-              <span className="font-semibold text-gray-700">
-                Page {page.num} — {page.title}
-              </span>
-              <button
-                onClick={() => handleOpenCommentsForPage(page.num)}
-                className="flex items-center gap-1.5 text-blue-700 hover:text-blue-900 bg-white/90 hover:bg-white px-2.5 py-1 rounded-md border border-gray-300 shadow-2xs transition-colors cursor-pointer"
-              >
-                <MessageSquare size={12} />
-                <span>Commenter cette page</span>
-                {getPageCommentsCount(page.num) > 0 && (
-                  <span className="bg-blue-600 text-white text-[10px] font-bold px-1.5 py-0.2 rounded-full">
-                    {getPageCommentsCount(page.num)}
-                  </span>
-                )}
-              </button>
+      {/* CONTENU PRINCIPAL SELON LA VUE SÉLECTIONNÉE */}
+      {activeView === 'td1' ? (
+        <Td1EvaluationPage
+          onNavigateToDossierPage={handleNavigateToDossierPage}
+          onBackToDossier={() => handleSwitchView('dossier')}
+        />
+      ) : (
+        /* LES 21 PAGES A4 DU DOSSIER ACADÉMIQUE */
+        <div className="flex flex-col items-center gap-12 w-full max-w-full print:block print:w-auto print:gap-0 print:p-0 print:m-0">
+          {DOSSIER_PAGES.map((page) => (
+            <div key={page.num} className="dossier-page-item relative flex flex-col items-center w-full print:block print:w-auto print:m-0 print:p-0">
+              <div className="no-print print:hidden w-[210mm] max-w-full flex justify-between items-center mb-1.5 px-1 text-xs text-gray-600">
+                <span className="font-semibold text-gray-700">
+                  Page {page.num} — {page.title}
+                </span>
+                <button
+                  onClick={() => handleOpenCommentsForPage(page.num)}
+                  className="flex items-center gap-1.5 text-blue-700 hover:text-blue-900 bg-white/90 hover:bg-white px-2.5 py-1 rounded-md border border-gray-300 shadow-2xs transition-colors cursor-pointer"
+                >
+                  <MessageSquare size={12} />
+                  <span>Commenter cette page</span>
+                  {getPageCommentsCount(page.num) > 0 && (
+                    <span className="bg-blue-600 text-white text-[10px] font-bold px-1.5 py-0.2 rounded-full">
+                      {getPageCommentsCount(page.num)}
+                    </span>
+                  )}
+                </button>
+              </div>
+              <div id={`page-wrapper-${page.num}`} className="a4-page-wrapper">
+                {page.render(page.num, totalPages, handleScrollToPage)}
+              </div>
             </div>
-            <div id={`page-wrapper-${page.num}`} className="a4-page-wrapper">
-              {page.render(page.num, totalPages, handleScrollToPage)}
-            </div>
-          </div>
-        ))}
-      </div>
+          ))}
+        </div>
+      )}
 
       {/* PANNEAU LATÉRAL DE COMMENTAIRES */}
       <CommentsPanel

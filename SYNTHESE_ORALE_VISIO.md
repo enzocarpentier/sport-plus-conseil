@@ -44,7 +44,7 @@
 
 ---
 
-### BLOC 2 : Diagnostic de l'Environnement (PESTEL & Porter) (Pages 7 à 11)
+### BLOC 2 : Diagnostic de l'Environnement (PESTEL & Grand SWOT) (Pages 7 à 11)
 
 #### A. Le PESTEL (Macro-environnement)
 1. **Politique** : Phase post-JO Paris 2024 marquée par le resserrement budgétaire de l'État et des collectivités. Obligation de conventions pluriannuelles et de justification de l'utilité publique.
@@ -54,26 +54,24 @@
 5. **Écologique** : Norme ISO 26000 et Agenda Olympique 2020+5 du CIO (Jurisport n° 117) ; transports gratuits/doux (réseau Astuce à Rouen) ; **0 plastique à usage unique** (gobelets réutilisables, rampes d'eau courante) ; dons des surplus alimentaires à la Banque Alimentaire.
 6. **Légal** : ERP de 1ère catégorie (Accor Arena, Kindarena) ; Vigipirate Urgence Attentat (stadiers CNAPS, brigades cynophiles) ; coordination SAMU ; respect du RGPD sur les billetteries ; lutte contre l'ambush marketing autour des arénas.
 
-#### B. Les 5 Forces (+1) de Michael Porter
-- **Rivalité sectorielle (TRÈS FORTE)** : Concurrence de mastodontes multinationaux (Live Nation, IMG Events, Infront, consortium AEG / Lagardère). Sport Plus Conseil résiste grâce à sa flexibilité de PME et sa proximité de terrain.
-- **Pouvoir des clients (TRÈS ÉLEVÉ)** : Ligues mondiales (NBA, WTA, LNB) et métropoles publiques qui imposent des cahiers des charges drastiques et des appels d'offres rigides.
-- **Pouvoir des fournisseurs (ÉLEVÉ)** : Quasi-monopole des arénas couvertes (Accor Arena à Paris, Kindarena à Rouen) ; prestataires certifiés rares (sécurité CNAPS, monteurs de parquets homologués FIBA).
-- **Menace des nouveaux entrants (FAIBLE)** : Barrières à l'entrée très hautes (cautions bancaires en millions d'euros, historique de probité depuis 1996, réseau institutionnel).
-- **Menace des substituts (FORTE)** : Concurrence du budget temps/loisir face aux concerts, e-sport, streaming 4K à domicile $\rightarrow$ riposte par l'émotion vécue « en direct physique » et le prestige des salons VIP.
-- **+1 La Sixième Force (Aurélien François)** : L'État et les autorités régaliennes (préfectures, commissions de sécurité) dont les arrêtés conditionnent l'ouverture des sites.
+#### B. Diagnostic Stratégique Interne & Externe (Grand SWOT Étendu)
+- **Forces (S)** : Portefeuille multisport équilibré (basket NBA/LNB, tennis WTA, running, hockey sur glace pro), intégration verticale complète avec régie TV Sport Events intégrée, carnet d'adresses et capital social des dirigeants (Gaëtan Muller, Pascal Biojout).
+- **Faiblesses (W)** : Taille resserrée de PME (une quinzaine de salariés) générant une forte intensité de charge en période de pointe, dépendance envers les bénévoles (800 sur le marathon) et absence de propriété foncière des arénas.
+- **Opportunités (O)** : Explosion de la demande corporate pour les loges VIP et le réseautage d'affaires, médiatisation croissante du sport féminin d'élite, synergies d'abonnements à l'année avec le club des Dragons de Rouen.
+- **Menaces (T)** : Inflation des coûts d'énergie, de sécurité et des loyers de salles, incertitude sur le renouvellement des subventions publiques territoriales, volatilité du cours de change USD/EUR.
 
-#### C. Matrice SWOT Synthétique
-- **Forces (S)** : Notoriété historique (depuis 1996), réseau influent Gaëtan Muller, régie TV Sport Events intégrée, agilité de PME.
-- **Faiblesses (W)** : Équipe resserrée (10-19 salariés) créant une surchauffe RH lors des pics, dépendance au renouvellement périodique des licences (NBA, WTA), absence de propriété foncière des arénas.
-- **Opportunités (O)** : Explosion de la demande corporate pour les loges VIP, valorisation du sport féminin d'élite, synergies à l'année avec le club des Dragons de Rouen.
-- **Menaces (T)** : Inflation des coûts d'énergie et de sécurité, alternances politiques locales remettant en cause les subventions, volatilité de change EUR/USD.
+#### C. Matrice Stratégique Croisée (TOWS)
+- **Maxi-Maxi (Forces/Opportunités)** : Utiliser le prestige des labels d'élite pour commercialiser des hospitalités VIP haut de gamme aux entreprises régionales.
+- **Mini-Maxi (Faiblesses/Opportunités)** : Pallier l'effectif réduit en s'appuyant sur des conventions solides avec les collectivités et les associations bénévoles.
+- **Maxi-Mini (Forces/Menaces)** : Mobiliser la régie TV intégrée et la réactivité de terrain pour contrer l'inflation des coûts de sous-traitance.
+- **Mini-Mini (Faiblesses/Menaces)** : Pré-financer systématiquement les événements via les partenariats B2B amont pour sécuriser la rentabilité.
 
 ---
 
 ### BLOC 3 : Modèle d'Affaires & Ressources (RBV / VRIO) (Pages 12 à 15)
 
 #### A. Business Model vs Stratégie
-- **Distinction théorique capitale** (Magretta 2002, Porter 2001, Lecocq/Demil/Warnier 2006 modèle RCOV) :
+- **Distinction théorique capitale** (Magretta 2002, Teece 2010, Lecocq/Demil/Warnier 2006 modèle RCOV) :
   - Le *Business Model* décrit l'architecture interne : comment la boîte crée et capte de la valeur (Ressources, Organisation, Offre, Volume des revenus/coûts).
   - La *Stratégie* décrit le choix des combats externes : comment faire mieux que les rivaux pour construire un avantage compétitif durable.
   - *Tests de Joan Magretta* : Sport Plus Conseil réussit le **test narratif** (l'histoire a du sens pour les collectivités et sponsors) et le **test des chiffres** (marges nettes positives dégagées par les hospitalités).
@@ -134,10 +132,9 @@
 
 ### 📌 Point 2 : Analyse de l'Environnement
 * **Quels outils ?** Grand PESTEL complet (macro) + Diagnostic SWOT étendu avec matrice TOWS (confrontation stratégique).
-* **Pourquoi avoir délibérément écarté Porter ? (Argument clé vis-à-vis du professeur) :**
-  - Le modèle classique de Porter (1980) suppose des frontières étanches entre Fournisseurs, Clients et Concurrents. Or, **Sport Plus Conseil est hautement intégrée verticalement** : elle possède sa propre filiale de production TV (*TV Sport Events*), détient en direct un club professionnel d'élite (*Dragons de Rouen*) et co-produit ses événements avec les ligues.
-  - Les ayants droit (NBA, WTA, LNB) sont à la fois des concédants de droits, des clients et des partenaires opérationnels au sein d'un marché biface.
-  - Appliquer Porter conduisait à forcer artificiellement les cases. Le choix méthodologique s'est donc porté sur un **PESTEL approfondi** (l'OS 2 subit directement le macro-environnement : subventions locales, inflation énergie, risque de change USD/EUR) et un **SWOT/TOWS croisé** bien plus fidèle à la réalité hybride de l'agence.
+* **Pertinence de ces outils pour Sport Plus Conseil (OS 2) :**
+  - **Le PESTEL (Macro) :** Une OS 2 est une agence commerciale privée sans mandat régalien. Elle subit directement les variables macro-économiques : politiques publiques locales, subventions des métropoles, inflation des coûts d'énergie et de sécurité, ou encore le risque de change EUR/USD sur les contrats des ligues mondiales (NBA, WTA).
+  - **Le SWOT et la Matrice TOWS (Interne / Externe) :** Grâce à sa forte intégration verticale (sa filiale TV *TV Sport Events*, la gestion du club des *Dragons de Rouen*, la régie d'arénas), l'agence déploie un écosystème hybride. Le SWOT croisé confronte ses compétences distinctives de PME agile face aux opportunités du marché (sport féminin, hospitalités B2B) et aux menaces de coûts, dégageant 4 trajectoires opérationnelles claires.
 
 ### 📌 Point 3 : Analyse du Modèle d'Affaires (Business Model)
 * **Parties prenantes apporteuses de ressources (Freeman 1984) :**
@@ -187,8 +184,8 @@
 | Auteur & Date | Ouvrage / Concept clé | Comment le placer dans la discussion |
 | :--- | :--- | :--- |
 | **Emmanuel BAYLE (2007)** | *Typologie des Organisations Sportives (Niveaux 1 à 4)* | Pour positionner l'agence comme une **OS de niveau 2** marchande. |
-| **Michael PORTER (1985, 2001, 2008)** | *5 Forces concurrentielles* & *Définition du Business Model* | Pour analyser la rivalité avec Live Nation/IMG et la génération de cash. |
-| **Aurélien FRANÇOIS (2026)** | *6ème Force régalienne* & *Apporteurs de ressources* | Pour citer l'autorité préfectorale et les ligues délégataires primaires. |
+| **David TEECE (2010)** | *Business Models, Strategy & Innovation* | Pour définir le modèle d'affaires comme architecture de création et captation de valeur. |
+| **Aurélien FRANÇOIS (2026)** | *Théorie des OS, PESTEL & Apporteurs de ressources* | Pour citer l'autorité préfectorale et les ligues délégataires primaires. |
 | **Joan MAGRETTA (2002)** | *Why Business Models Matter* (Tests narratif & chiffres) | Pour prouver la cohérence de l'histoire et la viabilité des marges. |
 | **LECOCQ, DEMIL & WARNIER (2006)** | *Modèle RCOV* (Ressources, Compétences, Offre, Valeur) | Pour décomposer l'architecture interne de Sport Plus Conseil. |
 | **R. Edward FREEMAN (1984)** | *Théorie des Parties Prenantes (Stakeholders)* | Pour cartographier les 800 bénévoles, sponsors B2B, élus et public. |

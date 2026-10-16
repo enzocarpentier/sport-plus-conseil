@@ -29,7 +29,7 @@ export const DossierPage12BusinessModel: React.FC<DossierPageProps> = ({
         </h2>
 
         <p>
-          Au cœur de la théorie managériale, Michael Porter (2001) définit le modèle d&apos;affaires comme « la façon dont l&apos;entreprise génère des revenus et des profits ». Joan Magretta (2002) démontre qu&apos;un modèle d&apos;affaires valide doit surmonter deux épreuves : le <em>test narratif</em> (l&apos;histoire a-t-elle du sens pour les clients ?) et le <em>test des chiffres</em> (l&apos;équation financière dégage-t-elle des marges nettes positives ?). Cette approche est complétée par le modèle RCOV de Xavier Lecocq, Benoît Demil et Vanessa Warnier (2006), articulant Ressources et compétences (R), Organisation et coordination (C), Offre (O) et Volume des revenus et des coûts (V).
+          Au cœur de la théorie managériale, David Teece (2010) et Joan Magretta (2002) définissent le modèle d&apos;affaires comme « l&apos;architecture conceptuelle par laquelle l&apos;entreprise crée, délivre et capte de la valeur économique ». Joan Magretta démontre qu&apos;un modèle d&apos;affaires valide doit surmonter deux épreuves fondamentales : le <em>test narratif</em> (l&apos;histoire a-t-elle du sens pour les clients et partenaires ?) et le <em>test des chiffres</em> (l&apos;équation financière dégage-t-elle des marges nettes positives et pérennes ?). Cette approche est complétée par le modèle RCOV de Xavier Lecocq, Benoît Demil et Vanessa Warnier (2006), articulant Ressources et compétences (R), Organisation et coordination (C), Offre (O) et Volume des revenus et des coûts (V).
         </p>
 
         <p>

@@ -377,13 +377,13 @@ export const Td1EvaluationPage: React.FC<Td1EvaluationPageProps> = ({
             {/* PERTINENCE DE L'OUTIL PAR RAPPORT À L'ORGANISATION CHOISIE */}
             <div className="border-l-4 border-purple-600 pl-4 py-1 space-y-3">
               <h3 className="font-bold text-gray-900 text-base">
-                § Pertinence de l’outil et justification du retrait de Porter
+                § Pertinence méthodologique de l’articulation PESTEL &amp; SWOT
               </h3>
               
               <div className="space-y-3 text-xs sm:text-sm">
                 <div className="bg-purple-50/40 p-3.5 rounded-lg border border-purple-100">
                   <strong className="text-purple-950 font-serif block mb-1 text-sm">
-                    Pourquoi le PESTEL est-il l&apos;outil d&apos;analyse roi pour une OS 2 ?
+                    Pourquoi le PESTEL est-il l&apos;outil d&apos;analyse macro roi pour une OS 2 ?
                   </strong>
                   <p className="text-gray-700">
                     Contrairement aux organisations de niveau 1 (fédérations ou ligues) qui disposent d&apos;une autorité réglementaire et d&apos;un monopole délégué par l&apos;État, une organisation sportive de niveau 2 comme Sport Plus Conseil est une <strong>société commerciale privée exposée de plein fouet aux variables macro-économiques</strong>. Elle ne maîtrise ni les arrêtés préfectoraux de sécurité, ni l&apos;inflation des coûts de l&apos;énergie, ni les arbitrages de subventions publiques des collectivités. Le PESTEL est donc indispensable pour identifier les risques régaliens et les fenêtres sociétales favorables (parité, sport-santé).
@@ -392,10 +392,10 @@ export const Td1EvaluationPage: React.FC<Td1EvaluationPageProps> = ({
 
                 <div className="bg-purple-50/40 p-3.5 rounded-lg border border-purple-100">
                   <strong className="text-purple-950 font-serif block mb-1 text-sm">
-                    Pourquoi écarter le modèle des 5 forces de Porter au profit d&apos;un grand SWOT ?
+                    Pourquoi un grand SWOT complété par la matrice TOWS ?
                   </strong>
                   <p className="text-gray-700">
-                    Comme l&apos;enseigne la littérature académique contemporaine, <strong>le modèle de Porter (1980) est inadapté à une firme hautement intégrée verticalement telle que Sport Plus Conseil</strong>. En effet, l&apos;agence dispose de sa propre filiale de production audiovisuelle (TV Sport Events), détient en direct un club professionnel (les Dragons de Rouen) et co-produit ses événements avec les ligues. Les frontières porteriennes classiques entre « fournisseurs », « concurrents » et « clients » s&apos;estompent complètement. Un SWOT étendu complété par la matrice TOWS permet d&apos;analyser avec bien plus de justesse la dynamique relationnelle hybride de la firme.
+                    En raison de la forte intégration verticale de Sport Plus Conseil (sa propre filiale audiovisuelle <em>TV Sport Events</em>, la détention majoritaire des <em>Dragons de Rouen</em>, la co-production d&apos;arénas avec les ligues), l&apos;écosystème de l&apos;agence repose sur des relations partenariales hybrides et des marchés bifaces. Le diagnostic SWOT étendu, articulé à la matrice croisée TOWS (Weihrich, 1982), permet de confronter directement les compétences internes de la PME aux opportunités de marché et aux menaces de coûts, dégageant des orientations opérationnelles concrètes et adaptées.
                   </p>
                 </div>
               </div>

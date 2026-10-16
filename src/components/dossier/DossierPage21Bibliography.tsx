@@ -62,7 +62,7 @@ export const DossierPage21Bibliography: React.FC<DossierPageProps> = ({
             • <strong>MINTZBERG, H., AHLSTRAND, B., LAMPEL, J. (2009).</strong> <em>Safari en pays stratégie</em>, Paris, Pearson Education France, 496 p.
           </p>
           <p className="indent-0! text-justify">
-            • <strong>PORTER, M. E. (2001, 2008).</strong> « Strategy and the Internet » et « The Five Competitive Forces That Shape Strategy », <em>Harvard Business Review</em>.
+            • <strong>TEECE, D. J. (2010).</strong> « Business Models, Business Strategy and Innovation », <em>Long Range Planning</em>, vol. 43, n° 2-3, p. 172–194.
           </p>
         </div>
 
@@ -72,7 +72,7 @@ export const DossierPage21Bibliography: React.FC<DossierPageProps> = ({
         </h3>
         <div className="space-y-1 mb-2 text-[12pt] leading-[1.5]">
           <p className="indent-0! text-justify">
-            • <strong>FRANÇOIS, A. (2026).</strong> <em>Stratégie des Organisations Sportives — Théories des OS, PESTEL, Porter, VRIO et Business Models</em>, Support de cours magistral et séminaire, UFR STAPS, Université de Rouen Normandie.
+            • <strong>FRANÇOIS, A. (2026).</strong> <em>Stratégie des Organisations Sportives — Théories des OS, PESTEL, VRIO, RCOV et Business Models</em>, Support de cours magistral et séminaire, UFR STAPS, Université de Rouen Normandie.
           </p>
         </div>
 

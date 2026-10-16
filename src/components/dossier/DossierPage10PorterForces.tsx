@@ -19,25 +19,25 @@ export const DossierPage10PorterForces: React.FC<DossierPageProps> = ({
       {/* En-tête courant académique */}
       <div className="page-header pb-1 mb-3 flex items-center justify-between text-[10pt] text-gray-700 border-b border-gray-400 shrink-0 w-full overflow-hidden">
         <span className="uppercase tracking-wide whitespace-nowrap shrink-0">Stratégie des OS — Cas Sport Plus Conseil</span>
-        <span className="italic whitespace-nowrap shrink-0">Partie 2 : Analyse Interne &amp; Externe (SWOT 1/2)</span>
+        <span className="italic whitespace-nowrap shrink-0">Partie 2 : Diagnostic Interne (SWOT 1/2)</span>
       </div>
 
       {/* Corps du texte */}
       <div className="academic-body flex-1 flex flex-col justify-start">
         <h2 className="academic-h1">
-          2.7 Justification Épistémologique : Choix du PESTEL et du SWOT face aux Limites de Porter
+          2.7 Démarche Méthodologique du Diagnostic Stratégique d&apos;une OS 2 Intégrée
         </h2>
 
         <p>
-          L&apos;analyse stratégique de l&apos;environnement d&apos;une organisation sportive de niveau 2 requiert une vigilance méthodologique fondamentale quant au choix des cadres conceptuels mobilisés. Si le modèle des 5 forces de Michael Porter (1980) constitue une référence classique pour apprécier la dynamique concurrentielle des marchés industriels conventionnels, son application directe au cas de Sport Plus Conseil se heurte à des limites théoriques majeures soulevées par la littérature contemporaine du management du sport (Bayle, 2007 ; Desbordes, 2019).
+          L&apos;analyse de l&apos;environnement d&apos;une organisation sportive de niveau 2 requiert une démarche méthodologique rigoureuse et adaptée aux spécificités de son modèle d&apos;activité. Si le diagnostic macro-environnemental PESTEL permet de cerner avec précision les déterminants exogènes qui s&apos;imposent à l&apos;agence, l&apos;évaluation de sa compétitivité globale exige une confrontation méthodique de ses ressources internes avec les dynamiques du marché. Dans la littérature managériale (Bayle, 2007 ; Desbordes, 2019), la matrice SWOT constitue le cadre analytique par excellence pour structurer cet arbitrage stratégique fondamental.
         </p>
 
         <p>
-          En effet, Sport Plus Conseil se caractérise par une forte intégration verticale et un modèle de co-production hybride qui estompent les frontières catégorielles étanches du schéma porterien. L&apos;agence dispose en interne de sa propre filiale de production audiovisuelle (TV Sport Events), détient en propre la majorité du capital d&apos;un club d&apos;élite (les Dragons de Rouen en Ligue Magnus) et opère comme régisseur délégué d&apos;arénas publiques. Dès lors, les acteurs de son écosystème ne se cantonnent pas à un rôle univoque : les ayants droit mondiaux (NBA, WTA, LNB) agissent simultanément comme des concédants de licences, des clients prescripteurs et des partenaires opérationnels au sein d&apos;un marché biface. Face à cet effacement des clivages entre fournisseurs, clients et concurrents, l&apos;articulation entre un diagnostic macro-environnemental PESTEL approfondi et une matrice SWOT stratégique croisée s&apos;avère scientifiquement bien plus féconde et robuste pour appréhender le positionnement de la firme.
+          Cette approche est particulièrement adaptée à Sport Plus Conseil en raison de sa forte intégration verticale et de son écosystème partenarial multisport. L&apos;agence dispose en interne de sa propre filiale de production audiovisuelle (TV Sport Events), détient en propre la majorité du capital d&apos;un club professionnel d&apos;élite (les Dragons de Rouen en Ligue Magnus) et opère comme régisseur délégué d&apos;arénas publiques. Dès lors, les acteurs de son environnement ne se cantonnent pas à des relations commerciales unilatérales : les grandes ligues et ayants droit (NBA, WTA, LNB) agissent simultanément comme concédants de licences prestigieuses, clients prescripteurs et partenaires opérationnels de co-production. Le diagnostic stratégique interne permet de cartographier avec exactitude les atouts distinctifs et les zones de fragilité de cette architecture d&apos;entreprise agile.
         </p>
 
         <h2 className="academic-h1">
-          2.8 Diagnostic Interne Détaillé : Forces Compétitives et Vulnérabilités de la PME
+          2.8 Diagnostic Interne : Forces Compétitives et Vulnérabilités de la PME
         </h2>
 
         <p>

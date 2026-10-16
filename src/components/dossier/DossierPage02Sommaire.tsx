@@ -173,7 +173,7 @@ export const DossierPage02Sommaire: React.FC<DossierPageProps> = ({
               className="flex items-baseline justify-between w-full hover:text-blue-800 transition-colors group cursor-pointer"
             >
               <span className="group-hover:underline shrink min-w-0 text-left" style={{ textAlign: 'left' }}>
-                2.4 Diagnostic interne : forces, faiblesses et limites de Porter
+                2.4 Diagnostic interne : forces et faiblesses organisationnelles (SWOT 1/2)
               </span>
               <span className="flex-1 mx-2 border-b border-dotted border-gray-300 min-w-[20px]" />
               <span className="text-gray-700 shrink-0 whitespace-nowrap ml-2">10</span>

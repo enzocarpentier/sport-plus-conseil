@@ -25,7 +25,8 @@ import { CommentsPanel } from './components/CommentsPanel'
 import {
   type DossierComment,
   fetchDossierComments,
-  subscribeToDossierComments
+  subscribeToDossierComments,
+  deleteDossierComment
 } from './lib/supabase'
 import { Printer, MessageSquare, ChevronDown } from 'lucide-react'
 
@@ -173,6 +174,18 @@ export function App() {
     return comments.filter((c) => c.page_number === pageNum).length
   }
 
+  // Suppression d'un commentaire synchronisée avec Supabase (mise à jour optimiste)
+  const handleDeleteComment = async (id: string): Promise<{ success: boolean; error: string | null }> => {
+    setComments((prev) => prev.filter((c) => c.id !== id))
+    const result = await deleteDossierComment(id)
+    if (result.error) {
+      const refreshed = await fetchDossierComments()
+      setComments(refreshed)
+      return result
+    }
+    return { success: true, error: null }
+  }
+
   return (
     <div className="min-h-screen bg-[#e5e7eb] py-12 px-4 flex flex-col items-center justify-start select-text relative print:min-h-0 print:bg-white print:p-0 print:m-0 print:block">
       
@@ -261,6 +274,7 @@ export function App() {
         onClose={() => setIsCommentsOpen(false)}
         comments={comments}
         onRefreshComments={() => fetchDossierComments().then(setComments)}
+        onDeleteComment={handleDeleteComment}
         targetPage={targetPage}
         onTargetPageChange={setTargetPage}
         onScrollToPage={handleScrollToPage}

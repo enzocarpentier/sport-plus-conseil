@@ -23,6 +23,7 @@ interface CommentsPanelProps {
   onClose: () => void
   comments: DossierComment[]
   onRefreshComments: () => void
+  onDeleteComment?: (id: string) => Promise<{ success: boolean; error: string | null }>
   targetPage: number
   onTargetPageChange: (page: number) => void
   onScrollToPage: (page: number) => void
@@ -66,6 +67,7 @@ export const CommentsPanel: React.FC<CommentsPanelProps> = ({
   onClose,
   comments,
   onRefreshComments,
+  onDeleteComment,
   targetPage,
   onTargetPageChange,
   onScrollToPage,
@@ -85,6 +87,10 @@ export const CommentsPanel: React.FC<CommentsPanelProps> = ({
   const [editingCommentId, setEditingCommentId] = useState<string | null>(null)
   const [editPageNumber, setEditPageNumber] = useState<number>(1)
   const [isUpdatingPage, setIsUpdatingPage] = useState(false)
+
+  // Gestion de la suppression d'un commentaire
+  const [confirmDeleteId, setConfirmDeleteId] = useState<string | null>(null)
+  const [isDeleting, setIsDeleting] = useState(false)
 
   // Sauvegarder l'auteur sélectionné
   useEffect(() => {
@@ -145,14 +151,22 @@ export const CommentsPanel: React.FC<CommentsPanelProps> = ({
     }
   }
 
-  const handleDeleteComment = async (commentId: string) => {
-    if (window.confirm('Supprimer définitivement ce commentaire ?')) {
-      const result = await deleteDossierComment(commentId)
-      if (result.error) {
-        alert(`Erreur de suppression : ${result.error}`)
-      } else {
-        onRefreshComments()
-      }
+  const handleConfirmDelete = async (commentId: string) => {
+    setIsDeleting(true)
+    let res: { success: boolean; error: string | null }
+    if (onDeleteComment) {
+      res = await onDeleteComment(commentId)
+    } else {
+      res = await deleteDossierComment(commentId)
+      onRefreshComments()
+    }
+    setIsDeleting(false)
+    setConfirmDeleteId(null)
+    if (res.error) {
+      setStatusMessage({ type: 'error', text: `Erreur lors de la suppression : ${res.error}` })
+    } else {
+      setStatusMessage({ type: 'success', text: 'Commentaire supprimé de Supabase avec succès !' })
+      setTimeout(() => setStatusMessage(null), 4000)
     }
   }
 
@@ -240,6 +254,33 @@ export const CommentsPanel: React.FC<CommentsPanelProps> = ({
             )
           })}
         </div>
+
+        {/* BANNIÈRE DE NOTIFICATION SYNCHRO SUPABASE */}
+        {statusMessage && (
+          <div
+            className={`mx-4 mt-2.5 mb-0 flex items-center justify-between gap-2 text-xs px-3 py-2 rounded-md shadow-xs animate-in slide-in-from-top-1 ${
+              statusMessage.type === 'success'
+                ? 'bg-emerald-50 text-emerald-900 border border-emerald-300'
+                : 'bg-red-50 text-red-900 border border-red-300'
+            }`}
+          >
+            <div className="flex items-center gap-2">
+              {statusMessage.type === 'success' ? (
+                <CheckCircle2 size={15} className="text-emerald-600 shrink-0" />
+              ) : (
+                <AlertCircle size={15} className="text-red-600 shrink-0" />
+              )}
+              <span className="font-medium text-[11px]">{statusMessage.text}</span>
+            </div>
+            <button
+              type="button"
+              onClick={() => setStatusMessage(null)}
+              className="text-gray-400 hover:text-gray-600 text-xs px-1 cursor-pointer"
+            >
+              ✕
+            </button>
+          </div>
+        )}
 
         {/* CONTENU : FORMULAIRE + LISTE DES COMMENTAIRES */}
         <div className="flex-1 overflow-y-auto p-4 space-y-5">
@@ -504,26 +545,49 @@ export const CommentsPanel: React.FC<CommentsPanelProps> = ({
                         )}
                       </div>
 
-                      <div className="flex items-center gap-2.5">
+                      <div className="flex items-center gap-2">
                         <button
                           type="button"
                           onClick={() => {
                             onScrollToPage(comment.page_number)
                             onClose()
                           }}
-                          className="text-gray-500 hover:text-blue-700 flex items-center gap-1 font-medium transition-colors cursor-pointer"
+                          className="text-gray-500 hover:text-blue-700 flex items-center gap-1 font-medium transition-colors cursor-pointer text-[10.5px]"
                         >
                           <span>Voir la page</span>
                           <ArrowRight size={11} />
                         </button>
-                        <button
-                          type="button"
-                          onClick={() => handleDeleteComment(comment.id)}
-                          className="text-gray-400 hover:text-red-600 p-0.5 transition-colors cursor-pointer"
-                          title="Supprimer ce commentaire"
-                        >
-                          <Trash2 size={12} />
-                        </button>
+
+                        {confirmDeleteId === comment.id ? (
+                          <div className="flex items-center gap-1 bg-red-50 border border-red-300 px-1.5 py-0.5 rounded text-[10px] text-red-800 animate-in fade-in">
+                            <span className="font-semibold">Supprimer ?</span>
+                            <button
+                              type="button"
+                              disabled={isDeleting}
+                              onClick={() => handleConfirmDelete(comment.id)}
+                              className="bg-red-600 hover:bg-red-700 text-white px-1.5 py-0.5 rounded text-[10px] font-semibold transition-colors disabled:opacity-50 cursor-pointer shadow-2xs"
+                            >
+                              {isDeleting ? '...' : 'Oui'}
+                            </button>
+                            <button
+                              type="button"
+                              onClick={() => setConfirmDeleteId(null)}
+                              className="text-gray-500 hover:text-gray-700 px-1 text-[10px] cursor-pointer"
+                            >
+                              Non
+                            </button>
+                          </div>
+                        ) : (
+                          <button
+                            type="button"
+                            onClick={() => setConfirmDeleteId(comment.id)}
+                            className="text-red-600 hover:text-red-700 hover:bg-red-50 border border-red-200 hover:border-red-300 px-1.5 py-0.5 rounded text-[10.5px] font-medium flex items-center gap-1 transition-all cursor-pointer"
+                            title="Supprimer définitivement ce commentaire de Supabase"
+                          >
+                            <Trash2 size={11} />
+                            <span>Supprimer</span>
+                          </button>
+                        )}
                       </div>
                     </div>
                   </div>
